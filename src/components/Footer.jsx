@@ -63,7 +63,7 @@ const Footer = () => {
                     <ul className="list-none flex flex-col justify-end md:items-end">
                         {community.map((nav) => (
                             <li
-                                key={nav.id}
+                                key={nav.title}
                                 className="font-normal cursor-pointer text-lg md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[16px] mb-4 text-dimGrey"
                             >
                                 <a href={`#${nav.id}`}>{nav.title}</a>

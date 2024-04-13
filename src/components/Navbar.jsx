@@ -68,7 +68,7 @@ const Navbar = () => {
             <ul className="list-none flex flex-col justify-end items-center">
               {navLinks.map((nav) => (
                 <li
-                  key={nav.id}
+                  key={nav.title}
                   className="font-normal cursor-pointer text-[16px] mb-4 text-white"
                 >
                  <NavLink to={nav.id}>{nav.title}</NavLink>
