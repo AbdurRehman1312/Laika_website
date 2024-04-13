@@ -13,7 +13,7 @@ const Opportunities = () => {
           <span className="text-gradient font-bold">Laïka</span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-12 lg:gap-6">
         <OpportunitiesCard
           img="scalibilty"
           name="Scalability"
@@ -31,8 +31,8 @@ const Opportunities = () => {
           desc="Laïka is your gateway to endless meme possibilities, fostering a sustainable memecoin ecosystem."
         />
       </div>
-      <div className="w-full rounded-[20px] bg-dark-gradient h-[300px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-[100%]">
+      <div className="w-full rounded-[20px] bg-dark-gradient h-[300px] mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  h-[100%]">
           <div></div>
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-white m-auto text-5xl md:text-6xl lg:text-7xl font-semibold text-center lg:leading-[70px]">

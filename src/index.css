@@ -43,6 +43,16 @@ body{
   /* background: linear-gradient(90deg, rgba(0,10,30,1) 37%, rgba(0,21,30,1) 56%, rgba(0,29,28,1) 79%); */
   background: linear-gradient(90deg, rgba(0,10,30,1) 37%, rgba(0,21,30,1) 56%, rgba(0,29,28,1) 100%);
 }
+.bg-dark-gradient2 {
+  background: rgb(1, 9, 27);
+  /* background: linear-gradient(90deg, rgba(0,10,30,1) 37%, rgba(0,21,30,1) 56%, rgba(0,29,28,1) 79%); */
+  background: linear-gradient(90deg, rgb(0, 7, 22) 37%, rgb(0, 17, 24) 56%, rgb(1, 36, 35) 100%);
+}
+.bg-dark-gradient3 {
+  background: rgb(1, 9, 27);
+  /* background: linear-gradient(90deg, rgba(0,10,30,1) 37%, rgba(0,21,30,1) 56%, rgba(0,29,28,1) 79%); */
+  background: linear-gradient(90deg, rgb(0, 13, 40) 37%, rgb(1, 31, 44) 56%, rgb(1, 36, 35) 100%);
+}
 .sidebar {
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

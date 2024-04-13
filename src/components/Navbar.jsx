@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import * as images from "../assets";
 import Button from "./Button";
+import { NavLink } from "react-router-dom";
 
 const navLinks = [
   {
-    id: "home",
+    id: "/",
     title: "Home",
   },
   {
@@ -32,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
       <img src={images.logo} alt="Hoobank" className="w-[64px] h-[64px]" />
-      <div className="flex-1 justify-center items-center hidden sm:flex">
+      <div className="flex-1 justify-center items-center hidden lg:flex">
         <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
         <ul className="list-none flex justify-center items-center gap-14">
           {navLinks.map((nav) => (
@@ -41,16 +42,16 @@ const Navbar = () => {
               className="font-normal cursor-pointer text-[16px] text-white"
             >
               <p className="text-gradient text-xs text-center">{nav.desc}</p>
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <NavLink to={nav.id}>{nav.title}</NavLink>
             </li>
           ))}
         </ul>
       </div>
-      <Button name="Whitepaper" />
+      <Button name="Whitepaper" style="px-6"/>
 
       {/* For mobile screen */}
 
-      <div className="sm:hidden flex justify-end items-center">
+      <div className="lg:hidden flex justify-end items-center">
         
         <img
           src={toggle ? images.close : images.menu}
@@ -61,7 +62,7 @@ const Navbar = () => {
       </div>
 
       {toggle && (
-        <div className="sm:hidden absolute top-[90px] right-0 w-full">
+        <div className="lg:hidden absolute top-[90px] right-0 w-full">
           <div className="p-6 bg-dark-gradient mx-4 my-2 rounded-xl sidebar">
             
             <ul className="list-none flex flex-col justify-end items-center">
@@ -70,7 +71,7 @@ const Navbar = () => {
                   key={nav.id}
                   className="font-normal cursor-pointer text-[16px] mb-4 text-white"
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                 <NavLink to={nav.id}>{nav.title}</NavLink>
                 </li>
               ))}
             </ul>

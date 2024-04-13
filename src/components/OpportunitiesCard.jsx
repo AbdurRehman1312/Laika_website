@@ -10,7 +10,7 @@ const OpportunitiesCard = ({ img, style, name, desc }) => {
       </div>
       <div className="flex flex-col gap-4 items-center h-[200px]">
         <h1 className="text-white text-xl font-semibold">{name}</h1>
-        <p className="text-dimGrey text-center w-[75%]">{desc}</p>
+        <p className="text-dimGrey text-center w-[75%] ">{desc}</p>
       </div>
     </div>
   );

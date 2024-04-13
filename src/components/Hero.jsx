@@ -13,7 +13,7 @@ const Hero = () => {
           <h1 className="text-white text-2xl sm:text-lg md:text-xl font-extralight mt-2">
             MAKE (AND WAY MORE COOL) <span className="text-primary">*</span>
           </h1>
-          <Button name="Discover Laïka" style="mt-8" />
+          <Button name="Discover Laïka" style="mt-8 px-6" />
         </div>
       </div>
 
