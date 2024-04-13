@@ -1,0 +1,15 @@
+export { default as logo } from "./logo.png";
+export { default as close } from "./close.svg";
+export { default as menu } from "./menu.svg";
+export { default as hero } from "./hero-animate.png";
+export { default as scalibilty } from "./scalibilty.png";
+export { default as setting } from "./setting.png";
+export { default as thumb } from "./thumb.png";
+export { default as line } from "./line.png";
+export { default as rench } from "./rench.png";
+export { default as check } from "./check.png";
+export { default as shield } from "./shield.png";
+export { default as trophy } from "./trophy.png";
+export { default as file } from "./file.png";
+export { default as inputsend } from "./inputsend.png";
+export { default as dog } from "./dog.png";
