@@ -15,8 +15,9 @@ const Home = () => {
       <Features />
       <Token />
       <Memecoin />
-      <Ecosystem />
       <Memechain />
+      <Ecosystem />
+     
     </div>
   );
 };

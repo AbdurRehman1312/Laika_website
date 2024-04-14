@@ -24,7 +24,7 @@ const Token = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-16 lg:gap-20 my-6 md:my-10 lg:my-12">
-        <div className="col-span-1 md:col-span-12 lg:col-span-4">
+        <div className="col-span-1 md:col-span-11 lg:col-span-4 mt-5">
           <div className="flex flex-col justify-center bg-dark-gradient h-auto md:h-[370px] rounded-[20px] p-5">
             <div className="w-full flex flex-col gap-4">
               <h2 className="text-white text-lg md:text-xl font-semibold">
@@ -61,7 +61,7 @@ const Token = () => {
               efficiency and scalability. Dive into the details that shape our
               ecosystem's future.{" "}
             </p>
-            <Button name="See Docs" style="w-[25%] md:w-[35%]" />
+            <Button name="See Docs" style="w-[35%] md:w-[35%] lg:w-[45%]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div className="flex flex-col gap-4">
@@ -71,13 +71,13 @@ const Token = () => {
               <p className="text-dimGrey">
                 Stay up to date about $LAIKA release.
               </p>
-              <div className="relative w-[70%]">
+              <div className="relative lg:w-[90%] xl:w-[70%]">
                 <input
                   className="bg-dark-gradient text-white px-3 h-[35px] rounded-[5px] w-full focus:outline-none"
                   type="text"
                   placeholder="jonh@doge.wtf..."
                 />
-                <button className="absolute right-[5px] top-[20%]">
+                <button className="absolute right-[5px] top-[11.7%]">
                   <img src={images.inputsend} alt="" className="w-7 h-7" />
                 </button>
               </div>
