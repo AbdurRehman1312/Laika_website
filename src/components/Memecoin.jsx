@@ -5,13 +5,13 @@ const Memecoin = () => {
     return (
         <>
             <section className="my-32">
-                <div className="w-full rounded-[20px] bg-dark-gradient p-5">
+                <div className="w-full rounded-[20px] bg-dark-gradient sm:h-[300px] md:h-[200px] lg:h-[300px] p-5">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-                        <div className="flex justify-center items-center ">
-                            {/* <img src="src/assets/memecoin.png" alt="memecoin" className="w-full md:max-w-[300px] m-auto" /> */}
+                        <div className="w-[100%] sm:relative">
+                            <img src="src/assets/unleash.gif" alt="memecoin" className="w-full sm:absolute sm:top-[-60%] md:top-[-60%] lg:top-[-40%] xl:top-[-55%] mix-blend-screen md:max-w-[500px] m-auto" />
                         </div>
-                        <div className="flex flex-col justify-center items-center ">
-                            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center lg:leading-[70px]">
+                        <div className="flex items-center justify-center mt-[10%]">
+                            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center lg:leading-[70px] w-[70%]">
                                 Unleash the full potential of{" "}
                                 <span className="text-gradient">memecoins</span>
                             </h1>

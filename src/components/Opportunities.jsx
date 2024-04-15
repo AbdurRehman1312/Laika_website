@@ -31,18 +31,31 @@ const Opportunities = () => {
           desc="Laïka is your gateway to endless meme possibilities, fostering a sustainable memecoin ecosystem."
         />
       </div>
-      <div className="w-full rounded-[20px] bg-dark-gradient h-[300px] mt-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  h-[100%]">
-          <div></div>
-          <div className="flex flex-col justify-center items-center">
-            <h1 className="text-white m-auto text-5xl md:text-6xl lg:text-7xl font-semibold text-center lg:leading-[70px]">
-              Make the Dogechain{" "}
-              <span className="text-gradient">universal</span>
-            </h1>
-          </div>
-          <div></div>
-        </div>
-      </div>
+      <div className="w-full rounded-[20px] bg-dark-gradient sm:h-[300px] h-[700px] mt-16">
+  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 h-full gap-7">
+    <div className="flex justify-center items-center md:order-last lg:order-first">
+      <img
+        src="src/assets/text1.gif"
+        alt=""
+        className="mix-blend-screen sm:w-[70%] sm:h-[50%] h-[100%] w-full"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center">
+      <h1 className="text-white m-auto text-5xl md:text-6xl lg:text-7xl font-semibold text-center lg:leading-[70px]">
+        Make the Dogechain{" "}
+        <span className="text-gradient">universal</span>
+      </h1>
+    </div>
+    <div className="flex justify-center items-center md:order-first lg:order-last">
+      <img
+        src="src/assets/text2.gif"
+        alt=""
+        className="mix-blend-screen sm:w-[70%] sm:h-[50%] h-[100%] w-full"
+      />
+    </div>
+  </div>
+</div>
+
     </section>
   );
 };

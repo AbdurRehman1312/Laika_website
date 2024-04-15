@@ -10,13 +10,13 @@ const Features = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 my-6 md:my-10 lg:my-12">
         <div className="col-span-1 md:col-span-4 flex flex-col gap-3">
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
-            Laïka is <span className="text-gradient_sec">innovative</span>
+            Laïka is <span className="text-gradient_sec font-bold">innovative</span>
           </h1>
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
-            Laïka is <span className="text-gradient_sec">scalable</span>
+            Laïka is <span className="text-gradient_sec font-bold">scalable</span>
           </h1>
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
-            Laïka is <span className="text-gradient_sec">fast</span>
+            Laïka is <span className="text-gradient_sec font-bold">fast</span>
           </h1>
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold flex items-center">
             Laïka is{" "}

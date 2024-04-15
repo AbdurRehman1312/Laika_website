@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as images from "../assets";
 import Button from "./Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const navLinks = [
   {
@@ -29,56 +29,76 @@ const navLinks = [
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const location = useLocation();
+
+  // Check if the current route is the airdrop route
+  const isAirdropRoute = location.pathname === "/airdrop";
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={images.logo} alt="Hoobank" className="w-[64px] h-[64px]" />
-      <div className="flex-1 justify-center items-center hidden lg:flex">
-        <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
-        <ul className="list-none flex justify-center items-center gap-14">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className="font-normal cursor-pointer text-[16px] text-white"
-            >
-              <p className="text-gradient text-xs text-center">{nav.desc}</p>
-              <NavLink to={nav.id}>{nav.title}</NavLink>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <Button name="Whitepaper" style="px-6"/>
-
-      {/* For mobile screen */}
-
-      <div className="lg:hidden flex justify-end items-center">
-        
-        <img
-          src={toggle ? images.close : images.menu}
-          alt="menu"
-          className="w-[28px] h-[28px] object-contain"
-          onClick={() => setToggle((prev) => !prev)}
-        />
-      </div>
-
-      {toggle && (
-        <div className="lg:hidden absolute top-[90px] right-0 w-full">
-          <div className="p-6 bg-dark-gradient mx-4 my-2 rounded-xl sidebar">
-            
-            <ul className="list-none flex flex-col justify-end items-center">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.title}
-                  className="font-normal cursor-pointer text-[16px] mb-4 text-white"
-                >
-                 <NavLink to={nav.id}>{nav.title}</NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+    <>
+      {!isAirdropRoute && ( // Only render if not on the airdrop route
+        <nav className="bg-black flex flex-col md:flex-row justify-center items-center py-3">
+          <h2 className="text-white text-center md:text-left">
+            Stay informed about{" "}
+            <span className="text-gradient font-semibold">$LAIKA</span>
+          </h2>
+          <button className="bg-transparent py-1 px-8 mt-3 md:mt-0 md:ml-4 text-white border border-white rounded-[5px] text-sm">
+            Join Waitlist
+          </button>
+        </nav>
       )}
-    </nav>
+
+      <nav className="w-full flex py-6 justify-between items-center navbar">
+        <img
+          src={images.logo}
+          alt="Hoobank"
+          className="w-[64px] h-[64px]"
+        />
+        <div className="flex-1 justify-center items-center hidden lg:flex">
+          <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
+          <ul className="list-none flex justify-center items-center gap-14">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className="font-normal cursor-pointer text-[16px] text-white"
+              >
+                <p className="text-gradient text-xs text-center">{nav.desc}</p>
+                <NavLink to={nav.id}>{nav.title}</NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Button name="Whitepaper" style="px-6" />
+
+        {/* For mobile screen */}
+
+        <div className="lg:hidden flex justify-end items-center">
+          <img
+            src={toggle ? images.close : images.menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain"
+            onClick={() => setToggle((prev) => !prev)}
+          />
+        </div>
+
+        {toggle && (
+          <div className="lg:hidden absolute top-[90px] right-0 w-full">
+            <div className="p-6 bg-dark-gradient mx-4 my-2 rounded-xl sidebar">
+              <ul className="list-none flex flex-col justify-end items-center">
+                {navLinks.map((nav) => (
+                  <li
+                    key={nav.title}
+                    className="font-normal cursor-pointer text-[16px] mb-4 text-white"
+                  >
+                    <NavLink to={nav.id}>{nav.title}</NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+      </nav>
+    </>
   );
 };
 
