@@ -1,4 +1,5 @@
 import React from "react";
+import * as images from  "../assets"
 import ButtonImage from "./ButtonImage";
 const Sputnik = () => {
   return (
@@ -27,7 +28,7 @@ const Sputnik = () => {
               <ButtonImage
                 name="Join the ecosystem"
                 style="w-[57%] md:w-[48%] lg:w-[55%] xl:w-[41%] gap-1"
-                image="src/assets/dog2.png"
+                img="dog2"
               />
             </div>
             <div className="flex flex-col relative z-[-10]">

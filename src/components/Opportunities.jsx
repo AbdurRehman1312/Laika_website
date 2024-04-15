@@ -35,7 +35,7 @@ const Opportunities = () => {
   <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 h-full gap-7">
     <div className="flex justify-center items-center md:order-last lg:order-first">
       <img
-        src="src/assets/text1.gif"
+        src={images.text1}
         alt=""
         className="mix-blend-screen sm:w-[70%] sm:h-[50%] h-[100%] w-full"
       />
@@ -48,7 +48,7 @@ const Opportunities = () => {
     </div>
     <div className="flex justify-center items-center md:order-first lg:order-last">
       <img
-        src="src/assets/text2.gif"
+        src={images.text2}
         alt=""
         className="mix-blend-screen sm:w-[70%] sm:h-[50%] h-[100%] w-full"
       />

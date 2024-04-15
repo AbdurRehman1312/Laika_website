@@ -27,10 +27,10 @@ const Ecosystem = () => {
           <div className="relative ">
             <img
               className="w-auto z-10 absolute top-0"
-              src="src/assets/revealloading.gif"
+              src={images.revealloading}
               alt=""
             />
-            <img className="" src="src/assets/shiners.gif" alt="" />
+            <img className="" src={images.shiners} alt="" />
           </div>
           </div>
           
