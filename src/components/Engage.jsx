@@ -3,7 +3,7 @@ import React from 'react'
 const Engage = () => {
     return (
         <>
-            <section className='sm:my-20 md:my-20 my-80 mb-[20px]'>
+            <section className='lg:my-20 md:my-20 mt-96 pt-20 mb-[20px]'>
                 <div className='flex flex-col items-center gap-6'>
                     <h1 className='text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:leading-[70px] w-[55%] text-center'>Engage with Laïka Ecosystem
                         & Earn <span className='text-gradient font-semibold'>meme Points</span></h1>
