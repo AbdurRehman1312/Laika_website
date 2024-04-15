@@ -6,7 +6,7 @@ const Ecosystem = () => {
   return (
     <>
       <section className="my-36">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 md:gap-0">
           <div className="flex flex-col justify-evenly gap-4">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold lg:leading-[70px]">
               Built for developers and meme enjoyers
@@ -23,14 +23,17 @@ const Ecosystem = () => {
               style="w-[57%] md:w-[48%] lg:w-[35%] xl:w-[27%]"
             />
           </div>
-          <div className="relative">
+          <div className="flex justify-end">
+          <div className="relative ">
             <img
-              className="w-auto z-10 absolute top-5"
+              className="w-auto z-10 absolute top-0"
               src="src/assets/revealloading.gif"
               alt=""
             />
             <img className="" src="src/assets/shiners.gif" alt="" />
           </div>
+          </div>
+          
         </div>
       </section>
     </>
