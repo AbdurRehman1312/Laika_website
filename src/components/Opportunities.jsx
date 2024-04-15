@@ -26,7 +26,7 @@ const Opportunities = () => {
         />
         <OpportunitiesCard
           img="thumb"
-          style="h-[50px] w-[35px]"
+          style="h-[50px] w-[35px] rotate-[180deg] "
           name="Infinite meme potential"
           desc="Laïka is your gateway to endless meme possibilities, fostering a sustainable memecoin ecosystem."
         />

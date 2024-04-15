@@ -27,6 +27,7 @@ const Token = () => {
         <div className="col-span-1 md:col-span-11 lg:col-span-4 mt-5">
           <div className="flex flex-col justify-center bg-dark-gradient h-auto md:h-[370px] rounded-[20px] p-5">
             <div className="w-full flex flex-col gap-4">
+              <img src={images.heart} alt="" className="w-[45px] h-[45px] md:mb-6" />
               <h2 className="text-white text-lg md:text-xl font-semibold">
                 Engage with Laika to earn meme points
               </h2>
