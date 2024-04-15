@@ -10,8 +10,8 @@ const Memecoin = () => {
                         <div className="w-[100%] sm:relative">
                             <img src="src/assets/unleash.gif" alt="memecoin" className="w-full sm:absolute sm:top-[-60%] md:top-[-60%] lg:top-[-40%] xl:top-[-55%] mix-blend-screen md:max-w-[500px] m-auto" />
                         </div>
-                        <div className="flex items-center justify-center mt-[10%]">
-                            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center lg:leading-[70px] w-[70%]">
+                        <div className="flex items-center justify-center ">
+                            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center lg:leading-[65px] xl:leading-[82px] w-[70%]">
                                 Unleash the full potential of{" "}
                                 <span className="text-gradient">memecoins</span>
                             </h1>

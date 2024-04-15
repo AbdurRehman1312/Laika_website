@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
 
         {toggle && (
-          <div className="lg:hidden absolute top-[90px] right-0 w-full">
+          <div className="lg:hidden absolute top-[170px] md:top-[140px] right-0 w-full">
             <div className="p-6 bg-dark-gradient mx-4 my-2 rounded-xl sidebar">
               <ul className="list-none flex flex-col justify-end items-center">
                 {navLinks.map((nav) => (

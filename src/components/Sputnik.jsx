@@ -40,7 +40,7 @@ const Sputnik = () => {
                 </h2>
               </div>
               <div className="bg-[#0c121f] absolute w-full md:top-[21%] lg:top-[14%] xl:top-[19%] top-[85%] p-5 rounded-t-[10px] flex gap-6 items-center">
-                <div className="bg-dark-gradient py-2 lg:px-4 xl:px-0 text-center rounded-[5px]">
+                <div className="bg-dark-gradient py-2 px-4 md:px-4 lg:px-4 xl:px-0 text-center rounded-[5px]">
                   <span className="text-white font-semibold text-sm">
                     Providing liquidity
                   </span>
@@ -50,7 +50,7 @@ const Sputnik = () => {
                   hours.
                 </h2>
               </div>
-              <div className="bg-[#090d17] absolute w-full md:top-[37%] lg:top-[32%] xl:top-[42%] top-[180%] p-5 rounded-t-[10px] flex gap-6 items-center">
+              <div className="bg-[#090d17] absolute w-full md:top-[45%] lg:top-[32%] xl:top-[42%] top-[188%] p-5 rounded-t-[10px] flex gap-6 items-center">
                 <div className="bg-dark-gradient py-2 px-6 rounded-[5px]">
                   <span className="text-white font-semibold text-sm">Staking</span>
                 </div>
@@ -58,7 +58,7 @@ const Sputnik = () => {
                   Earn 1 LAIKA point for each DOGE worth staked every 6 hours.
                 </h2>
               </div>
-              <div className="bg-[#060910] absolute w-full md:top-[61%] lg:top-[47%] xl:top-[61%] top-[281%] p-5 rounded-t-[10px] flex gap-6 items-center">
+              <div className="bg-[#060910] absolute w-full md:top-[69%] lg:top-[47%] xl:top-[61%] top-[289%] p-5 rounded-t-[10px] flex gap-6 items-center">
                 <div className="bg-dark-gradient py-2 px-6 rounded-[5px]">
                   <span className="text-white font-semibold text-sm">Referring</span>
                 </div>

@@ -304,7 +304,7 @@ const Quests = () => {
     <>
       <section className="my-8 md:my-32">
         <div className="w-full rounded-[20px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-3 lg:gap-0 xl:gap-0 bg-dark-gradient2 xl:h-[60px] lg:h-[70px] md:h-[90px] text-center items-center rounded-t">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-3 lg:gap-0 xl:gap-0 bg-dark-gradient2 xl:h-[60px] lg:h-[70px] md:h-[90px] text-center items-center rounded-t-[20px]">
             <button
               className={`text-white  ${activeTab === "tweetToEarn" ? "opacity-100 font-semibold" : "opacity-25 font-extralight "
                 }`}
@@ -339,7 +339,7 @@ const Quests = () => {
               Support Laïka Ecosystem
             </button>
           </div>
-          <div className="bg-dark-gradient md:h-[680px] lg:h-[570px] xl:h-[570px] h-[155vh] pt-10 md:pt-5 lg:pt-0 rounded-b">
+          <div className="bg-dark-gradient md:h-[680px] lg:h-[570px] xl:h-[570px] h-[155vh] pt-10 md:pt-5 lg:pt-0 rounded-b-[20px]">
             {renderContent()}
             {/* Additional content */}
           </div>
