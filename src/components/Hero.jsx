@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import Button from "./Button";
 import * as images from "../assets";
 const Hero = () => {
