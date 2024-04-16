@@ -33,7 +33,7 @@ const Footer = () => {
     ]
     return (
         <>
-         <footer className='mb-10'>
+         <footer className='my-10'>
     <div className='flex flex-col gap-10 md:gap-0 md:flex-row '>
         <div className='flex flex-col gap-2 '>
             <div className='w-[53%] md:w-[31%] lg:w-[23%] xl:w-[19%]'>
