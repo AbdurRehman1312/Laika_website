@@ -57,7 +57,7 @@ const Opportunities = () => {
   return (
     <section id="airdrop" className="my-28">
       <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>
-      <div className="flex flex-col justify-center items-center text-center h-[70vh] sm:h-[40vh]">
+      <div className="flex flex-col justify-center items-center text-center h-[50vh] sm:h-[40vh]">
         <h1 className="text-white text-5xl sm:text-4xl md:text-5xl">
           Turning <span className="text-gradient_sec font-bold">Doge</span>{" "}
           obstacles <br />
@@ -65,7 +65,7 @@ const Opportunities = () => {
           <span className="text-gradient font-bold">Laïka</span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-12 lg:gap-6" ref={sectionRef}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-12 lg:gap-6 mt-3" ref={sectionRef}>
         <OpportunitiesCard
           img="scalibilty"
           name="Scalability"
