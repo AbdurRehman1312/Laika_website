@@ -42,7 +42,7 @@ const Opportunities = () => {
       />
     </div>
     <div className="flex flex-col justify-center items-center">
-      <h1 className="text-white m-auto text-5xl md:text-6xl lg:text-7xl font-semibold text-center lg:leading-[70px]">
+      <h1 className="text-white m-auto text-4xl md:text-4xl lg:text-7xl font-semibold text-center lg:leading-[70px]">
         Make the Dogechain{" "}
         <span className="text-gradient">universal</span>
       </h1>
