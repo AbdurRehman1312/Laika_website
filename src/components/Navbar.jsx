@@ -52,16 +52,20 @@ const Navbar = () => {
         <img src={images.logo} alt="Hoobank" className="w-[64px] h-[64px]" />
         <div className="flex-1 justify-center items-center hidden lg:flex">
           <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
-          <ul className="list-none flex justify-center items-center gap-14">
+          <ul className="list-none flex justify-center items-end gap-14">
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className="font-normal cursor-pointer text-[16px] text-white"
+                className={`font-normal cursor-pointer text-[16px] text-white navlink ${nav.id === 'bridge' ? 'coming-soon' : ''
+                  }`}
               >
-                <p className="text-gradient text-xs text-center">{nav.desc}</p>
-                <NavLink to={nav.id}>{nav.title}</NavLink>
+                {nav.id === 'bridge' && <p className="text-gradient text-[55%]">{nav.desc}</p>}
+                <NavLink to={nav.id} className={nav.id === 'bridge' ? 'disabled-link font-medium tracking-wide' : ''}>
+                  {nav.title}
+                </NavLink>
               </li>
             ))}
+
           </ul>
         </div>
         <Button name="Whitepaper" style="px-6" />
@@ -78,7 +82,7 @@ const Navbar = () => {
         </div>
 
         {toggle && (
-          <div className="lg:hidden absolute top-[170px] md:top-[140px] right-0 w-full">
+          <div className="lg:hidden absolute top-[90px] right-0 w-full">
             <div className="p-6 bg-dark-gradient mx-4 my-2 rounded-xl sidebar">
               <ul className="list-none flex flex-col justify-end items-center">
                 {navLinks.map((nav) => (

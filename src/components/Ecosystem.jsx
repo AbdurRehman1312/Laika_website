@@ -20,7 +20,7 @@ const Ecosystem = () => {
             </p>
             <Button
               name="Join the ecosystem"
-              style="w-[57%] md:w-[48%] lg:w-[35%] xl:w-[27%]"
+              style="w-[57%] md:w-[56%] lg:w-[35%] xl:w-[27%]"
             />
           </div>
           <div className="flex justify-end">
