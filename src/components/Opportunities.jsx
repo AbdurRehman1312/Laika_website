@@ -1,10 +1,11 @@
 import React from "react";
 import OpportunitiesCard from "./OpportunitiesCard";
 import * as images from "../assets";
+import { Link } from "react-router-dom";
 const Opportunities = () => {
   return (
-    <section id="airdrop" className="my-48">
-      <h2 className="text-primary">{">"} Solving the Dogechain problem</h2>
+    <section id="airdrop" className="my-28">
+      <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>
       <div className="flex flex-col justify-center items-center text-center h-[70vh] sm:h-[40vh]">
         <h1 className="text-white text-5xl sm:text-4xl md:text-5xl">
           Turning <span className="text-gradient_sec font-bold">Doge</span>{" "}

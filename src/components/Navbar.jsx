@@ -36,8 +36,8 @@ const Navbar = () => {
 
   return (
     <>
-      {!isAirdropRoute && ( // Only render if not on the airdrop route
-        <nav className="bg-black flex flex-col md:flex-row justify-center items-center py-3">
+      {!isAirdropRoute && (
+        <nav className="hidden lg:flex bg-black flex-col md:flex-row justify-center items-center py-3">
           <h2 className="text-white text-center md:text-left">
             Stay informed about{" "}
             <span className="text-gradient font-semibold">$LAIKA</span>
@@ -49,11 +49,7 @@ const Navbar = () => {
       )}
 
       <nav className="w-full flex py-6 justify-between items-center navbar">
-        <img
-          src={images.logo}
-          alt="Hoobank"
-          className="w-[64px] h-[64px]"
-        />
+        <img src={images.logo} alt="Hoobank" className="w-[64px] h-[64px]" />
         <div className="flex-1 justify-center items-center hidden lg:flex">
           <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
           <ul className="list-none flex justify-center items-center gap-14">

@@ -12,7 +12,7 @@ const Sputnik = () => {
         </div>
         <div className="my-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-28">
-            <div className="flex flex-col justify-evenly gap-6">
+            <div className="flex flex-col justify-evenly gap-6  mx-3">
               <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:leading-[70px] ">
                 Unlock Rewards with{" "}
                 <span className="text-gradient font-semibold">Sputnik I</span>{" "}

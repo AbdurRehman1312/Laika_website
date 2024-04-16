@@ -7,7 +7,7 @@ const Ecosystem = () => {
     <>
       <section className="my-36">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 md:gap-0">
-          <div className="flex flex-col justify-evenly gap-4">
+          <div className="flex flex-col justify-evenly gap-4 mx-4">
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold lg:leading-[70px]">
               Built for developers and meme enjoyers
             </h1>
