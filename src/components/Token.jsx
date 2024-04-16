@@ -1,14 +1,65 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import * as images from "../assets";
 import Button from "./Button";
+import gsap from "gsap";
+import { useIntersection } from "react-use";
 import { Link } from "react-router-dom";
 const Token = () => {
+  const sectionRef = useRef(null);
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust the threshold value as needed
+  });
+  
+
+  useEffect(() => {
+    const textElements = Array.from(sectionRef.current.children);
+
+    const fadeIn = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 1,
+        x: () => {
+          // Starting position for the animation
+          return 0;
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+    const fadeOut = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 0,
+        x: () => {
+          // Starting position for the animation
+          return "-100%";
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      fadeIn();
+    }
+    else{
+      fadeOut();
+    }
+  }, [intersection]); // Add intersection to the dependency array
   return (
     <section id="laikatoken" className="my-8 sm:my-2 lg:my-4">
       <Link className="text-primary hover:opacity-65">
         {">"} $LAIKA Token
       </Link>
-      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center h-[70vh] sm:h-[60vh] lg:h-[50vh]">
+      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center h-[70vh] sm:h-[60vh] lg:h-[50vh]" ref={sectionRef}>
         <h1 className="text-white font-semibold text-4xl sm:text-5xl lg:text-6xl">
           Discover <span className="text-gradient">$LAIKA</span> Token
         </h1>

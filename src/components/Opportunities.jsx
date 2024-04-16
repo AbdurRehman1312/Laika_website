@@ -1,8 +1,59 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import OpportunitiesCard from "./OpportunitiesCard";
 import * as images from "../assets";
+import gsap from "gsap";
+import { useIntersection } from "react-use";
 import { Link } from "react-router-dom";
 const Opportunities = () => {
+  const sectionRef = useRef(null);
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust the threshold value as needed
+  });
+  
+
+  useEffect(() => {
+    const textElements = Array.from(sectionRef.current.children);
+
+    const fadeIn = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 1,
+        x: () => {
+          // Starting position for the animation
+          return 0;
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+    const fadeOut = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 0,
+        x: () => {
+          // Starting position for the animation
+          return "100%";
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      fadeIn();
+    }
+    else{
+      fadeOut();
+    }
+  }, [intersection]); // Add intersection to the dependency array
   return (
     <section id="airdrop" className="my-28">
       <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>
@@ -14,7 +65,7 @@ const Opportunities = () => {
           <span className="text-gradient font-bold">Laïka</span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-12 lg:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-12 lg:gap-6" ref={sectionRef}>
         <OpportunitiesCard
           img="scalibilty"
           name="Scalability"

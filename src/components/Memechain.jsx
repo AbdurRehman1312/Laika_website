@@ -1,24 +1,80 @@
-import React from 'react'
-import Button from './Button';
- 
+import React, { useRef, useEffect } from "react";
+import Button from "./Button";
+import gsap from "gsap";
+import { useIntersection } from "react-use";
 const Memechain = () => {
+  const sectionRef = useRef(null);
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust the threshold value as needed
+  });
+
+  useEffect(() => {
+    const textElements = Array.from(sectionRef.current.children);
+
+    const fadeIn = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 1,
+        x: () => {
+          // Starting position for the animation
+          return 0;
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+    const fadeOut = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 0,
+        x: () => {
+          // Starting position for the animation
+          return "100%";
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      fadeIn();
+    } else {
+      fadeOut();
+    }
+  }, [intersection]); // Add intersection to the dependency array
   return (
     <>
-   <section className="my-36">
-    <div className='flex flex-col gap-12 items-center '>
-        <h1 className="text-white m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin text-center leading-[60px] md:leading-[70px] lg:leading-[90px] xl:leading-[110px] lg:w-[70%] xl:w-[50%] ">
-            REAL<br />
-            <span className="text-gradient font-extrabold">MEMECOINS</span><br />
-            ARE ON<br />
-            THE LEADING<br />
-            <span className="text-gradient font-extrabold">MEMECHAIN</span>
-        </h1>
-        <Button name="Bridge to Laïka now" style="px-6" />
-    </div>
-</section>
+      <section className="my-16">
+        <div className="flex flex-col gap-10 lg:gap-14 items-center " ref={sectionRef}>
+          <h1 className="text-white m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin text-center">
+            REAL
+          </h1>
+          <span className="text-gradient m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center">
+            MEMECOINS
+          </span>
+          <h1 className="text-white m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin text-center">
+            ARE ON
+          </h1>
+          <h1 className="text-white m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin text-center">
+            THE LEADING
+          </h1>
+          <span className="text-gradient font-extrabold m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center">
+            MEMECHAIN
+          </span>
 
+          <Button name="Bridge to Laïka now" style="px-6" />
+        </div>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Memechain
+export default Memechain;

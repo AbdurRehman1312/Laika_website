@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import * as images from  "../assets"
 import ButtonImage from "./ButtonImage";
 const Sputnik = () => {
+
   return (
     <>
       <section className="my-10">

@@ -1,13 +1,64 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import * as images from "../assets";
 import Button from "./Button";
+import gsap from "gsap";
+import { useIntersection } from "react-use";
 
 const Ecosystem = () => {
+  const sectionRef = useRef(null);
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust the threshold value as needed
+  });
+  
+
+  useEffect(() => {
+    const textElements = Array.from(sectionRef.current.children);
+
+    const fadeIn = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 1,
+        x: () => {
+          // Starting position for the animation
+          return 0;
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+    const fadeOut = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 0,
+        x: () => {
+          // Starting position for the animation
+          return "-100%";
+        },
+        ease: "power4.out",
+        stagger: {
+          // Delay between each line animation
+          amount: 0.3,
+        },
+      });
+    };
+
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      fadeIn();
+    }
+    else{
+      fadeOut();
+    }
+  }, [intersection]); // Add intersection to the dependency array
   return (
     <>
-      <section className="my-36">
+      <section className="my-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 md:gap-0">
-          <div className="flex flex-col justify-evenly gap-4 mx-4">
+          <div className="flex flex-col justify-evenly gap-4 mx-4" ref={sectionRef}>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold lg:leading-[70px]">
               Built for developers and meme enjoyers
             </h1>

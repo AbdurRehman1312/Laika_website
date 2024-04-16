@@ -10,7 +10,7 @@ const Features = () => {
   const intersection = useIntersection(sectionRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5, // Adjust the threshold value as needed
+    threshold: 0.1, // Adjust the threshold value as needed
   });
   
 
