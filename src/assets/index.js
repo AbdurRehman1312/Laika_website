@@ -20,3 +20,4 @@ export { default as revealloading } from "./revealloading.gif";
 export { default as unleash } from "./unleash.gif";
 export { default as shiners } from "./shiners.gif";
 export { default as heart } from "./heart.gif";
+export { default as footerLogo } from "./footerLogo.png";
