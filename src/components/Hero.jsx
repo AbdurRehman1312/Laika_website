@@ -1,6 +1,8 @@
-import React, {useRef} from "react";
+import React, { useRef, useEffect } from "react";
 import Button from "./Button";
+import Canvas from "./Canvas"; // Import the Canvas component
 import * as images from "../assets";
+
 const Hero = () => {
   return (
     <section id="home">
@@ -16,8 +18,22 @@ const Hero = () => {
           <Button name="Discover Laïka" style="mt-8 px-6" />
         </div>
       </div>
-
-      <img src={images.hero} alt="" />
+      {/* Replace the img tag with the Canvas component */}
+      <div className="animation_hero flex justify-center relative h-[400px] w-full"> {/* Add relative positioning */}
+        <Canvas
+          count={50}
+          speed={0.1}
+          radius={13}
+          width={window.innerWidth}
+          height={window.innerHeight}
+          size={15}
+          color="rgba(10, 130, 150, 0.8)"
+          maxDistance={120}
+          background={["0, 0, 0", "0, 0, 0"]}
+          className="absolute inset-0" 
+        />
+        <img src={images.logo} alt="" className="w-[5%] z-10 absolute left-[50%] top-[50%]" />
+      </div>
     </section>
   );
 };
