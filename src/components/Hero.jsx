@@ -19,7 +19,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Replace the img tag with the Canvas component */}
-      <div className="flex justify-center relative h-[450px] w-full"> {/* Add relative positioning */}
+      <div className="flex justify-center relative h-[500px] w-full"> {/* Add relative positioning */}
         <Canvas
           count={50}
           speed={0.1}

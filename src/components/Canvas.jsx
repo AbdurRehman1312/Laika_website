@@ -90,10 +90,7 @@ const Canvas = () => {
     window.addEventListener('resize', this.updateDimensions.bind(this), false);
     this.resetTarget();
 
-    if (isTouch) {
-      this.el.addEventListener('touchstart', this.touchMove.bind(this), false);
-      this.el.addEventListener('touchmove', this.touchMove.bind(this), false);
-    } else {
+    if (!isMobileDevice()) { // Only add mouse events if not on a mobile device
       window.addEventListener('mousemove', this.mouseMove.bind(this), false);
       window.addEventListener('mouseout', this.resetTarget.bind(this), false);
     }
@@ -118,14 +115,6 @@ const Canvas = () => {
   // Reset target to center when mouse out
   Canvas.prototype.resetTarget = function () {
     this.target = new Vector(this.width / 2, this.height / 2);
-  };
-
-  // Touch Event
-  Canvas.prototype.touchMove = function (event) {
-    if (event.touches.length === 1) {
-      event.preventDefault();
-    }
-    this.target = new Vector(event.touches[0].pageX * this.dpr, event.touches[0].pageY * this.dpr);
   };
 
   // Setup particles
@@ -185,7 +174,7 @@ const Canvas = () => {
   // Main loop for animation
   Canvas.prototype.loop = function () {
     this.clear();
-    if (isTouch || isSafari) {
+    if (isSafari) {
       this.ghost();
     } else {
       this.ghostGradient();
@@ -277,6 +266,11 @@ const Canvas = () => {
     }
   };
 
+  // Function to detect mobile devices
+  function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+
   // Initialize Canvas instance
   useEffect(() => {
     canvas = new Canvas({
@@ -298,7 +292,7 @@ const Canvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} id="canvas" style={{ width: '100%', height: '100%', backgroundColor: 'black' }}></canvas>;
+  return <canvas ref={canvasRef} id="canvas" style={{ width: '100%', height: '100%', backgroundColor: 'black' }} onTouchStart={() => {}} onTouchMove={() => {}}></canvas>;
 };
 
 export default Canvas;
