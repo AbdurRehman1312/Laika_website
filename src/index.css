@@ -104,6 +104,9 @@ body{
 .filter_blur{
   filter: blur(150px);
 }
+.filter_blur2{
+  filter: blur(350px);
+}
 ::-webkit-scrollbar
 {
 	width: 3px;

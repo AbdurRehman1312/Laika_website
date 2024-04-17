@@ -15,24 +15,24 @@ const Hero = () => {
           <h1 className="text-white text-xl sm:text-lg md:text-xl font-extralight mt-2">
             MAKE (AND MUCH COOLER) <span className="text-primary font-extrabold">*</span>
           </h1>
-          <Button name="Discover Laïka" style="mt-8 px-6" />
+          <Button name="Discover Laïka" style="mt-8 px-6"  />
         </div>
       </div>
       {/* Replace the img tag with the Canvas component */}
-      <div className="animation_hero flex justify-center relative h-[400px] w-full"> {/* Add relative positioning */}
+      <div className="flex justify-center relative h-[450px] w-full"> {/* Add relative positioning */}
         <Canvas
           count={50}
           speed={0.1}
           radius={13}
           width={window.innerWidth}
           height={window.innerHeight}
-          size={15}
+          size={5}
           color="rgba(10, 130, 150, 0.8)"
           maxDistance={120}
           background={["0, 0, 0", "0, 0, 0"]}
-          className="absolute inset-0" 
+          className="absolute inset-0 rounded-[100px] " 
         />
-        <img src={images.logo} alt="" className="w-[5%] z-10 absolute left-[50%] top-[50%]" />
+        <img src={images.logo} alt="" className="lg:w-[8%] xl:w-[12%] md:w-[15%] w-[30%]  z-10 absolute top-[50%]" />
       </div>
     </section>
   );

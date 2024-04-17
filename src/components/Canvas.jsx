@@ -56,7 +56,7 @@ const Canvas = () => {
     this.options.size = this.options.size || 7;
     this.size = 1 + Math.random() * this.options.size;
     this.targetSize = this.options.targetSize || this.options.size;
-    this.orbit = this.options.radius * 0.2 + (this.options.radius * 0.8 * Math.random());
+    this.orbit = this.options.radius * 0.2 + (this.options.radius * 0.7 * Math.random());
   }
 
   Particle.prototype.update = function (target, index) {
