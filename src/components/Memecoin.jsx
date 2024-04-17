@@ -13,7 +13,7 @@ const Memecoin = () => {
                         <div className="flex items-center justify-center mt-[1%] xl:mt-[1%] lg:mt-[6%]">
                             <h1 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center lg:leading-[65px] md:leading-[50px] xl:leading-[82px] w-[70%]">
                                 Unleash the full potential of{" "}
-                                <span className="text-gradient">memecoins</span>
+                                <span className="text-gradient font-extrabold">memecoins</span>
                             </h1>
                         </div>
                     </div>

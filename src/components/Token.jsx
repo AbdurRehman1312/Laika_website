@@ -61,7 +61,7 @@ const Token = () => {
       </Link>
       <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center h-[70vh] sm:h-[60vh] lg:h-[50vh]" ref={sectionRef}>
         <h1 className="text-white font-semibold text-4xl sm:text-5xl lg:text-6xl">
-          Discover <span className="text-gradient">$LAIKA</span> Token
+          Discover <span className="text-gradient font-extrabold">$LAIKA</span> Token
         </h1>
         <p className="text-dimGrey text-center w-full sm:w-[80%] lg:w-[65%]">
           Designed to optimize and enhance the Dogecoin ecosystem, $LAIKA is at

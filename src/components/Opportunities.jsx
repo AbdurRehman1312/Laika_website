@@ -59,10 +59,10 @@ const Opportunities = () => {
       <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>
       <div className="flex flex-col justify-center items-center text-center h-[50vh] sm:h-[40vh]">
         <h1 className="text-white text-5xl sm:text-4xl md:text-5xl">
-          Turning <span className="text-gradient_sec font-bold">Doge</span>{" "}
+          Turning <span className="text-gradient_sec font-extrabold">Doge</span>{" "}
           obstacles <br />
           into opportunities with{" "}
-          <span className="text-gradient font-bold">Laïka</span>
+          <span className="text-gradient font-extrabold">Laïka</span>
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-12 lg:gap-6 mt-3" ref={sectionRef}>
@@ -95,7 +95,7 @@ const Opportunities = () => {
     <div className="flex flex-col justify-center items-center">
       <h1 className="text-white m-auto text-4xl md:text-4xl lg:text-7xl font-semibold text-center lg:leading-[70px]">
         Make the Dogechain{" "}
-        <span className="text-gradient">universal</span>
+        <span className="text-gradient font-extrabold">universal</span>
       </h1>
     </div>
     <div className="flex justify-center items-center md:order-first lg:order-last">
