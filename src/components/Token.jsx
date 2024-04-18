@@ -70,7 +70,7 @@ const Token = () => {
       <Link className="text-primary hover:opacity-65">
         {">"} $LAIKA Token
       </Link>
-      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center h-[70vh] sm:h-[60vh] lg:h-[50vh]" ref={sectionRef}>
+      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center h-[70vh] sm:h-[60vh] lg:h-[50vh] overflow-hidden" ref={sectionRef}>
         <h1 className="text-white font-semibold text-4xl sm:text-5xl lg:text-6xl">
           Discover <span className="text-gradient font-extrabold">$LAIKA</span> Token
         </h1>
