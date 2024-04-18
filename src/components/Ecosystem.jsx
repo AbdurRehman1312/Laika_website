@@ -56,10 +56,10 @@ const Ecosystem = () => {
   }, [intersection]); // Add intersection to the dependency array
   return (
     <>
-      <section className="my-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 md:gap-0">
+      <section className="my-6 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-0">
           <div className="flex flex-col justify-evenly gap-4 mx-4" ref={sectionRef}>
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold lg:leading-[70px]">
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold lg:leading-[60px]">
               Built for developers and meme enjoyers
             </h1>
             <p className="text-dimGrey text-lg md:text-base lg:text-lg xl:text-xl">

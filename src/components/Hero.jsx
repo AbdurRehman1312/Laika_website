@@ -19,20 +19,18 @@ const Hero = () => {
         </div>
       </div>
       {/* Replace the img tag with the Canvas component */}
-      <div className="flex justify-center relative h-[500px] w-full"> {/* Add relative positioning */}
+      <div className="aniamtion_hero flex justify-center relative h-[350px] w-full"> {/* Add relative positioning */}
         <Canvas
           count={50}
           speed={0.1}
           radius={13}
-          width={window.innerWidth}
-          height={window.innerHeight}
           size={5}
           color="rgba(10, 130, 150, 0.8)"
           maxDistance={120}
           background={["0, 0, 0", "0, 0, 0"]}
           className="absolute inset-0 rounded-[100px] " 
         />
-        <img src={images.logo} alt="" className="lg:w-[8%] xl:w-[12%] md:w-[15%] w-[30%]  z-10 absolute top-[50%]" />
+        <img src={images.logo} alt="" className="lg:w-[8%] xl:w-[10%] md:w-[15%] w-[30%]  z-10 absolute top-[50%]" />
       </div>
     </section>
   );

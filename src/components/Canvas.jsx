@@ -8,7 +8,7 @@ const Canvas = () => {
     count: 70,
     speed: 0.1,
     radius: 13,
-    size: 15,
+    size: 20,
     color: '10, 130, 150',
     maxDistance: 120,
     background: ['0, 0, 0', '0, 0, 0']
@@ -85,6 +85,7 @@ const Canvas = () => {
     this.el = this.options.el;
     this.ctx = this.el.getContext('2d');
     this.dpr = window.devicePixelRatio || 1;
+    let prevTarget = new Vector(this.width / 2, this.height / 2); // Initialize prevTarget for smooth transition
 
     this.updateDimensions();
     window.addEventListener('resize', this.updateDimensions.bind(this), false);
@@ -97,6 +98,11 @@ const Canvas = () => {
 
     this.setupParticles();
     this.loop();
+
+    // Smooth transition logic
+    this.target.x += (prevTarget.x - this.target.x) * 0.05;
+    this.target.y += (prevTarget.y - this.target.y) * 0.05;
+    prevTarget = new Vector(this.target.x, this.target.y);
   };
 
   // Update dimensions of the canvas
@@ -107,15 +113,22 @@ const Canvas = () => {
     this.el.style.height = (typeof this.options.height === 'function' ? this.options.height() : this.options.height) + 'px';
   };
 
-  // Update the orb target on mouse move
-  Canvas.prototype.mouseMove = function (event) {
-    this.target = new Vector(event.clientX * this.dpr, event.clientY * this.dpr);
-  };
+ // Update the orb target on mouse move
+Canvas.prototype.mouseMove = function (event) {
+  const boundingRect = this.el.getBoundingClientRect();
+  const mouseX = event.clientX - boundingRect.left;
+  const mouseY = event.clientY - boundingRect.top;
 
-  // Reset target to center when mouse out
-  Canvas.prototype.resetTarget = function () {
-    this.target = new Vector(this.width / 2, this.height / 2);
-  };
+  if (mouseX >= 0 && mouseX <= this.width && mouseY >= 0 && mouseY <= this.height) {
+    this.target = new Vector(mouseX * this.dpr, mouseY * this.dpr);
+  }
+};
+
+// Reset target to center when mouse out
+Canvas.prototype.resetTarget = function () {
+  this.target = new Vector(this.width / 2, this.height / 2);
+};
+
 
   // Setup particles
   Canvas.prototype.setupParticles = function () {
@@ -292,7 +305,7 @@ const Canvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} id="canvas" style={{ width: '100%', height: '100%', backgroundColor: 'black' }} onTouchStart={() => {}} onTouchMove={() => {}}></canvas>;
+  return <canvas className='z-[-100]' ref={canvasRef} id="canvas" style={{ width: '100%', height: '100%', backgroundColor: 'black' }} onTouchStart={() => {}} onTouchMove={() => {}}></canvas>;
 };
 
 export default Canvas;

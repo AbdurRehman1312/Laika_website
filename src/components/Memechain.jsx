@@ -17,28 +17,23 @@ const Memechain = () => {
       gsap.to(textElements, {
         duration: 1,
         opacity: 1,
-        x: () => {
-          // Starting position for the animation
-          return 0;
-        },
+        scale: 1,
+        y: 0,
         ease: "power4.out",
         stagger: {
-          // Delay between each line animation
           amount: 0.3,
         },
       });
     };
+
     const fadeOut = () => {
       gsap.to(textElements, {
         duration: 1,
         opacity: 0,
-        x: () => {
-          // Starting position for the animation
-          return "100%";
-        },
+        y: "100%",
+        scale: 0.1,
         ease: "power4.out",
         stagger: {
-          // Delay between each line animation
           amount: 0.3,
         },
       });
@@ -49,10 +44,28 @@ const Memechain = () => {
     } else {
       fadeOut();
     }
-  }, [intersection]); // Add intersection to the dependency array
+  }, [intersection]);
+
+  useEffect(() => {
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      gsap.to(".pop-up", {
+        duration: 0.5,
+        scale: 1,
+        opacity: 1,
+        ease: "elastic.out(4.7)",
+      });
+    } else {
+      gsap.to(".pop-up", {
+        duration: 0.5,
+        scale: 0,
+        opacity: 0,
+        ease: "elastic.in(4.7)",
+      });
+    }
+  }, [intersection]);
   return (
     <>
-      <section className="my-16">
+      <section className="my-20">
         <div className="flex flex-col gap-10 lg:gap-14 items-center " ref={sectionRef}>
           <h1 className="text-white m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin text-center">
             REAL

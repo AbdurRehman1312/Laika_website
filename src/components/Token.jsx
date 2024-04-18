@@ -11,7 +11,6 @@ const Token = () => {
     rootMargin: "0px",
     threshold: 0.5, // Adjust the threshold value as needed
   });
-  
 
   useEffect(() => {
     const textElements = Array.from(sectionRef.current.children);
@@ -20,28 +19,23 @@ const Token = () => {
       gsap.to(textElements, {
         duration: 1,
         opacity: 1,
-        x: () => {
-          // Starting position for the animation
-          return 0;
-        },
+        scale: 1,
+        y: 0,
         ease: "power4.out",
         stagger: {
-          // Delay between each line animation
           amount: 0.3,
         },
       });
     };
+
     const fadeOut = () => {
       gsap.to(textElements, {
         duration: 1,
         opacity: 0,
-        x: () => {
-          // Starting position for the animation
-          return "-100%";
-        },
+        y: "100%",
+        scale: 0.1,
         ease: "power4.out",
         stagger: {
-          // Delay between each line animation
           amount: 0.3,
         },
       });
@@ -49,11 +43,28 @@ const Token = () => {
 
     if (intersection && intersection.intersectionRatio >= 0.5) {
       fadeIn();
-    }
-    else{
+    } else {
       fadeOut();
     }
-  }, [intersection]); // Add intersection to the dependency array
+  }, [intersection]);
+
+  useEffect(() => {
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      gsap.to(".pop-up", {
+        duration: 0.5,
+        scale: 1,
+        opacity: 1,
+        ease: "elastic.out(4.7)",
+      });
+    } else {
+      gsap.to(".pop-up", {
+        duration: 0.5,
+        scale: 0,
+        opacity: 0,
+        ease: "elastic.in(4.7)",
+      });
+    }
+  }, [intersection]);
   return (
     <section id="laikatoken" className="my-8 sm:my-2 lg:my-4">
       <Link className="text-primary hover:opacity-65">

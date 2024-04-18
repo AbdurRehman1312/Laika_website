@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as images from "../assets";
 import Button from "./Button";
 import { NavLink, useLocation } from "react-router-dom";
@@ -29,7 +29,24 @@ const navLinks = [
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.1) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Check if the current route is the airdrop route
   const isAirdropRoute = location.pathname === "/airdrop";
@@ -37,7 +54,7 @@ const Navbar = () => {
   return (
     <>
       {!isAirdropRoute && (
-        <nav className="hidden lg:flex bg-black flex-col md:flex-row justify-center items-center py-3">
+      <nav className={`hidden lg:flex bg-black w-full flex-col md:flex-row justify-center items-center trans py-3 ${isFixed ? 'fixed top-0 w-full z-[40]' : ''}`}>
           <h2 className="text-white text-center md:text-left">
             Stay informed about{" "}
             <span className="text-gradient font-semibold">$LAIKA</span>
@@ -48,7 +65,7 @@ const Navbar = () => {
         </nav>
       )}
 
-      <nav className="w-full flex py-6 justify-between items-center navbar">
+      <nav className={`w-full flex py-6 justify-between items-center navbar`}>
         <img src={images.logo} alt="Hoobank" className="w-[64px] h-[64px]" />
         <div className="flex-1 justify-center items-center hidden lg:flex">
           <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
@@ -56,8 +73,7 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-normal cursor-pointer text-[16px] text-white navlink ${nav.id === 'bridge' ? 'coming-soon' : ''
-                  }`}
+                className={`font-normal cursor-pointer text-[16px] text-white navlink ${nav.id === 'bridge' ? 'coming-soon' : ''}`}
               >
                 {nav.id === 'bridge' && <p className="text-gradient text-[55%]">{nav.desc}</p>}
                 <NavLink to={nav.id} className={nav.id === 'bridge' ? 'disabled-link font-medium tracking-wide' : ''}>
@@ -65,13 +81,11 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
-
           </ul>
         </div>
         <Button name="Whitepaper" style="px-6" />
 
         {/* For mobile screen */}
-
         <div className="lg:hidden flex justify-end items-center">
           <img
             src={toggle ? images.close : images.menu}
