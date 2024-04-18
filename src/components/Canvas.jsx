@@ -305,7 +305,7 @@ Canvas.prototype.resetTarget = function () {
     };
   }, []);
 
-  return <canvas className='z-[-100] rounded-[30%]' ref={canvasRef} id="canvas" style={{ width: '100%', height: '100%', backgroundColor: 'black', boxShadow: "0 0 10px 2px red" }} onTouchStart={() => {}} onTouchMove={() => {}}></canvas>;
+  return <canvas className='z-[-100] rounded-[30%]' ref={canvasRef} id="canvas" style={{ width: '100%', height: '100%', backgroundColor: 'black' }} onTouchStart={() => {}} onTouchMove={() => {}}></canvas>;
 };
 
 export default Canvas;
