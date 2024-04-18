@@ -30,7 +30,7 @@ const Hero = () => {
           background={["0, 0, 0", "0, 0, 0"]}
           className="absolute inset-0 rounded-[100px] " 
         />
-        <img src={images.logo} alt="" className="lg:w-[8%] xl:w-[10%] md:w-[15%] w-[30%]  z-10 absolute top-[50%]" />
+        <img src={images.logo} alt="" className="lg:w-[8%] xl:w-[9%] md:w-[15%] w-[30%]  z-10 absolute top-[50%] lg:top-[70%] xl:top-[65%]" />
       </div>
     </section>
   );

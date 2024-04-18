@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <>
       {!isAirdropRoute && (
-      <nav className={`hidden lg:flex bg-black w-full flex-col md:flex-row justify-center items-center trans py-3 ${isFixed ? 'fixed top-0 w-full z-[40]' : ''}`}>
+      <nav className={`hidden lg:flex bg-black w-full  justify-center items-center trans py-3 ${isFixed ? 'fixed top-0 w-full z-[40] left-0' : ''}`}>
           <h2 className="text-white text-center md:text-left">
             Stay informed about{" "}
             <span className="text-gradient font-semibold">$LAIKA</span>
