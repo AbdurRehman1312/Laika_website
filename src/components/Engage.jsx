@@ -2,55 +2,66 @@ import React, {useRef, useEffect} from 'react'
 import gsap from "gsap";
 import { useIntersection } from "react-use";
 const Engage = () => {
-    const sectionRef = useRef(null);
-    const intersection = useIntersection(sectionRef, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // Adjust the threshold value as needed
-    });
-    
-  
-    useEffect(() => {
-      const textElements = Array.from(sectionRef.current.children);
-  
-      const fadeIn = () => {
-        gsap.to(textElements, {
-          duration: 1,
-          opacity: 1,
-          x: () => {
-            // Starting position for the animation
-            return 0;
-          },
-          ease: "power4.out",
-          stagger: {
-            // Delay between each line animation
-            amount: 0.3,
-          },
-        });
-      };
-      const fadeOut = () => {
-        gsap.to(textElements, {
-          duration: 1,
-          opacity: 0,
-          x: () => {
-            // Starting position for the animation
-            return "-100%";
-          },
-          ease: "power4.out",
-          stagger: {
-            // Delay between each line animation
-            amount: 0.3,
-          },
-        });
-      };
-  
-      if (intersection && intersection.intersectionRatio >= 0.5) {
-        fadeIn();
-      }
-      else{
-        fadeOut();
-      }
-    }, [intersection]); // Add intersection to the dependency array
+  const sectionRef = useRef(null);
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust the threshold value as needed
+  });
+
+  useEffect(() => {
+    const textElements = Array.from(sectionRef.current.children);
+
+    const fadeIn = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        ease: "power4.out",
+        stagger: {
+          amount: 0.3,
+        },
+      });
+    };
+
+    const fadeOut = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 0,
+        y: "100%",
+        scale: 0.1,
+        ease: "power4.out",
+        stagger: {
+          amount: 0.3,
+        },
+      });
+    };
+
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      fadeIn();
+    } else {
+      fadeOut();
+    }
+  }, [intersection]);
+
+  useEffect(() => {
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      gsap.to(".pop-up", {
+        duration: 0.5,
+        scale: 1,
+        opacity: 1,
+        ease: "elastic.out(4.7)",
+      });
+    } else {
+      gsap.to(".pop-up", {
+        duration: 0.5,
+        scale: 0,
+        opacity: 0,
+        ease: "elastic.in(4.7)",
+      });
+    }
+  }, [intersection]);
     return (
         <>
             <section className='lg:my-20 md:my-20 mt-96 pt-20 mb-[20px]'>
