@@ -53,7 +53,7 @@ const Opportunities = () => {
       <div className="flex flex-col justify-center items-center text-center h-[50vh] sm:h-[40vh]">
         <h1 className="text-white text-5xl sm:text-4xl md:text-5xl">
           Turning <span className="text-gradient_sec font-extrabold">Doge</span>{" "}
-          obstacles <br />
+          limits <br />
           into opportunities with{" "}
           <span className="text-gradient font-extrabold">Laïka</span>
         </h1>
@@ -61,19 +61,19 @@ const Opportunities = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-12 lg:gap-6 mt-3 overflow-hidden" ref={sectionRef}>
         <OpportunitiesCard
           img="scalibilty"
-          name="Scalability"
-          desc="The DRC20 protocol has surged DOGE's transaction activity, underscoring the network's scalability challenges and the pressing need for efficient transaction processing solutions."
+          name="Scalability, Programmability"
+          desc="The new protocols on Doge have exposed limitations in transaction processing capacity and a notable lack of asset programmability"
         />
         <OpportunitiesCard
           img="setting"
-          name="Programmability"
-          desc="DRC20's growth on DOGE is hampered by its technical challenges, requiring simpler development solutions to unleash its full potential."
+          name="Users Adoption"
+          desc="The absence of dApps on the Dogecoin network, resulting from its original design, leads to minimal on-chain activity and limited user engagement"
         />
         <OpportunitiesCard
           img="thumb"
           style="h-[50px] w-[35px] rotate-[180deg] "
           name="Infinite meme potential"
-          desc="Laïka is your gateway to endless meme possibilities, fostering a sustainable memecoin ecosystem."
+          desc="Laïka leverages Dogecoin to become your gateway to endless meme possibilities, nurturing a sustainable memecoin ecosystem within the Dogecoin network."
         />
       </div>
       <div className="w-full rounded-[20px] bg-dark-gradient sm:h-[300px] h-[700px] mt-16">
@@ -86,9 +86,11 @@ const Opportunities = () => {
       />
     </div>
     <div className="flex flex-col justify-center items-center">
-      <h1 className="text-white m-auto text-4xl md:text-4xl lg:text-7xl font-semibold text-center lg:leading-[70px]">
-        Make the Dogechain{" "}
-        <span className="text-gradient font-extrabold">universal</span>
+      <h1 className="text-white m-auto text-4xl md:text-4xl lg:text-5xl font-semibold text-center lg:leading-[60px]">
+      Make the  
+Doge network
+{" "}
+        <span className="text-gradient font-extrabold">competitive</span>
       </h1>
     </div>
     <div className="flex justify-center items-center md:order-first lg:order-last">

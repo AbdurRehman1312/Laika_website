@@ -13,12 +13,13 @@ const navLinks = [
     title: "$LAIKA Token",
   },
   {
-    id: "developers",
-    title: "Developers",
+    id: "sputnik",
+    title: "Sputnik I",
   },
   {
-    id: "airdrop",
-    title: "Airdrop",
+    desc: "coming soon",
+    id: "docs",
+    title: "Docs",
   },
   {
     desc: "coming soon",
@@ -73,17 +74,17 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-normal cursor-pointer text-[16px] text-white navlink ${nav.id === 'bridge' ? 'coming-soon' : ''}`}
+                className={`font-normal cursor-pointer text-[16px] text-white navlink ${(nav.id === 'bridge'|| nav.id ==='docs') ? 'coming-soon' : ''}`}
               >
-                {nav.id === 'bridge' && <p className="text-gradient text-[55%]">{nav.desc}</p>}
-                <NavLink to={nav.id} className={nav.id === 'bridge' ? 'disabled-link font-medium tracking-wide' : ''}>
+                {(nav.id === 'bridge'|| nav.id ==='docs') && <p className="text-gradient text-[55%]">{nav.desc}</p>}
+                <NavLink to={nav.id} className={(nav.id === 'bridge' || nav.id ==='docs') ? 'disabled-link font-medium tracking-wide' : ''}>
                   {nav.title}
                 </NavLink>
               </li>
             ))}
           </ul>
         </div>
-        <Button name="Whitepaper" style="px-6" />
+        <Button name="Whitepaper" style="px-6 hidden lg:flex" />
 
         {/* For mobile screen */}
         <div className="lg:hidden flex justify-end items-center">
@@ -107,6 +108,7 @@ const Navbar = () => {
                     <NavLink to={nav.id}>{nav.title}</NavLink>
                   </li>
                 ))}
+                <li><Button name="Whitepaper" style="px-6 mt-3" /> </li>
               </ul>
             </div>
           </div>

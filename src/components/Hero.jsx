@@ -12,8 +12,8 @@ const Hero = () => {
             MAKE <span className="text-gradient_sec font-extrabold">DOGE</span>{" "}
             ASSETS SMARTER
           </h1>
-          <h1 className="text-white text-xl sm:text-lg md:text-xl font-extralight mt-2">
-            MAKE (AND MUCH COOLER) <span className="text-primary font-extrabold">*</span>
+          <h1 className="text-white text-xl sm:text-lg md:text-xl font-extralight mt-3 tracking-wider">
+           (AND MUCH COOLER) <span className="text-primary font-extrabold">*</span>
           </h1>
           <Button name="Discover Laïka" style="mt-8 px-6"  />
         </div>

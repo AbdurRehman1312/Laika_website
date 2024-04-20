@@ -1,17 +1,16 @@
 import React, {useRef, useEffect} from "react";
 import * as images from  "../assets"
 import ButtonImage from "./ButtonImage";
+import { Link } from "react-router-dom";
 const Sputnik = () => {
 
   return (
     <>
       <section className="my-10">
-        <div className="flex justify-center">
-          <button className="text-primary border border-gray-800 py-3 px-6 rounded-[9px]">
-            Sputnik 1 Program
-          </button>
+        <div className="flex justify-start mt-20 ml-2">
+        <Link className="text-primary hover:opacity-65">{">"} Sputnik 1 Program</Link>
         </div>
-        <div className="my-20">
+        <div className="my-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-28">
             <div className="flex flex-col justify-evenly gap-6  mx-3">
               <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:leading-[70px] ">
@@ -20,14 +19,10 @@ const Sputnik = () => {
                 on Wufiswap
               </h1>
               <p className="text-dimGrey text-lg md:text-base lg:text-lg xl:text-xl">
-                Join the Sputnik I campaign on Wufiswap and turn your DRC20
-                assets into valuable Meme Points. Engage in various activities
-                like swapping, providing liquidity, staking, referring, and
-                participating in the Zealy campaign to earn points. These points
-                are your ticket to a share of the $LAIKA airdrop.
+              Join the Sputnik I campaign on Wufiswap and turn your DRC20 assets into valuable points. Engage in various activities like swapping, providing liquidity, staking and referring. 
               </p>
               <ButtonImage
-                name="Join the ecosystem"
+                name="Go to Wufiswap"
                 style="w-[57%] md:w-[48%] lg:w-[55%] xl:w-[41%] gap-1"
                 img="dog2"
               />
