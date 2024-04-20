@@ -63,11 +63,7 @@ const Ecosystem = () => {
               Built for developers and meme enjoyers
             </h1>
             <p className="text-dimGrey text-lg md:text-base lg:text-lg xl:text-xl">
-              Laika is offering developers a robust and dynamic infrastructure
-              to build, innovate, and scale their projects on the DogeChain.
-              Whether you're developing the next groundbreaking dApp or
-              integrating DOGE into your existing projects, Laika provides the
-              speed, scalability, and security you need.
+            Laika is offering developers a robust and dynamic infrastructure to build, innovate, and scale their projects on the Dogecoin network. Whether you're developing the next groundbreaking dApp or integrating DOGE into your existing projects, Laika provides the speed, scalability, and security you need.
             </p>
             <Button
               name="Join the ecosystem"

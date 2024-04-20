@@ -75,14 +75,7 @@ const Token = () => {
           Discover <span className="text-gradient font-extrabold">$LAIKA</span> Token
         </h1>
         <p className="text-dimGrey text-center w-full sm:w-[80%] lg:w-[65%]">
-          Designed to optimize and enhance the Dogecoin ecosystem, $LAIKA is at
-          the heart of our mission to address and resolve the inherent
-          challenges faced by DOGE. $LAIKA not only rewards validators, securing
-          the network, but also empowers holders with a stake in the future
-          development and governance of the platform through DAO. While Doge
-          remains the primary token for transaction fees, $LAIKA will also be
-          utilized to pay fees in the future, further integrating its role
-          within the Laïka ecosystem.
+        $LAIKA is at the heart of our mission to address and resolve the inherent challenges faced by DOGE. $LAIKA not only rewards validators, securing the network, but also empowers holders with a stake in the future development and governance of the platform through DAO. While Dogecoin remains the primary token for transaction fees, $LAIKA will increasingly be used for this purpose, reinforcing its integral function within the ecosystem.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-16 lg:gap-20">
@@ -91,12 +84,10 @@ const Token = () => {
             <div className="w-full flex flex-col gap-4">
               <img src={images.heart} alt="" className="w-[45px] h-[45px] md:mb-6" />
               <h2 className="text-white text-lg md:text-xl font-semibold">
-                Engage with Laika to earn meme points
+              Engage with Laika to earn Laika  points
               </h2>
               <p className="text-dimGrey text-justify">
-                Earn meme points by actively engaging with Laïka, transforming
-                your contributions into valuable rewards within the Dogecoin
-                ecosystem.
+              Earn points by actively engaging with Laïka, transforming your contributions into valuable rewards within the Dogecoin ecosystem.
               </p>
             </div>
             <div className="flex justify-end w-full mt-8 md:mt-16">
@@ -119,10 +110,7 @@ const Token = () => {
               Explore $LAIKA Docs
             </h2>
             <p className="text-dimGrey text-justify">
-              Explore our Laika documentation for an overview of our Layer 2
-              solution and $LAIKA token information, enhancing Dogecoin's
-              efficiency and scalability. Dive into the details that shape our
-              ecosystem's future.{" "}
+            Explore our Laika documentation for an overview of our Layer 2 solution and $LAIKA token informations, enhancing Dogecoin's efficiency and scalability. Dive into the details that shape our ecosystem's future.
             </p>
             <Button name="See Docs" style="w-[35%] md:w-[35%] lg:w-[15%]" />
           </div>

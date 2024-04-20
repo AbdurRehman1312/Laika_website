@@ -90,25 +90,26 @@ const Features = () => {
             <div className="flex flex-col gap-6">
               <FeaturesCard
                 img="check"
-                name="Native DOGE assets"
-                desc="Harness the full potential of Dogecoin with Laïka's DOGE protocol, designed for enhanced functionality and integration."
+                name="Native Doge assets & AA"
+                desc="Enabling seamless integration and use of Dogecoin protocols and assets through full interoperability and account abstraction."
               />
               <FeaturesCard
-                img="rench"
-                name="Built for developers"
-                desc="Laika offers a developer-centric environment, providing the tools and support needed to innovate and create seamlessly."
+                img="shield"
+                name="EVM Compatible"
+                desc="Providing an easy to build environnement to developers to easily build on Dogecoin while providing users with familiar tools for enhanced usability"
               />
             </div>
             <div className="flex flex-col gap-6">
-              <FeaturesCard
-                img="shield"
-                name="EVM Compatible & AA"
-                desc="Enjoy broad compatibility and simplified account management with Laïka's EVM compatibility and innovative account abstraction feature."
+             
+               <FeaturesCard
+                img="rench"
+                name="Memecoin bridge"
+                desc="As a hub for memecoins, Laïka supports existing memecoins from other networks to enhance the memecoiners experience"
               />
               <FeaturesCard
                 img="trophy"
-                name="Low Fees, High Scalability"
-                desc="Experience the benefits of low transaction fees and high scalability, ensuring efficient and cost-effective operations on the Laïka Layer 2."
+                name="High Scalability & Low Fees"
+                desc="Enhancing scalability and lowering fees to ensure efficient and economical interactions on Laika"
               />
             </div>
           </div>

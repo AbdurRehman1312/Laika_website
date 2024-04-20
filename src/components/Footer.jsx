@@ -5,30 +5,30 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
     const quickLink = [
         {
-            id: "",
-            title: "LINK #1",
+            id: "/",
+            title: "Home",
+        },
+        {
+            id: "sputnik",
+            title: "Sputnik 1",
         },
         {
             id: "",
-            title: "LINK #2",
+            title: "Docs",
         },
         {
             id: "",
-            title: "LINK #3",
-        },
-        {
-            id: "",
-            title: "LINK #4",
+            title: "Bridge",
         },
     ];
     const community = [
         {
             id: "",
-            title: "LINK #1",
+            title: "Twitter",
         },
         {
             id: "",
-            title: "LINK #2",
+            title: "Discord",
         },
     ]
     return (
@@ -45,13 +45,13 @@ const Footer = () => {
             <div className='flex flex-col md:items-end'>
                 <h1 className='text-[1rem] text-white font-medium text-nowrap'>Quick Links</h1>
                 <div className='mt-4 md:mt-9'>
-                    <ul className="list-none">
+                    <ul className="list-none md:text-right">
                         {quickLink.map((nav) => (
                             <li
                                 key={nav.id}
                                 className="font-normal cursor-pointer text-[0.8rem]  mb-4 text-dimGrey text-nowrap"
                             >
-                                <a href={`#${nav.id}`}>{nav.title}</a>
+                                <NavLink to={nav.id}>{nav.title}</NavLink>
                             </li>
                         ))}
                     </ul>
@@ -60,13 +60,13 @@ const Footer = () => {
             <div className='flex flex-col md:items-end'>
                 <h1 className='text-[1rem] text-white font-medium'>Community</h1>
                 <div className='mt-4 md:mt-9'>
-                    <ul className="list-none">
+                    <ul className="list-none md:text-right">
                         {community.map((nav) => (
                             <li
                                 key={nav.title}
                                 className="font-normal cursor-pointer text-[0.8rem]  mb-4 text-dimGrey text-nowrap"
                             >
-                                <NavLink href={`#${nav.id}`}>{nav.title}</NavLink>
+                                <NavLink to={nav.id}>{nav.title}</NavLink>
                             </li>
                         ))}
                     </ul>

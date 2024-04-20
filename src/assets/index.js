@@ -22,3 +22,7 @@ export { default as unleash2 } from "./unleash2.gif";
 export { default as shiners } from "./shiners.gif";
 export { default as heart } from "./heart.gif";
 export { default as footerLogo } from "./footerLogo.png";
+export { default as lock } from "./lock.png";
+export { default as medium } from "./medium.png";
+export { default as discord } from "./discord.png";
+export { default as Zealy } from "./Zealy.png";
