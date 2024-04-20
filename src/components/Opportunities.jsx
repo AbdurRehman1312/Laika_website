@@ -47,24 +47,6 @@ const Opportunities = () => {
       fadeOut();
     }
   }, [intersection]);
-
-  useEffect(() => {
-    if (intersection && intersection.intersectionRatio >= 0.5) {
-      gsap.to(".pop-up", {
-        duration: 0.5,
-        scale: 1,
-        opacity: 1,
-        ease: "elastic.out(4.7)",
-      });
-    } else {
-      gsap.to(".pop-up", {
-        duration: 0.5,
-        scale: 0,
-        opacity: 0,
-        ease: "elastic.in(4.7)",
-      });
-    }
-  }, [intersection]);
   return (
     <section id="airdrop" className="my-28 lg:mt-[275px] xl:mt-[360px]">
       <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>

@@ -44,24 +44,6 @@ const Engage = () => {
       fadeOut();
     }
   }, [intersection]);
-
-  useEffect(() => {
-    if (intersection && intersection.intersectionRatio >= 0.5) {
-      gsap.to(".pop-up", {
-        duration: 0.5,
-        scale: 1,
-        opacity: 1,
-        ease: "elastic.out(4.7)",
-      });
-    } else {
-      gsap.to(".pop-up", {
-        duration: 0.5,
-        scale: 0,
-        opacity: 0,
-        ease: "elastic.in(4.7)",
-      });
-    }
-  }, [intersection]);
     return (
         <>
             <section className='lg:my-20 md:my-20 mt-96 pt-20 mb-[20px]'>
