@@ -2,6 +2,8 @@ export { default as logo } from "./logo.png";
 export { default as close } from "./close.svg";
 export { default as menu } from "./menu.svg";
 export { default as hero } from "./hero-animate.png";
+export { default as herogif } from "./herogif.gif";
+export { default as herovid } from "./herovid.mov";
 export { default as scalibilty } from "./scalability.gif";
 export { default as setting } from "./setting.gif";
 export { default as thumb } from "./thumb.gif";

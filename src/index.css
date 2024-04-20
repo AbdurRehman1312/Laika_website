@@ -44,7 +44,14 @@ body{
   background: linear-gradient(90deg, rgba(0,10,30,1) 37%, rgba(0,21,30,1) 56%, rgba(0,29,28,1) 100%) !important;
   box-shadow: 0 0px 10px 6px rgba(0, 111, 243, 0.5);
 }
+.video-container {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
 
+.video-container.show {
+  opacity: 1;
+}
 .navlink {
   transition: transform 0.3s ease, color 0.3s ease;
 }

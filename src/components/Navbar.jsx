@@ -50,7 +50,7 @@ const Navbar = () => {
   }, []);
 
   // Check if the current route is the airdrop route
-  const isAirdropRoute = location.pathname === "/airdrop";
+  const isAirdropRoute = location.pathname === "/sputnik";
 
   return (
     <>
@@ -58,7 +58,7 @@ const Navbar = () => {
       <nav className={`hidden lg:flex bg-black w-full  justify-center items-center trans py-3 ${isFixed ? 'fixed top-0 w-full z-[40] left-0' : ''}`}>
           <h2 className="text-white text-center md:text-left">
             Stay informed about{" "}
-            <span className="text-gradient font-semibold">$LAIKA</span>
+            <span className="text-gradient font-extrabold">$LAIKA</span>
           </h2>
           <button className="bg-transparent py-1 px-8 mt-3 md:mt-0 md:ml-4 text-white border border-white rounded-[5px] text-sm">
             Join Waitlist

@@ -1,9 +1,18 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
-import Canvas from "./Canvas"; // Import the Canvas component
 import * as images from "../assets";
 
 const Hero = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    // Set showVideo to true after a short delay to allow the transition effect to be visible
+    const timeout = setTimeout(() => {
+      setShowVideo(true);
+    }, 50); // Adjust the delay as needed
+
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <section id="home">
       <div className="flex justify-center items-center h-[70vh] sm:h-[40vh]">
@@ -13,25 +22,25 @@ const Hero = () => {
             ASSETS SMARTER
           </h1>
           <h1 className="text-white text-xl sm:text-lg md:text-xl font-extralight mt-3 tracking-wider">
-           (AND MUCH COOLER) <span className="text-primary font-extrabold">*</span>
+            (AND MUCH COOLER){" "}
+            <span className="text-primary font-extrabold">*</span>
           </h1>
-          <Button name="Discover Laïka" style="mt-8 px-6"  />
+          <Button name="Discover Laïka" style="mt-8 px-6" />
         </div>
       </div>
-      {/* Replace the img tag with the Canvas component */}
-      <div className="aniamtion_hero flex justify-center relative lg:h-[350px] h-[450px] w-full"> {/* Add relative positioning */}
-        <Canvas
-          count={50}
-          speed={0.1}
-          radius={13}
-          size={5}
-          color="rgba(10, 130, 150, 0.8)"
-          maxDistance={120}
-          background={["0, 0, 0", "0, 0, 0"]}
-          className="absolute inset-0 rounded-[100px] " 
+      <div className="flex justify-center w-full">
+      <div className={`video-container ${showVideo ? 'show' : ''}`}>
+        <video
+          src={images.herovid}
+          autoPlay
+          loop
+          muted
+          controls={false}
+          className="w-full mix-blend-screen"
+          style={{ maxWidth: "100%", height: "auto" }}
         />
-        <img src={images.logo} alt="" className="lg:w-[8%] xl:w-[9%] md:w-[15%] w-[30%]  z-10 absolute top-[50%] lg:top-[70%] xl:top-[65%]" />
       </div>
+    </div>
     </section>
   );
 };

@@ -67,14 +67,14 @@ const Features = () => {
         >
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
             Laïka is{" "}
-            <span className="text-gradient_sec font-extrabold">innovative</span>
+            <span className="text-gradient font-extrabold">innovative</span>
           </h1>
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
             Laïka is{" "}
-            <span className="text-gradient_sec font-extrabold">scalable</span>
+            <span className="text-gradient font-extrabold">scalable</span>
           </h1>
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
-            Laïka is <span className="text-gradient_sec font-extrabold">fast</span>
+            Laïka is <span className="text-gradient font-extrabold">fast</span>
           </h1>
           <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold flex items-center">
             Laïka is{" "}
