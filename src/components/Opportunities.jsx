@@ -50,8 +50,8 @@ const Opportunities = () => {
   return (
     <section id="airdrop" className="my-28">
       <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>
-      <div className="flex flex-col justify-center items-center text-center h-[50vh] sm:h-[40vh]">
-        <h1 className="text-white text-5xl sm:text-4xl md:text-5xl">
+      <div className="flex flex-col justify-center items-center text-center h-[33vh] sm:h-[40vh]">
+        <h1 className="text-white text-3xl  md:text-5xl">
           Turning <span className="text-gradient_sec font-extrabold">Doge</span>{" "}
           limits <br />
           into opportunities with{" "}
@@ -77,27 +77,27 @@ const Opportunities = () => {
         />
       </div>
       <div className="w-full rounded-[20px] bg-dark-gradient sm:h-[300px] h-[700px] mt-16">
-  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 h-full gap-7">
-    <div className="flex justify-center items-center md:order-last lg:order-first">
+  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 h-full  md:gap-7">
+    <div className="flex justify-center items-center  ">
       <img
         src={images.text1}
         alt=""
-        className="mix-blend-screen sm:w-[70%] sm:h-[50%] h-[100%] w-full"
+        className="mix-blend-screen xl:w-[70%] lg:w-[70%] sm:h-[50%] h-[70%] w-[80%]"
       />
     </div>
     <div className="flex flex-col justify-center items-center">
-      <h1 className="text-white m-auto text-4xl md:text-4xl lg:text-5xl font-semibold text-center lg:leading-[60px]">
+      <h1 className="text-white m-auto text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-center w-64 md:w-full lg:leading-[60px]">
       Make the  
 Doge network
 {" "}
         <span className="text-gradient font-extrabold">competitive</span>
       </h1>
     </div>
-    <div className="flex justify-center items-center md:order-first lg:order-last">
+    <div className="flex justify-center items-center  ">
       <img
         src={images.text2}
         alt=""
-        className="mix-blend-screen sm:w-[70%] sm:h-[50%] h-[100%] w-full"
+        className="mix-blend-screen xl:w-[70%] lg:w-[70%] sm:h-[50%] h-[70%] w-[80%]"
       />
     </div>
   </div>
