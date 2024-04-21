@@ -87,7 +87,7 @@ const Navbar = () => {
         <div className="flex-1 justify-center items-center hidden lg:flex">
           <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
           {isWaitListRoute && (
-          <div className="bg-blue-600 h-[480px] z-[-1] filter_blur rounded-[10px] w-[65%] absolute" />
+          <div className="bg-blue-600 h-[200px] z-[-1] filter_blur rounded-[10px] w-[85%] absolute" />
           )}
           <ul className="list-none flex justify-center items-end gap-14">
             {navLinks.map((nav) => (

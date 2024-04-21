@@ -28,3 +28,6 @@ export { default as lock } from "./lock.png";
 export { default as medium } from "./medium.png";
 export { default as discord } from "./discord.png";
 export { default as Zealy } from "./Zealy.png";
+export { default as digoicon } from "./digoicon.png";
+export { default as x } from "./x.png";
+export { default as sendarrow } from "./sendarrow.png";
