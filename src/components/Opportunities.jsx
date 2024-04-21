@@ -48,7 +48,7 @@ const Opportunities = () => {
     }
   }, [intersection]);
   return (
-    <section id="opportunities" className="my-28">
+    <section id="opportunities" className="md:my-28 mt-48 mb-[7rem] md:mb-0 md:mt-0">
       <Link className="text-primary hover:opacity-65">
         {">"} Solving the Dogechain problem
       </Link>
