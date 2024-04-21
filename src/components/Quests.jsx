@@ -476,7 +476,7 @@ const Quests = () => {
               Support Laïka Ecosystem
             </button>
           </div>
-          <div className="bg-dark-gradient md:h-[630px] lg:h-[480px] xl:h-[490px] h-[115vh] pt-10 md:pt-2 lg:pt-0 rounded-b-[20px]">
+          <div className="bg-dark-gradient md:h-[630px] lg:h-[480px] xl:h-[490px] h-[135vh] pt-10 md:pt-2 lg:pt-0 rounded-b-[20px]">
             {renderContent()}
             {/* Additional content */}
           </div>
