@@ -46,7 +46,7 @@ const Engage = () => {
   }, [intersection]);
     return (
         <>
-            <section className='lg:my-20 md:my-20 mt-96 pt-20 mb-[20px]'>
+            <section className='lg:my-20 md:mt-48 mt-[70vh]  pt-20 mb-[20vh]'>
                 <div className='flex flex-col items-center gap-6' ref={sectionRef}>
                     <h1 className='text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:leading-[70px] w-[55%] text-center'><span className='text-gradient font-extrabold'>Engage with</span> Laïka Ecosystem 
 & Earn   <span className='text-gradient_sec font-extrabold'>Points</span></h1>

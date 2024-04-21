@@ -59,7 +59,7 @@ const Ecosystem = () => {
       <section className="mb-6 mt-36">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-0">
           <div className="flex flex-col justify-evenly gap-4 mx-4" ref={sectionRef}>
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold lg:leading-[60px]">
+            <h1 className="text-white text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-semibold lg:leading-[60px]">
               Built for developers and meme enjoyers
             </h1>
             <p className="text-dimGrey text-lg md:text-base lg:text-lg xl:text-xl">
@@ -67,7 +67,7 @@ const Ecosystem = () => {
             </p>
             <Button
               name="Join the ecosystem"
-              style="w-[57%] md:w-[56%] lg:w-[35%] xl:w-[27%]"
+              style="w-[65%] md:w-[56%] lg:w-[39%] xl:w-[27%]"
             />
           </div>
           <div className="flex justify-end">

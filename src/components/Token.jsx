@@ -53,7 +53,7 @@ const Token = () => {
       <Link className="text-primary hover:opacity-65">
         {">"} $LAIKA Token
       </Link>
-      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center h-[70vh] sm:h-[60vh] lg:h-[50vh] overflow-hidden" ref={sectionRef}>
+      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center my-7 md:my-2 h-[70vh] sm:h-[60vh] lg:h-[50vh] overflow-hidden" ref={sectionRef}>
         <h1 className="text-white font-semibold text-4xl sm:text-5xl lg:text-6xl">
           Discover <span className="text-gradient font-extrabold">$LAIKA</span> Token
         </h1>
@@ -63,7 +63,7 @@ const Token = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-16 lg:gap-20">
         <div className="col-span-1 md:col-span-11 lg:col-span-5">
-          <div className="flex flex-col justify-center bg-dark-gradient h-auto md:h-[370px] rounded-[20px] p-5">
+          <div className="flex flex-col justify-center bg-dark-gradient h-auto md:h-[370px] lg:h-[410px] rounded-[20px] p-5">
             <div className="w-full flex flex-col gap-4">
               <img src={images.heart} alt="" className="w-[45px] h-[45px] md:mb-6" />
               <h2 className="text-white text-lg md:text-xl font-semibold">
@@ -95,7 +95,7 @@ const Token = () => {
             <p className="text-dimGrey text-justify">
             Explore our Laika documentation for an overview of our Layer 2 solution and $LAIKA token informations, enhancing Dogecoin's efficiency and scalability. Dive into the details that shape our ecosystem's future.
             </p>
-            <Button name="See Docs" style="w-[35%] md:w-[35%] lg:w-[15%]" />
+            <Button name="See Docs" style="w-[35%] md:w-[35%] lg:w-[20%]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
             <div className="flex flex-col gap-4">

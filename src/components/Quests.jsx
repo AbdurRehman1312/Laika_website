@@ -62,7 +62,7 @@ const Quests = () => {
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg mb-10">
                 To discover more task, consult the links below
               </p>
-              <div className="flex items-center gap-7">
+              <div className="flex flex-col md:flex-row items-center gap-7">
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-[80px] h-[20px]">
                     <img src={images.medium} alt="" className="w-full h-[100%]" />
@@ -424,7 +424,7 @@ const Quests = () => {
     <>
       <section className="my-8 md:my-32">
         <div className="w-full rounded-[20px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-3 lg:gap-0 xl:gap-0 bg-dark-gradient2 xl:h-[60px] lg:h-[70px] md:h-[90px] text-center items-center rounded-t-[20px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-3 lg:gap-0 xl:gap-0 bg-dark-gradient2 py-10 md:py-5 lg:py-0 h-[40vh] xl:h-[60px] lg:h-[70px] md:h-[90px] text-center items-center rounded-t-[20px]">
             <button
               className={`text-white  ${
                 activeTab === "tweetToEarn"
@@ -466,7 +466,7 @@ const Quests = () => {
               🦴🦴🦴
             </button>
             <button
-              className={`text-white  ${
+              className={`text-white   ${
                 activeTab === "supportLaika"
                   ? "opacity-100 font-semibold"
                   : "opacity-25 font-extralight"
@@ -476,7 +476,7 @@ const Quests = () => {
               Support Laïka Ecosystem
             </button>
           </div>
-          <div className="bg-dark-gradient md:h-[580px] lg:h-[470px] xl:h-[470px] h-[155vh] pt-10 md:pt-5 lg:pt-0 rounded-b-[20px]">
+          <div className="bg-dark-gradient md:h-[610px] lg:h-[480px] xl:h-[490px] h-[185vh] pt-10 md:pt-2 lg:pt-0 rounded-b-[20px]">
             {renderContent()}
             {/* Additional content */}
           </div>
