@@ -48,13 +48,13 @@ const Engage = () => {
     <>
       <section className="    pt-20 mb-[17vh]">
         <div className="flex flex-col items-center gap-6" ref={sectionRef}>
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl text-center font-semibold lg:leading-[70px] w-[55%]">
+          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl text-center font-semibold lg:leading-[70px] lg:w-[55%] md:w-[80%]">
             <span className="text-gradient font-extrabold">Engage with</span>{" "}
             Laïka Ecosystem
             <br /> & Earn{" "}
             <span className="text-gradient_sec font-extrabold">Points</span>
           </h1>
-          <p className="text-dimGrey text-lg md:text-base text-center lg:text-lg xl:text-base w-[70%]">
+          <p className="text-dimGrey text-lg md:text-base text-center lg:text-lg xl:text-base lg:w-[70%] md:w-[90%]">
             {" "}
             Your active engagement through various interactions and
             contributions is rewarded with some points. Whether you're trading,

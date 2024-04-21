@@ -31,7 +31,7 @@ const Waitlist = () => {
             <img src={images.discord} alt="" className="w-[20px] h-[20px]" />
             <img src={images.digoicon} alt="" className="w-[20px] h-[20px]" />
           </div>
-          <div className="bg-[#191919] lg:h-[180px] xl:h-[180px] h-[180px] w-[90%] lg:w-[60%] xl:w-[60%] mx-auto rounded-[20px] my-14 p-8 border border-white border-opacity-30 flex flex-col justify-between">
+          <div className="bg-[#191919] w-[90%] lg:w-[60%] xl:w-[60%] mx-auto rounded-[20px] my-14 p-8 border border-white border-opacity-30 flex flex-col justify-between gap-6">
             <h2 className="text-white font-bold text-xl">Join the waitlist</h2>
             <p className="text-dimGrey text-lg">
               Sign up to stay informed about Laïka.
