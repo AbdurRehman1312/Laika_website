@@ -47,7 +47,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex justify-center w-full mt-20 md:mt-0 h-[23vh] md:h-[100%]">
-        <div className={`video-container p-0 m-0 ${showVideo ? "show" : ""} `}>
+        <div className={`video-container ${showVideo ? "show" : ""} `}>
           <video
             src={images.herovid}
             autoPlay

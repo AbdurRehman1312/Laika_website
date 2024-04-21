@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import OpportunitiesCard from "./OpportunitiesCard";
 import * as images from "../assets";
 import gsap from "gsap";
@@ -49,7 +49,9 @@ const Opportunities = () => {
   }, [intersection]);
   return (
     <section id="opportunities" className="my-28">
-      <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>
+      <Link className="text-primary hover:opacity-65">
+        {">"} Solving the Dogechain problem
+      </Link>
       <div className="flex flex-col justify-center items-center text-center h-[33vh] sm:h-[40vh]">
         <h1 className="text-white text-3xl  md:text-5xl">
           Turning <span className="text-gradient_sec font-extrabold">Doge</span>{" "}
@@ -58,7 +60,10 @@ const Opportunities = () => {
           <span className="text-gradient font-extrabold">Laïka</span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-12 lg:gap-6 mt-3 overflow-hidden" ref={sectionRef}>
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-12 lg:gap-6 mt-3 overflow-hidden"
+        ref={sectionRef}
+      >
         <OpportunitiesCard
           img="scalibilty"
           name="Scalability, Programmability"
@@ -76,33 +81,30 @@ const Opportunities = () => {
           desc="Laïka leverages Dogecoin to become your gateway to endless meme possibilities, nurturing a sustainable memecoin ecosystem within the Dogecoin network."
         />
       </div>
-      <div className="w-full rounded-[20px] bg-dark-gradient sm:h-[300px] h-[700px] mt-16">
-  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 h-full  md:gap-7">
-    <div className="flex justify-center items-center  ">
-      <img
-        src={images.text1}
-        alt=""
-        className="mix-blend-screen xl:w-[70%] lg:w-[70%] sm:h-[50%] h-[70%] w-[80%]"
-      />
-    </div>
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="text-white m-auto text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-center w-64 md:w-full lg:leading-[60px]">
-      Make the  
-Doge network
-{" "}
-        <span className="text-gradient font-extrabold">competitive</span>
-      </h1>
-    </div>
-    <div className="flex justify-center items-center  ">
-      <img
-        src={images.text2}
-        alt=""
-        className="mix-blend-screen xl:w-[70%] lg:w-[70%] sm:h-[50%] h-[70%] w-[80%]"
-      />
-    </div>
-  </div>
-</div>
-
+      <div className="w-full rounded-[20px] bg-dark-gradient sm:h-[270px] h-[700px] mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 h-full  md:gap-7">
+          <div className="flex justify-center items-center  ">
+            <img
+              src={images.text1}
+              alt=""
+              className="mix-blend-screen xl:w-[70%] lg:w-[70%] sm:h-[50%] h-[70%] w-[80%]"
+            />
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-white m-auto text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-center w-64 md:w-full lg:leading-[60px]">
+              Make the <br /> Doge network{" "}
+              <span className="text-gradient font-extrabold">competitive</span>
+            </h1>
+          </div>
+          <div className="flex justify-center items-center  ">
+            <img
+              src={images.text2}
+              alt=""
+              className="mix-blend-screen xl:w-[70%] lg:w-[70%] sm:h-[50%] h-[70%] w-[80%]"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
