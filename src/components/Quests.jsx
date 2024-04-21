@@ -20,7 +20,7 @@ const Quests = () => {
               </div>
 
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
-                Tesnet interaction quests coming soon. You can
+                Tesnet interaction quests coming soon.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
@@ -60,27 +60,27 @@ const Quests = () => {
             </div>
             <div className="flex flex-col items-center my-10 ">
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg mb-10">
-                To discover more task, consult the links below
+                To discover all the Sputnik 1 quests, explore platforms below.
               </p>
               <div className="flex flex-col md:flex-row items-center gap-7">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[98px] h-[30px]">
                     <img src={images.medium} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                <div className="w-[29px] h-[29px]">
                     <img src={images.discord} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[82px] h-[28px]">
                     <img src={images.Zealy} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
@@ -92,7 +92,7 @@ const Quests = () => {
           </>
         );
       case "inviteToEarn":
-        return (
+         return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -101,7 +101,7 @@ const Quests = () => {
               </div>
 
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
-                Tesnet interaction quests coming soon. You can
+                Tesnet interaction quests coming soon.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
@@ -141,27 +141,27 @@ const Quests = () => {
             </div>
             <div className="flex flex-col items-center my-10 ">
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg mb-10">
-                To discover more task, consult the links below
+                To discover all the Sputnik 1 quests, explore platforms below.
               </p>
-              <div className="flex items-center gap-7">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+              <div className="flex flex-col md:flex-row items-center gap-7">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[98px] h-[30px]">
                     <img src={images.medium} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                <div className="w-[29px] h-[29px]">
                     <img src={images.discord} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[82px] h-[28px]">
                     <img src={images.Zealy} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
@@ -173,7 +173,7 @@ const Quests = () => {
           </>
         );
       case "dailyTasks":
-        return (
+         return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -182,7 +182,7 @@ const Quests = () => {
               </div>
 
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
-                Tesnet interaction quests coming soon. You can
+                Tesnet interaction quests coming soon.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
@@ -222,27 +222,27 @@ const Quests = () => {
             </div>
             <div className="flex flex-col items-center my-10 ">
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg mb-10">
-                To discover more task, consult the links below
+                To discover all the Sputnik 1 quests, explore platforms below.
               </p>
-              <div className="flex items-center gap-7">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+              <div className="flex flex-col md:flex-row items-center gap-7">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[98px] h-[30px]">
                     <img src={images.medium} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                <div className="w-[29px] h-[29px]">
                     <img src={images.discord} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[82px] h-[28px]">
                     <img src={images.Zealy} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
@@ -254,7 +254,7 @@ const Quests = () => {
           </>
         );
       case "🦴🦴🦴":
-        return (
+         return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -263,7 +263,7 @@ const Quests = () => {
               </div>
 
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
-                Tesnet interaction quests coming soon. You can
+                Tesnet interaction quests coming soon.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
@@ -303,27 +303,27 @@ const Quests = () => {
             </div>
             <div className="flex flex-col items-center my-10 ">
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg mb-10">
-                To discover more task, consult the links below
+                To discover all the Sputnik 1 quests, explore platforms below.
               </p>
-              <div className="flex items-center gap-7">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+              <div className="flex flex-col md:flex-row items-center gap-7">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[98px] h-[30px]">
                     <img src={images.medium} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                <div className="w-[29px] h-[29px]">
                     <img src={images.discord} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[82px] h-[28px]">
                     <img src={images.Zealy} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
@@ -335,7 +335,7 @@ const Quests = () => {
           </>
         );
       case "supportLaika":
-        return (
+         return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -344,7 +344,7 @@ const Quests = () => {
               </div>
 
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
-                Tesnet interaction quests coming soon. You can
+                Tesnet interaction quests coming soon.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
@@ -384,27 +384,27 @@ const Quests = () => {
             </div>
             <div className="flex flex-col items-center my-10 ">
               <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg mb-10">
-                To discover more task, consult the links below
+                To discover all the Sputnik 1 quests, explore platforms below.
               </p>
-              <div className="flex items-center gap-7">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+              <div className="flex flex-col md:flex-row items-center gap-7">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[98px] h-[30px]">
                     <img src={images.medium} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                <div className="w-[29px] h-[29px]">
                     <img src={images.discord} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
                     Join
                   </button>
                 </div>
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-[80px] h-[20px]">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-[82px] h-[28px]">
                     <img src={images.Zealy} alt="" className="w-full h-[100%]" />
                   </div>
                   <button className="border rounded py-2 px-7 text-white">
@@ -476,7 +476,7 @@ const Quests = () => {
               Support Laïka Ecosystem
             </button>
           </div>
-          <div className="bg-dark-gradient md:h-[610px] lg:h-[480px] xl:h-[490px] h-[185vh] pt-10 md:pt-2 lg:pt-0 rounded-b-[20px]">
+          <div className="bg-dark-gradient md:h-[630px] lg:h-[480px] xl:h-[490px] h-[115vh] pt-10 md:pt-2 lg:pt-0 rounded-b-[20px]">
             {renderContent()}
             {/* Additional content */}
           </div>
