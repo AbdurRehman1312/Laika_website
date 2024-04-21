@@ -50,33 +50,51 @@ const Token = () => {
 
   return (
     <section id="laikatoken" className="my-8 sm:my-2 lg:my-4">
-      <Link className="text-primary hover:opacity-65">
+      <Link to="/#laikatoken" className="text-primary hover:opacity-65">
         {">"} $LAIKA Token
       </Link>
-      <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center my-7 md:my-2 h-[70vh] sm:h-[60vh] lg:h-[50vh] overflow-hidden" ref={sectionRef}>
+      <div
+        className="flex flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-5 text-center my-7 md:my-2 h-[70vh] sm:h-[60vh] lg:h-[50vh] overflow-hidden"
+        ref={sectionRef}
+      >
         <h1 className="text-white font-semibold text-4xl sm:text-5xl lg:text-6xl">
-          Discover <span className="text-gradient font-extrabold">$LAIKA</span> Token
+          Discover <span className="text-gradient font-extrabold">$LAIKA</span>{" "}
+          Token
         </h1>
         <p className="text-dimGrey text-center w-full sm:w-[80%] lg:w-[65%]">
-        $LAIKA is at the heart of our mission to address and resolve the inherent challenges faced by DOGE. $LAIKA not only rewards validators, securing the network, but also empowers holders with a stake in the future development and governance of the platform through DAO. While Dogecoin remains the primary token for transaction fees, $LAIKA will increasingly be used for this purpose, reinforcing its integral function within the ecosystem.
+          $LAIKA is at the heart of our mission to address and resolve the
+          inherent challenges faced by DOGE. $LAIKA not only rewards validators,
+          securing the network, but also empowers holders with a stake in the
+          future development and governance of the platform through DAO. While
+          Dogecoin remains the primary token for transaction fees, $LAIKA will
+          increasingly be used for this purpose, reinforcing its integral
+          function within the ecosystem.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-16 lg:gap-20">
         <div className="col-span-1 md:col-span-11 lg:col-span-5">
           <div className="flex flex-col justify-center bg-dark-gradient h-auto md:h-[370px] lg:h-[410px] rounded-[20px] p-5">
             <div className="w-full flex flex-col gap-4">
-              <img src={images.heart} alt="" className="w-[45px] h-[45px] md:mb-6" />
+              <img
+                src={images.heart}
+                alt=""
+                className="w-[45px] h-[45px] md:mb-6"
+              />
               <h2 className="text-white text-lg md:text-xl font-semibold">
-              Engage with Laika to earn Laika  points
+                Engage with Laïka to earn Laïka points
               </h2>
               <p className="text-dimGrey text-justify">
-              Earn points by actively engaging with Laïka, transforming your contributions into valuable rewards within the Dogecoin ecosystem.
+                Earn points by actively engaging with Laïka, transforming your
+                contributions into valuable rewards within the Dogecoin
+                ecosystem.
               </p>
             </div>
             <div className="flex justify-end w-full mt-8 md:mt-16">
-              <button className="bg-transparent text-white font-semibold border border-white py-2 px-3 rounded-[5px]">
-                Discover Laika Quests
-              </button>
+              <Link to="/sputnik">
+                <button className="bg-transparent text-white font-semibold border border-white py-2 px-3 rounded-[5px]">
+                  Discover Laïka Quests
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -93,7 +111,10 @@ const Token = () => {
               Explore $LAIKA Docs
             </h2>
             <p className="text-dimGrey text-justify">
-            Explore our Laika documentation for an overview of our Layer 2 solution and $LAIKA token informations, enhancing Dogecoin's efficiency and scalability. Dive into the details that shape our ecosystem's future.
+              Explore our Laïka documentation for an overview of our Layer 2
+              solution and $LAIKA token informations, enhancing Dogecoin's
+              efficiency and scalability. Dive into the details that shape our
+              ecosystem's future.
             </p>
             <Button name="See Docs" style="w-[35%] md:w-[35%] lg:w-[20%]" />
           </div>
@@ -121,9 +142,9 @@ const Token = () => {
                 Spread some <img src={images.dog} className="w-6 h-6" alt="" />{" "}
               </h2>
               <p className="text-dimGrey">Spread some what?</p>
-              <div className="bg-dark-gradient py-3 px-4 rounded-[10px] sm:w-[70%] xl:w-[50%] md:w-[80%] w-full text-center text-lg">
+              <a href="https://twitter.com/intent/post?text=I%20just%20discovered%20%40Laika_Layer2%2C%20a%20tier%202%20solution%20built%20on%20the%20Dogecoin%20blockchain.%0A%0ALet%27s%20join%20the%20Sputnik%201%20Program%2C%20allowing%20us%20to%20get%20early%20and%20accumulate%20%24LAIKA%20points.%20%20%0A%0A%24DOGE%20is%20the%20leading%20Memechain%2C%20La%C3%AFka%20will%20skyrocket%20its%20potential.%0A%F0%9F%A6%B4%F0%9F%A6%B4%F0%9F%A6%B4%0A%0Ahttps%3A%2F%2Flaikachain.dog%2F%20" target="_blank" className="bg-dark-gradient py-3 px-4 rounded-[10px] sm:w-[70%] xl:w-[50%] md:w-[80%] w-full text-center text-lg">
                 🦴🦴🦴🦴🦴🦴
-              </div>
+              </a>
             </div>
           </div>
         </div>

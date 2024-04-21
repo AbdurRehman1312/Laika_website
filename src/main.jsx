@@ -5,12 +5,14 @@ import Home from './components/Home.jsx'
 import Layout from '../Layout.jsx'
 import './index.css'
 import Airdrop from './components/Airdrop.jsx'
+import Waitlist from './components/Waitlist.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
         <Route path= "" element={<Home />}/>
         <Route path= "sputnik" element={<Airdrop />}/>
+        <Route path= "waitlist" element={<Waitlist />}/>
     </Route>
   )
 )

@@ -3,11 +3,10 @@ import Button from "./Button";
 import * as images from "../assets";
 
 const Hero = () => {
-  
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 600px)');
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
     const handleResize = () => setIsMobile(mediaQuery.matches);
 
     // Initial check on mount
@@ -42,23 +41,26 @@ const Hero = () => {
             (AND MUCH COOLER){" "}
             <span className="text-primary font-extrabold">*</span>
           </h1>
-          <Button name="Discover Laïka" style="mt-8 px-6" />
+          <a href="#opportunities">
+            <Button name="Discover Laïka" style="mt-8 px-6" />
+          </a>
         </div>
       </div>
       <div className="flex justify-center w-full mt-20 md:mt-0 h-[23vh] md:h-[100%]">
-  <div className={`video-container ${showVideo ? 'show' : ''} `}>
-    <video
-      src={images.herovid}
-      autoPlay
-      loop
-      muted
-      controls={false}
-      className={`w-full mix-blend-screen ${isMobile ? 'video-zoom' : ''}`}
-      style={{ maxWidth: "100%", height: "auto" }}
-    />
-    
-  </div>
-</div>
+        <div className={`video-container p-0 m-0 ${showVideo ? "show" : ""} `}>
+          <video
+            src={images.herovid}
+            autoPlay
+            loop
+            muted
+            controls={false}
+            className={`w-full mix-blend-screen ${
+              isMobile ? "video-zoom" : ""
+            }`}
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        </div>
+      </div>
     </section>
   );
 };

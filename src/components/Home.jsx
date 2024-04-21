@@ -10,14 +10,12 @@ import Memechain from "./Memechain";
 const Home = () => {
   return (
     <div className="w-full overflow-hidden">
-      <Hero />
       <Opportunities />
       <Features />
       <Token />
       <Memecoin />
       <Memechain />
       <Ecosystem />
-     
     </div>
   );
 };

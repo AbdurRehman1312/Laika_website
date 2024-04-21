@@ -48,7 +48,7 @@ const Opportunities = () => {
     }
   }, [intersection]);
   return (
-    <section id="airdrop" className="my-28">
+    <section id="opportunities" className="my-28">
       <Link className="text-primary hover:opacity-65">{">"} Solving the Dogechain problem</Link>
       <div className="flex flex-col justify-center items-center text-center h-[33vh] sm:h-[40vh]">
         <h1 className="text-white text-3xl  md:text-5xl">

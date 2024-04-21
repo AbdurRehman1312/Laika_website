@@ -96,7 +96,7 @@ const Features = () => {
               <FeaturesCard
                 img="shield"
                 name="EVM Compatible"
-                desc="Providing an easy to build environnement to developers to easily build on Dogecoin while providing users with familiar tools for enhanced usability"
+                desc="Providing an easy to build environnement to developers to easily build on Dogecoin while providing users with familiar tools for enhanced usability."
               />
             </div>
             <div className="flex flex-col gap-6">
@@ -104,12 +104,12 @@ const Features = () => {
                <FeaturesCard
                 img="rench"
                 name="Memecoin bridge"
-                desc="As a hub for memecoins, Laïka supports existing memecoins from other networks to enhance the memecoiners experience"
+                desc="As a hub for memecoins, Laïka supports existing memecoins from other networks to enhance the memecoiners experience."
               />
               <FeaturesCard
                 img="trophy"
                 name="High Scalability & Low Fees"
-                desc="Enhancing scalability and lowering fees to ensure efficient and economical interactions on Laika"
+                desc="Enhancing scalability and lowering fees to ensure efficient and economical interactions on Laïka."
               />
             </div>
           </div>

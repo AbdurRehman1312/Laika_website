@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react'
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useIntersection } from "react-use";
 const Engage = () => {
@@ -44,18 +44,30 @@ const Engage = () => {
       fadeOut();
     }
   }, [intersection]);
-    return (
-        <>
-            <section className='lg:my-20 md:mt-48 mt-[70vh]  pt-20 mb-[20vh]'>
-                <div className='flex flex-col items-center gap-6' ref={sectionRef}>
-                    <h1 className='text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:leading-[70px] w-[55%] text-center'><span className='text-gradient font-extrabold'>Engage with</span> Laïka Ecosystem 
-& Earn   <span className='text-gradient_sec font-extrabold'>Points</span></h1>
-                    <p className="text-dimGrey text-lg md:text-base lg:text-lg xl:text-base text-center w-[70%]"> Your active engagement through various interactions and contributions is rewarded with some points. Whether you're trading, staking, or simply being an active community member, every action counts. Accumulate these points and unlock exclusive benefits, enhancing your experience within the Laïka Layer 2. Join us, get involved, and earn rewards as you contribute to our growing ecosystem.</p>
-                </div>
+  return (
+    <>
+      <section className="lg:my-20 md:mt-48 mt-[70vh]  pt-20 mb-[20vh]">
+        <div className="flex flex-col items-center gap-6" ref={sectionRef}>
+          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl text-center font-semibold lg:leading-[70px] w-[55%]">
+            <span className="text-gradient font-extrabold">Engage with</span>{" "}
+            Laïka Ecosystem
+            <br /> & Earn{" "}
+            <span className="text-gradient_sec font-extrabold">Points</span>
+          </h1>
+          <p className="text-dimGrey text-lg md:text-base text-center lg:text-lg xl:text-base w-[70%]">
+            {" "}
+            Your active engagement through various interactions and
+            contributions is rewarded with some points. Whether you're trading,
+            staking, or simply being an active community member, every action
+            counts. Accumulate these points and unlock exclusive benefits,
+            enhancing your experience within the Laïka Layer 2. Join us, get
+            involved, and earn rewards as you contribute to our growing
+            ecosystem.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+};
 
-            </section>
-        </>
-    )
-}
-
-export default Engage
+export default Engage;

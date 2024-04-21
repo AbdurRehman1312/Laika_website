@@ -63,12 +63,14 @@ const Ecosystem = () => {
               Built for developers and meme enjoyers
             </h1>
             <p className="text-dimGrey text-lg md:text-base lg:text-lg xl:text-xl">
-            Laika is offering developers a robust and dynamic infrastructure to build, innovate, and scale their projects on the Dogecoin network. Whether you're developing the next groundbreaking dApp or integrating DOGE into your existing projects, Laika provides the speed, scalability, and security you need.
+            Laïka is offering developers a robust and dynamic infrastructure to build, innovate, and scale their projects on the Dogecoin network. Whether you're developing the next groundbreaking dApp or integrating DOGE into your existing projects, Laïka provides the speed, scalability, and security you need.
             </p>
+            <a href="https://forms.gle/P7VuCkE8BtZKLyYz6" target="_blank">
             <Button
               name="Join the ecosystem"
               style="w-[65%] md:w-[56%] lg:w-[39%] xl:w-[27%]"
             />
+            </a>
           </div>
           <div className="flex justify-end">
           <div className="relative ">
