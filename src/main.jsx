@@ -1,11 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import Home from './components/Home.jsx'
-import Layout from '../Layout.jsx'
-import './index.css'
-import Airdrop from './components/Airdrop.jsx'
-import Waitlist from './components/Waitlist.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import Home from './components/Home.jsx';
+import Layout from '../Layout.jsx';
+import './index.css';
+import Airdrop from './components/Airdrop.jsx';
+import Waitlist from './components/Waitlist.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,11 +16,13 @@ const router = createBrowserRouter(
         <Route path= "waitlist" element={<Waitlist />}/>
     </Route>
   )
-)
+);
 
+// Wrap your application with HelmetProvider
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <HelmetProvider>
+      <RouterProvider router={router}/>
+    </HelmetProvider>
   </React.StrictMode>,
-)
-
+);

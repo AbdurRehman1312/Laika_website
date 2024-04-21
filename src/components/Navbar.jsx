@@ -51,6 +51,7 @@ const Navbar = () => {
 
   // Check if the current route is the airdrop route
   const isAirdropRoute = location.pathname === "/sputnik";
+  const isWaitListRoute = location.pathname === "/waitlist";
 
   // Function to scroll to section
   const scrollToSection = (id) => {
@@ -63,7 +64,7 @@ const Navbar = () => {
   };
   return (
     <>
-      {!isAirdropRoute && (
+      {!isAirdropRoute && !isWaitListRoute && (
         <nav
           className={`hidden lg:flex bg-black w-full  justify-center items-center trans py-3 ${
             isFixed ? "fixed top-0 w-full z-[40] left-0" : ""
@@ -85,6 +86,9 @@ const Navbar = () => {
         </Link>
         <div className="flex-1 justify-center items-center hidden lg:flex">
           <div className="bg-blue-700 h-[70px] z-[-1] filter_blur rounded-[10px] w-[700px] absolute" />
+          {isWaitListRoute && (
+          <div className="bg-blue-700 h-[480px] z-[-1] filter_blur rounded-[10px] w-[65%] absolute" />
+          )}
           <ul className="list-none flex justify-center items-end gap-14">
             {navLinks.map((nav) => (
               <li
