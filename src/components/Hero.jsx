@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Button from "./Button";
 import * as images from "../assets";
 
@@ -29,6 +29,15 @@ const Hero = () => {
 
     return () => clearTimeout(timeout);
   }, []);
+  const videoRef = useRef(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.controls = false; // Hide controls initially
+      videoRef.current.addEventListener('loadedmetadata', () => {
+        videoRef.current.controls = false; // Hide controls after video is loaded
+      });
+    }
+  }, []);
   return (
     <section id="home">
       <div className="flex justify-center items-center h-[70vh] sm:h-[40vh]">
@@ -54,6 +63,7 @@ const Hero = () => {
             loop
             muted
             controls={false}
+            controlsList="nodownload"
             className={`w-full mix-blend-screen ${
               isMobile ? "video-zoom" : ""
             }`}

@@ -142,7 +142,11 @@ const Navbar = () => {
                     {nav.id === "#laikatoken" ? (
                       <a onClick={() => scrollToSection(nav.id)}>{nav.title}</a>
                     ) : (
-                      <NavLink to={nav.id}>{nav.title}</NavLink>
+                      <NavLink to={nav.id} className={
+                        nav.id === "bridge" || nav.id === "docs"
+                          ? "disabled-link font-medium tracking-wide"
+                          : ""
+                      }>{nav.title}</NavLink>
                     )}
                   </li>
                 ))}
