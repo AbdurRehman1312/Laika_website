@@ -65,7 +65,7 @@ const Memechain = () => {
             MEMECHAIN
           </span>
 
-          <Button name="Bridge to Laïka now" style="px-6" />
+          <Button name="Bridge to Laïka now" style="px-6" desc="coming soon" />
         </div>
       </section>
     </>

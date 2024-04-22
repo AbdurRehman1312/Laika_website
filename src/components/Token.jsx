@@ -65,7 +65,7 @@ const Token = () => {
           $LAIKA is at the heart of our mission to address and resolve the
           inherent challenges faced by DOGE. $LAIKA not only rewards validators,
           securing the network, but also empowers holders with a stake in the
-          future development and governance of the platform through DAO. While
+          future development and governance of the chain through DAO. While
           Dogecoin remains the primary token for transaction fees, $LAIKA will
           increasingly be used for this purpose, reinforcing its integral
           function within the ecosystem.
@@ -132,9 +132,9 @@ const Token = () => {
                   type="text"
                   placeholder="jonh@doge.wtf..."
                 />
-                <button className="absolute right-[5px] top-[11.7%]">
+                <Link to="/waitlist" className="absolute right-[5px] top-[11.7%]">
                   <img src={images.inputsend} alt="" className="w-7 h-7" />
-                </button>
+                </Link>
               </form>
             </div>
             <div className="flex flex-col gap-4">

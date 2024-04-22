@@ -36,14 +36,14 @@ const Quests = () => {
                   >
                     Follow
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
-                  Join the Laïka Telegram Group
+                  Join the Laïka Discord Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
                   <a
@@ -51,9 +51,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Join
                   </a>
-                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -68,9 +68,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Engage
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -86,7 +86,7 @@ const Quests = () => {
                     <img
                       src={images.medium}
                       alt=""
-                      className="w-full h-[100%]"
+                      className="w-full h-[90%]"
                     />
                   </div>
                   <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
@@ -147,14 +147,14 @@ const Quests = () => {
                   >
                     Follow
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
-                  Join the Laïka Telegram Group
+                  Join the Laïka Discord Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
                   <a
@@ -162,9 +162,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Join
                   </a>
-                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -179,9 +179,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Engage
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -197,7 +197,7 @@ const Quests = () => {
                     <img
                       src={images.medium}
                       alt=""
-                      className="w-full h-[100%]"
+                      className="w-full h-[90%]"
                     />
                   </div>
                   <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
@@ -258,14 +258,14 @@ const Quests = () => {
                   >
                     Follow
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
-                  Join the Laïka Telegram Group
+                  Join the Laïka Discord Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
                   <a
@@ -273,9 +273,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Join
                   </a>
-                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -290,9 +290,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Engage
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -308,7 +308,7 @@ const Quests = () => {
                     <img
                       src={images.medium}
                       alt=""
-                      className="w-full h-[100%]"
+                      className="w-full h-[90%]"
                     />
                   </div>
                   <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
@@ -369,14 +369,14 @@ const Quests = () => {
                   >
                     Follow
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
-                  Join the Laïka Telegram Group
+                  Join the Laïka Discord Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
                   <a
@@ -384,9 +384,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Join
                   </a>
-                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -401,9 +401,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Engage
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -419,7 +419,7 @@ const Quests = () => {
                     <img
                       src={images.medium}
                       alt=""
-                      className="w-full h-[100%]"
+                      className="w-full h-[90%]"
                     />
                   </div>
                   <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
@@ -480,14 +480,14 @@ const Quests = () => {
                   >
                     Follow
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
-                  Join the Laïka Telegram Group
+                  Join the Laïka Discord Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
                   <a
@@ -495,9 +495,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Join
                   </a>
-                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -512,9 +512,9 @@ const Quests = () => {
                     target="_blank"
                     className="border rounded py-2 px-7 text-white"
                   >
-                    Follow
+                    Engage
                   </a>
-                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                     <Button name="Check" style="px-7 " />
                   </a>
                 </div>
@@ -530,7 +530,7 @@ const Quests = () => {
                     <img
                       src={images.medium}
                       alt=""
-                      className="w-full h-[100%]"
+                      className="w-full h-[90%]"
                     />
                   </div>
                   <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
