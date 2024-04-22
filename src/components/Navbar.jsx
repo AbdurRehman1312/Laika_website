@@ -118,7 +118,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Button name="Whitepaper" style="px-6 hidden lg:flex" />
+        <Button name="Coming Soon" style="px-6 hidden lg:flex" />
 
         {/* For mobile screen */}
         <div className="lg:hidden flex justify-end items-center">
@@ -132,7 +132,7 @@ const Navbar = () => {
 
         {toggle && (
           <div className="lg:hidden absolute top-[90px] right-0 w-full">
-            <div className="p-6 bg-dark-gradient mx-4 my-2 rounded-xl sidebar">
+            <div className="p-6 bg-dark-gradient z-[100] mx-4 my-2 rounded-xl sidebar">
             <ul className="list-none flex flex-col justify-end items-center">
                 {navLinks.map((nav) => (
                   <li
@@ -147,7 +147,7 @@ const Navbar = () => {
                   </li>
                 ))}
                 <li>
-                  <Button name="Whitepaper" style="px-6 mt-3" />{" "}
+                  <Button name="Coming Soon" style="px-6 mt-3" />{" "}
                 </li>
               </ul>
             </div>

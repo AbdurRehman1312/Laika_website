@@ -116,7 +116,7 @@ const Token = () => {
               efficiency and scalability. Dive into the details that shape our
               ecosystem's future.
             </p>
-            <Button name="See Docs" style="w-[35%] md:w-[35%] lg:w-[20%]" />
+            <Button name="Coming Soon" style="w-[45%] md:w-[25%] lg:w-[20%]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
             <div className="flex flex-col gap-4">
