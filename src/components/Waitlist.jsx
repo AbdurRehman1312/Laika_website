@@ -42,7 +42,7 @@ const Waitlist = () => {
             <p className="text-dimGrey text-lg">
               Sign up to stay informed about Laïka.
             </p>
-            <div className="relative">
+            <form className="relative">
               <input
                 className="bg-[#303030] text-white px-6 h-[35px] rounded-[5px] w-full focus:outline-none border border-white border-opacity-30"
                 type="text"
@@ -51,7 +51,7 @@ const Waitlist = () => {
               <button className="absolute right-[10px] top-[30%]">
                 <img src={images.sendarrow} alt="" className="w-4 h-4" />
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

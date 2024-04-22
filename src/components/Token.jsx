@@ -126,7 +126,7 @@ const Token = () => {
               <p className="text-dimGrey">
                 Stay up to date about $LAIKA release.
               </p>
-              <div className="relative lg:w-[90%] xl:w-[70%]">
+              <form className="relative lg:w-[90%] xl:w-[70%]">
                 <input
                   className="bg-dark-gradient text-white px-3 h-[35px] rounded-[5px] w-full focus:outline-none"
                   type="text"
@@ -135,7 +135,7 @@ const Token = () => {
                 <button className="absolute right-[5px] top-[11.7%]">
                   <img src={images.inputsend} alt="" className="w-7 h-7" />
                 </button>
-              </div>
+              </form>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="text-white font-semibold text-lg md:text-xl flex gap-2">
