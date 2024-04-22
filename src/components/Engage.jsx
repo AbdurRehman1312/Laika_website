@@ -46,7 +46,7 @@ const Engage = () => {
   }, [intersection]);
   return (
     <>
-      <section className="    pt-20 mb-[17vh]">
+      <section className="mb-[17vh]">
         <div className="flex flex-col items-center gap-6" ref={sectionRef}>
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl text-center font-semibold lg:leading-[70px] lg:w-[55%] md:w-[80%]">
             <span className="text-gradient font-extrabold">Engage with</span>{" "}

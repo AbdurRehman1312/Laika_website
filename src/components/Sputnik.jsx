@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Sputnik = () => {
   return (
     <>
-      <section className="mt-[2.5rem] mb-80 md:mb-56 lg:mb-0">
+      <section className="">
         <div className="flex justify-start mt-20 ml-2">
           <Link className="text-primary hover:opacity-65">
             {">"} Sputnik 1 Program
