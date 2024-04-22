@@ -29,10 +29,16 @@ const Quests = () => {
                   Follow Laïka on Twitter
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://twitter.com/Laika_Layer2/"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -40,10 +46,16 @@ const Quests = () => {
                   Join the Laïka Telegram Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://discord.com/invite/YTHa4fda5r"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -51,10 +63,16 @@ const Quests = () => {
                   RT & Like the Campaign Tweet
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                <a
+                    href="https://twitter.com/Laika_Layer2/status/1768690859673874692"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
             </div>
@@ -65,34 +83,46 @@ const Quests = () => {
               <div className="flex flex-col md:flex-row items-center gap-7">
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[98px] h-[30px]">
-                    <img src={images.medium} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.medium}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
-                <div className="w-[29px] h-[29px]">
-                    <img src={images.discord} alt="" className="w-full h-[100%]" />
+                  <div className="w-[29px] h-[29px]">
+                    <img
+                      src={images.discord}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[82px] h-[28px]">
-                    <img src={images.Zealy} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.Zealy}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           </>
         );
       case "inviteToEarn":
-         return (
+        return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -110,10 +140,16 @@ const Quests = () => {
                   Follow Laïka on Twitter
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://twitter.com/Laika_Layer2/"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -121,10 +157,16 @@ const Quests = () => {
                   Join the Laïka Telegram Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://discord.com/invite/YTHa4fda5r"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -132,10 +174,16 @@ const Quests = () => {
                   RT & Like the Campaign Tweet
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                <a
+                    href="https://twitter.com/Laika_Layer2/status/1768690859673874692"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
             </div>
@@ -146,34 +194,46 @@ const Quests = () => {
               <div className="flex flex-col md:flex-row items-center gap-7">
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[98px] h-[30px]">
-                    <img src={images.medium} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.medium}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
-                <div className="w-[29px] h-[29px]">
-                    <img src={images.discord} alt="" className="w-full h-[100%]" />
+                  <div className="w-[29px] h-[29px]">
+                    <img
+                      src={images.discord}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[82px] h-[28px]">
-                    <img src={images.Zealy} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.Zealy}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           </>
         );
       case "dailyTasks":
-         return (
+        return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -191,10 +251,16 @@ const Quests = () => {
                   Follow Laïka on Twitter
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://twitter.com/Laika_Layer2/"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -202,10 +268,16 @@ const Quests = () => {
                   Join the Laïka Telegram Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://discord.com/invite/YTHa4fda5r"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -213,10 +285,16 @@ const Quests = () => {
                   RT & Like the Campaign Tweet
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                <a
+                    href="https://twitter.com/Laika_Layer2/status/1768690859673874692"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
             </div>
@@ -227,34 +305,46 @@ const Quests = () => {
               <div className="flex flex-col md:flex-row items-center gap-7">
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[98px] h-[30px]">
-                    <img src={images.medium} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.medium}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
-                <div className="w-[29px] h-[29px]">
-                    <img src={images.discord} alt="" className="w-full h-[100%]" />
+                  <div className="w-[29px] h-[29px]">
+                    <img
+                      src={images.discord}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[82px] h-[28px]">
-                    <img src={images.Zealy} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.Zealy}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           </>
         );
       case "🦴🦴🦴":
-         return (
+        return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -272,10 +362,16 @@ const Quests = () => {
                   Follow Laïka on Twitter
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://twitter.com/Laika_Layer2/"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -283,10 +379,16 @@ const Quests = () => {
                   Join the Laïka Telegram Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://discord.com/invite/YTHa4fda5r"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -294,10 +396,16 @@ const Quests = () => {
                   RT & Like the Campaign Tweet
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                <a
+                    href="https://twitter.com/Laika_Layer2/status/1768690859673874692"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
             </div>
@@ -308,34 +416,46 @@ const Quests = () => {
               <div className="flex flex-col md:flex-row items-center gap-7">
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[98px] h-[30px]">
-                    <img src={images.medium} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.medium}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
-                <div className="w-[29px] h-[29px]">
-                    <img src={images.discord} alt="" className="w-full h-[100%]" />
+                  <div className="w-[29px] h-[29px]">
+                    <img
+                      src={images.discord}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[82px] h-[28px]">
-                    <img src={images.Zealy} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.Zealy}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           </>
         );
       case "supportLaika":
-         return (
+        return (
           <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
@@ -353,10 +473,16 @@ const Quests = () => {
                   Follow Laïka on Twitter
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://twitter.com/Laika_Layer2/"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -364,10 +490,16 @@ const Quests = () => {
                   Join the Laïka Telegram Group
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a
+                    href="https://discord.com/invite/YTHa4fda5r"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-5">
@@ -375,10 +507,16 @@ const Quests = () => {
                   RT & Like the Campaign Tweet
                 </h1>
                 <div className="flex gap-4 items-center justify-center">
-                  <button className="border rounded py-2 px-7 text-white">
+                <a
+                    href="https://twitter.com/Laika_Layer2/status/1768690859673874692"
+                    target="_blank"
+                    className="border rounded py-2 px-7 text-white"
+                  >
                     Follow
-                  </button>
-                  <Button name="Check" style="px-7 " />
+                  </a>
+                  <a href="https://twitter.com/Laika_Layer2/status/1768690859673874692" target="_blank">
+                    <Button name="Check" style="px-7 " />
+                  </a>
                 </div>
               </div>
             </div>
@@ -389,27 +527,39 @@ const Quests = () => {
               <div className="flex flex-col md:flex-row items-center gap-7">
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[98px] h-[30px]">
-                    <img src={images.medium} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.medium}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://medium.com/@laika-layer2" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
-                <div className="w-[29px] h-[29px]">
-                    <img src={images.discord} alt="" className="w-full h-[100%]" />
+                  <div className="w-[29px] h-[29px]">
+                    <img
+                      src={images.discord}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://discord.com/invite/YTHa4fda5r" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-[82px] h-[28px]">
-                    <img src={images.Zealy} alt="" className="w-full h-[100%]" />
+                    <img
+                      src={images.Zealy}
+                      alt=""
+                      className="w-full h-[100%]"
+                    />
                   </div>
-                  <button className="border rounded py-2 px-7 text-white">
+                  <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank" className="border rounded py-2 px-7 text-white">
                     Join
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

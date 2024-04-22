@@ -24,12 +24,18 @@ const Waitlist = () => {
             Make DOGE assets smarter.
           </p>
           <div className="flex items-center justify-center gap-5 mt-8">
-            <button className="rounded-[30px] bg-white text-black font-extrabold py-3 px-6">
+            <a href="https://twitter.com/Laika_Layer2/" target="_blank" className="rounded-[30px] bg-white text-black font-extrabold py-3 px-6">
               Follow Us
-            </button>
+            </a>
+            <a href="https://twitter.com/Laika_Layer2/" target="_blank">
             <img src={images.x} alt="" className="w-[20px] h-[20px]" />
+            </a>
+            <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
             <img src={images.discord} alt="" className="w-[20px] h-[20px]" />
+            </a>
+            <a href="https://medium.com/@laika-layer2" target="_blank">
             <img src={images.digoicon} alt="" className="w-[20px] h-[20px]" />
+            </a>
           </div>
           <div className="bg-[#191919] w-[90%] lg:w-[60%] xl:w-[60%] mx-auto rounded-[20px] my-14 p-8 border border-white border-opacity-30 flex flex-col justify-between gap-6">
             <h2 className="text-white font-bold text-xl">Join the waitlist</h2>
