@@ -118,7 +118,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Button name="Coming Soon" style="px-6 hidden lg:flex" />
+        <Button name="Whitepaper" style="px-6 hidden lg:flex" desc="coming soon" descStyle=" hidden sm:hidden md:hidden lg:block" />
 
         {/* For mobile screen */}
         <div className="lg:hidden flex justify-end items-center">
@@ -147,7 +147,7 @@ const Navbar = () => {
                   </li>
                 ))}
                 <li>
-                  <Button name="Coming Soon" style="px-6 mt-3" />{" "}
+                  <Button name="Whitepaper" style="px-6 mt-3" desc="coming soon" />{" "}
                 </li>
               </ul>
             </div>

@@ -46,7 +46,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="flex justify-center w-full mt-20 md:mt-0 md:pt-6 lg:pt-0">
+      <div className="flex justify-center w-full mt-20 md:mt-0 md:pt-11 lg:pt-0">
         <div className={`video-container ${showVideo ? "show" : ""} `}>
           <video
             src={images.herovid}
