@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as images from "../assets";
 import Button from "./Button";
 import gsap from "gsap";
@@ -47,6 +47,32 @@ const Token = () => {
       fadeOut();
     }
   }, [intersection]);
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  function Submit(e) {
+    e.preventDefault();
+    const formEle = document.querySelector("form");
+    const formDatab = new FormData(formEle);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzB4zFTjX3W0R5Xnd4mD00IbHp5_Gw3zlPSxNQNDFwGQS9sRSPs_ytFms4Fl69e7InHvw/exec",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+    .then((res) => {
+      console.log('Response received', res);
+      return res.text();
+    })
+    .then((data) => {
+      console.log('Data received', data);
+      setShowPopup(true);
+    })
+    .catch((error) => {
+      console.log('Error occurred', error);
+    });
+  }
 
   return (
     <section id="laikatoken" className="my-8 sm:my-2 lg:my-4">
@@ -126,15 +152,16 @@ const Token = () => {
               <p className="text-dimGrey">
                 Stay up to date about $LAIKA release.
               </p>
-              <form className="relative lg:w-[90%] xl:w-[70%]">
+              <form className="relative lg:w-[90%] xl:w-[70%] form" onSubmit={(e) => Submit(e)}>
                 <input
                   className="bg-dark-gradient text-white px-3 h-[35px] rounded-[5px] w-full focus:outline-none"
                   type="text"
+                  name="Email"
                   placeholder="jonh@doge.wtf..."
                 />
-                <Link to="" className="absolute right-[5px] top-[11.7%]">
+                <button type="submit" className="absolute right-[5px] top-[11.7%]">
                   <img src={images.inputsend} alt="" className="w-7 h-7" />
-                </Link>
+                </button>
               </form>
             </div>
             <div className="flex flex-col gap-4">
@@ -149,6 +176,19 @@ const Token = () => {
           </div>
         </div>
       </div>
+
+      {showPopup && (
+            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
+              <div className="bg-[#191919] p-6 rounded-[20px] border-white border-opacity-30">
+                <p className="text-center font-bold text-xl text-white">
+                  You have joined the waitlist successfully!
+                </p>
+                <button className="block mx-auto mt-4 px-4 py-2 bg-white text-[#191919]  font-bold rounded-md" onClick={() => setShowPopup(false)}>
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
     </section>
   );
 };

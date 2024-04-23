@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as images from "../assets";
 
 const Waitlist = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  function Submit(e) {
+    e.preventDefault();
+    const formEle = document.querySelector("form");
+    const formDatab = new FormData(formEle);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzB4zFTjX3W0R5Xnd4mD00IbHp5_Gw3zlPSxNQNDFwGQS9sRSPs_ytFms4Fl69e7InHvw/exec",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+    .then((res) => {
+      console.log('Response received', res);
+      return res.text();
+    })
+    .then((data) => {
+      console.log('Data received', data);
+      setShowPopup(true);
+    })
+    .catch((error) => {
+      console.log('Error occurred', error);
+    });
+  }
   return (
     <section className="my-10">
       <div className="mt-12">
@@ -42,19 +67,33 @@ const Waitlist = () => {
             <p className="text-dimGrey text-lg">
               Sign up to stay informed about Laïka.
             </p>
-            <form className="relative">
+            <form className="relative form" onSubmit={(e) => Submit(e)}>
               <input
                 className="bg-[#303030] text-white px-6 h-[35px] rounded-[5px] w-full focus:outline-none border border-white border-opacity-30"
                 type="text"
+                name="Email"
                 placeholder="Email address"
               />
-              <button className="absolute right-[10px] top-[30%]">
+              <button type="submit"  className="absolute right-[10px] top-[30%]" >
                 <img src={images.sendarrow} alt="" className="w-4 h-4" />
               </button>
             </form>
           </div>
         </div>
       </div>
+
+      {showPopup && (
+            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
+              <div className="bg-[#191919] p-6 rounded-[20px] border-white border-opacity-30">
+                <p className="text-center font-bold text-xl text-white">
+                  You have joined the waitlist successfully!
+                </p>
+                <button className="block mx-auto mt-4 px-4 py-2 bg-white text-[#191919]  font-bold rounded-md" onClick={() => setShowPopup(false)}>
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
     </section>
   );
 };
