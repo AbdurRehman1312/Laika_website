@@ -50,7 +50,7 @@ const Opportunities = () => {
   return (
     <section id="opportunities" className="md:my-28 mt-48 mb-[7rem] md:mb-0 md:mt-0">
       <Link className="text-primary hover:opacity-65">
-        {">"} Solving the Dogechain problem
+        {">"} Solving the Dogecoin network problems
       </Link>
       <div className="flex flex-col justify-center items-center text-center h-[33vh] sm:h-[40vh]">
         <h1 className="text-white text-3xl  md:text-5xl">
