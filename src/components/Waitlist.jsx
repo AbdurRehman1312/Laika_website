@@ -16,24 +16,24 @@ const Waitlist = () => {
         body: formDatab
       }
     )
-    .then((res) => {
-      console.log('Response received', res);
-      return res.text();
-    })
-    .then((data) => {
-      console.log('Data received', data);
-      setShowPopup(true);
-    })
-    .catch((error) => {
-      console.log('Error occurred', error);
-    });
+      .then((res) => {
+        console.log('Response received', res);
+        return res.text();
+      })
+      .then((data) => {
+        console.log('Data received', data);
+        setShowPopup(true);
+      })
+      .catch((error) => {
+        console.log('Error occurred', error);
+      });
   }
   return (
     <section className="my-10">
       <div className="mt-12">
-      <Link className="text-primary hover:opacity-65">
-        {">"} Laika Waitlist
-      </Link>
+        <Link className="text-primary hover:opacity-65">
+          {">"} Laika Waitlist
+        </Link>
       </div>
       <div className="flex justify-center">
         <div className="w-full md:w-[70%] lg:w-[60%] xl:w-[55%] mt-9">
@@ -53,13 +53,13 @@ const Waitlist = () => {
               Follow Us
             </a>
             <a href="https://twitter.com/Laika_Layer2/" target="_blank">
-            <img src={images.x} alt="" className="w-[20px] h-[20px]" />
+              <img src={images.x} alt="" className="w-[20px] h-[20px]" />
             </a>
             <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
-            <img src={images.discord} alt="" className="w-[20px] h-[20px]" />
+              <img src={images.discord} alt="" className="w-[20px] h-[20px]" />
             </a>
             <a href="https://medium.com/@laika-layer2" target="_blank">
-            <img src={images.digoicon} alt="" className="w-[20px] h-[20px]" />
+              <img src={images.digoicon} alt="" className="w-[20px] h-[20px]" />
             </a>
           </div>
           <div className="bg-[#191919] w-[90%] lg:w-[60%] xl:w-[60%] mx-auto rounded-[20px] my-14 p-8 border border-white border-opacity-30 flex flex-col justify-between gap-6">
@@ -74,7 +74,7 @@ const Waitlist = () => {
                 name="Email"
                 placeholder="Email address"
               />
-              <button type="submit"  className="absolute right-[10px] top-[30%]" >
+              <button type="submit" className="absolute right-[10px] top-[30%]" >
                 <img src={images.sendarrow} alt="" className="w-4 h-4" />
               </button>
             </form>
@@ -83,17 +83,69 @@ const Waitlist = () => {
       </div>
 
       {showPopup && (
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
-              <div className="bg-[#191919] p-6 rounded-[20px] border-white border-opacity-30">
-                <p className="text-center font-bold text-xl text-white">
-                  You have joined the waitlist successfully!
-                </p>
-                <button className="block mx-auto mt-4 px-4 py-2 bg-white text-[#191919]  font-bold rounded-md" onClick={() => setShowPopup(false)}>
-                  Close
+        <div className="fixed inset-0 flex items-center justify-center">
+          <div className="bg-[#191919] py-6 px-7  rounded-[20px] w-[85%] md:w-[80%] lg:w-[75%] xl:w-[55%]">
+          <div className="flex justify-end">
+                <button onClick={() => setShowPopup(false)}>
+                  <img src={images.close2} alt="" width={20} />
                 </button>
               </div>
+            <div className="overflow-y-auto h-[70vh]  md:h-auto ">
+              
+              <div className="flex flex-col md:flex-row justify-between gap-10 mt-6">
+                <div className="w-full md:w-[50%]">
+                  <h2 className="text-white font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">Welcome Onboard!</h2>
+                  <div className="mt-2 md:mt-4 lg:mt-12">
+                    <p className="text-dimGrey text-base">
+                      Thank you for signing up for the Laïka waitlist!
+                    </p>
+                    <p className="text-dimGrey text-base mt-4">
+                      You've taken the first step towards unlocking the full potential of the Dogecoin ecosystem. Keep an eye on your inbox for updates and exclusive opportunities to engage with Laïka.
+                    </p>
+                  </div>
+                  <div className="mt-4 md:mt-5 lg:mt-16">
+                    <h1 className="text-dimGrey font-bold text-base md:text-xl">Join Laïka Community</h1>
+                    <div className="mt-5 flex flex-col gap-5">
+                      <a href="https://twitter.com/laika_Layer2/" target="_blank">
+                        <div className="flex gap-3 items-center">
+                          <img src={images.x} alt="" width={30} />
+                          <p className="text-dimGrey text-base">Follow us on Twitter</p>
+                        </div>
+                      </a>
+                      <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                        <div className="flex gap-3 items-center">
+                          <img src={images.discord} alt="" width={32} />
+                          <p className="text-dimGrey text-base">Join us on Discord</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className=" md:w-[50%]">
+                  <div className="bg-black rounded-[25px] pt-5 md:pl-12">
+                    <div className="bg-blue-800 h-[40px] filter_blur rounded-[10px] w-[250px] absolute top-[50%] right-[10%]" />
+                    <div className="flex flex-col justify-between items-center h-[64vh]  md:h-[64vh] lg:h-[70vh] xl:h-[60vh]">
+                      <div className="flex justify-center  px-5 md:px-0">
+                        <h1 className="text-white text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold ">
+                          Ride the <span className="text-gradient font-extrabold">DOGE</span>{" "}
+                          Ecosystem like never before.
+                        </h1>
+                      </div>
+                      <div className="flex justify-end w-[75%]">
+                        <img src={images.dog3} alt="" width={140} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          )}
+
+          </div>
+        </div>
+      )}
+
+
+
     </section>
   );
 };

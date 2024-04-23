@@ -1,5 +1,6 @@
 export { default as logo } from "./logo.png";
 export { default as close } from "./close.svg";
+export { default as close2 } from "./close.png";
 export { default as menu } from "./menu.svg";
 export { default as hero } from "./hero-animate.png";
 export { default as herogif } from "./herogif.gif";
@@ -16,6 +17,7 @@ export { default as file } from "./file.png";
 export { default as inputsend } from "./inputsend.png";
 export { default as dog } from "./dog.png";
 export { default as dog2 } from "./dog2.png";
+export { default as dog3 } from "./dog3.png";
 export { default as text1 } from "./text1.gif";
 export { default as text2 } from "./text2.gif";
 export { default as revealloading } from "./revealloading.gif";
