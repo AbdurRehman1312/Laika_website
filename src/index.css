@@ -145,3 +145,6 @@ body{
     display: none;
   }
 }
+.popup-open {
+  overflow: hidden;
+}

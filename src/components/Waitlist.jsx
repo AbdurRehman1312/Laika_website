@@ -13,21 +13,30 @@ const Waitlist = () => {
       "https://script.google.com/macros/s/AKfycbzB4zFTjX3W0R5Xnd4mD00IbHp5_Gw3zlPSxNQNDFwGQS9sRSPs_ytFms4Fl69e7InHvw/exec",
       {
         method: "POST",
-        body: formDatab
+        body: formDatab,
       }
     )
       .then((res) => {
-        console.log('Response received', res);
+        console.log("Response received", res);
         return res.text();
       })
       .then((data) => {
-        console.log('Data received', data);
+        console.log("Data received", data);
         setShowPopup(true);
+        // Add class to body to prevent scrolling
+        document.body.classList.add("popup-open");
       })
       .catch((error) => {
-        console.log('Error occurred', error);
+        console.log("Error occurred", error);
       });
   }
+
+  // Function to close the popup and remove class from body to enable scrolling
+  function closePopup() {
+    setShowPopup(false);
+    document.body.classList.remove("popup-open");
+  }
+
   return (
     <section className="my-10">
       <div className="mt-12">
@@ -49,7 +58,11 @@ const Waitlist = () => {
             Make DOGE assets smarter.
           </p>
           <div className="flex items-center justify-center gap-5 mt-8">
-            <a href="https://twitter.com/Laika_Layer2/" target="_blank" className="rounded-[30px] bg-white text-black font-extrabold py-3 px-6">
+            <a
+              href="https://twitter.com/Laika_Layer2/"
+              target="_blank"
+              className="rounded-[30px] bg-white text-black font-extrabold py-3 px-6"
+            >
               Follow Us
             </a>
             <a href="https://twitter.com/Laika_Layer2/" target="_blank">
@@ -74,7 +87,7 @@ const Waitlist = () => {
                 name="Email"
                 placeholder="Email address"
               />
-              <button type="submit" className="absolute right-[10px] top-[30%]" >
+              <button type="submit" className="absolute right-[10px] top-[30%]">
                 <img src={images.sendarrow} alt="" className="w-4 h-4" />
               </button>
             </form>
@@ -85,67 +98,87 @@ const Waitlist = () => {
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center">
           <div className="bg-[#191919] py-6 px-7  rounded-[20px] w-[85%] md:w-[80%] lg:w-[75%] xl:w-[55%]">
-          <div className="flex justify-end">
-                <button onClick={() => setShowPopup(false)}>
-                  <img src={images.close2} alt="" width={20} />
-                </button>
-              </div>
+            <div className="flex justify-end">
+              <button onClick={closePopup}>
+                <img src={images.close2} alt="" width={20} />
+              </button>
+            </div>
             <div className="overflow-y-auto h-[70vh]  md:h-auto ">
-              
-              <div className="flex flex-col md:flex-row justify-between gap-10 mt-6">
-                <div className="w-full md:w-[50%]">
-                  <h2 className="text-white font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">Welcome Onboard!</h2>
-                  <div className="mt-2 md:mt-4 lg:mt-12">
-                    <p className="text-dimGrey text-base">
-                      Thank you for signing up for the Laïka waitlist!
-                    </p>
-                    <p className="text-dimGrey text-base mt-4">
-                      You've taken the first step towards unlocking the full potential of the Dogecoin ecosystem. Keep an eye on your inbox for updates and exclusive opportunities to engage with Laïka.
-                    </p>
+              <div className="fixed inset-0 flex items-center justify-center">
+                <div className="bg-[#191919] py-6 px-7  rounded-[20px] w-[85%] md:w-[80%] lg:w-[75%] xl:w-[55%]">
+                  <div className="flex justify-end">
+                    <button onClick={closePopup}>
+                      <img src={images.close2} alt="" width={20} />
+                    </button>
                   </div>
-                  <div className="mt-4 md:mt-5 lg:mt-16">
-                    <h1 className="text-dimGrey font-bold text-base md:text-xl">Join Laïka Community</h1>
-                    <div className="mt-5 flex flex-col gap-5">
-                      <a href="https://twitter.com/laika_Layer2/" target="_blank">
-                        <div className="flex gap-3 items-center">
-                          <img src={images.x} alt="" width={30} />
-                          <p className="text-dimGrey text-base">Follow us on Twitter</p>
+                  <div className="overflow-y-auto h-[70vh]  md:h-auto ">
+                    <div className="flex flex-col md:flex-row justify-between gap-10 mt-6">
+                      <div className="w-full md:w-[50%]">
+                        <h2 className="text-white font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                          Welcome Onboard!
+                        </h2>
+                        <div className="mt-2 md:mt-4 lg:mt-12">
+                          <p className="text-dimGrey text-base">
+                            Thank you for signing up for the Laïka waitlist!
+                          </p>
+                          <p className="text-dimGrey text-base mt-4">
+                            You've taken the first step towards unlocking the
+                            full potential of the Dogecoin ecosystem. Keep an
+                            eye on your inbox for updates and exclusive
+                            opportunities to engage with Laïka.
+                          </p>
                         </div>
-                      </a>
-                      <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
-                        <div className="flex gap-3 items-center">
-                          <img src={images.discord} alt="" width={32} />
-                          <p className="text-dimGrey text-base">Join us on Discord</p>
+                        <div className="mt-4 md:mt-5 lg:mt-16">
+                          <h1 className="text-dimGrey font-bold text-base md:text-xl">
+                            Join Laïka Community
+                          </h1>
+                          <div className="mt-5 flex flex-col gap-5">
+                            <a
+                              href="https://twitter.com/laika_Layer2/"
+                              target="_blank"
+                              className="flex gap-3 items-center text-dimGrey text-base"
+                            >
+                              <img src={images.x} alt="" width={30} />
+                              <span>Follow us on Twitter</span>
+                            </a>
+                            <a
+                              href="https://discord.com/invite/YTHa4fda5r"
+                              target="_blank"
+                              className="flex gap-3 items-center text-dimGrey text-base"
+                            >
+                              <img src={images.discord} alt="" width={32} />
+                              <span>Join us on Discord</span>
+                            </a>
+                          </div>
                         </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className=" md:w-[50%]">
-                  <div className="bg-black rounded-[25px] pt-5 md:pl-12">
-                    <div className="bg-blue-800 h-[40px] filter_blur rounded-[10px] w-[250px] absolute top-[50%] right-[10%]" />
-                    <div className="flex flex-col justify-between items-center h-[64vh]  md:h-[64vh] lg:h-[70vh] xl:h-[60vh]">
-                      <div className="flex justify-center  px-5 md:px-0">
-                        <h1 className="text-white text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold ">
-                          Ride the <span className="text-gradient font-extrabold">DOGE</span>{" "}
-                          Ecosystem like never before.
-                        </h1>
                       </div>
-                      <div className="flex justify-end w-[75%]">
-                        <img src={images.dog3} alt="" width={140} />
+                      <div className=" md:w-[50%]">
+                        <div className="bg-black rounded-[25px] px-5 pt-6">
+                          <div className="bg-blue-800 h-[40px] filter_blur rounded-[10px] w-[250px] absolute top-[50%] right-[10%]" />
+                          <div className="flex flex-col justify-between items-center h-[64vh]  md:h-[64vh] lg:h-[70vh] xl:h-[60vh]">
+                            <div className="flex justify-center px-5 md:px-0">
+                              <h1 className="text-white text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold ">
+                                Ride the{" "}
+                                <span className="text-gradient font-extrabold">
+                                  DOGE
+                                </span>{" "}
+                                Ecosystem like never before.
+                              </h1>
+                            </div>
+                            <div className="flex justify-end w-[75%]">
+                              <img src={images.dog3} alt="" width={140} />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       )}
-
-
-
     </section>
   );
 };
