@@ -197,8 +197,8 @@ const Token = () => {
       </div>
 
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center">
-          <div className="bg-[#191919] py-6 px-7  rounded-[20px] w-[85%] md:w-[80%] lg:w-[75%] xl:w-[55%]">
+        <div className="fixed inset-0 flex items-center justify-center  z-[100]">
+          <div className="bg-[#191919] py-6 px-7 rounded-[20px] w-[85%] md:w-[80%] lg:w-[75%] xl:w-[55%]">
             <div className="flex justify-end">
               <button onClick={closePopup}>
                 <img src={images.close2} alt="" width={20} />
