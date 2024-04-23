@@ -67,12 +67,12 @@ const Opportunities = () => {
         <OpportunitiesCard
           img="scalibilty"
           name="Scalability, Programmability"
-          desc="The new protocols on Doge have exposed limitations in transaction processing capacity and a notable lack of asset programmability"
+          desc="The new protocols on Doge have exposed limitations in transaction processing capacity and a notable lack of asset programmability."
         />
         <OpportunitiesCard
           img="setting"
           name="Users Adoption"
-          desc="The absence of dApps on the Dogecoin network, resulting from its original design, leads to minimal on-chain activity and limited user engagement"
+          desc="The absence of dApps on the Dogecoin network, resulting from its original design, leads to minimal on-chain activity and limited user engagement."
         />
         <OpportunitiesCard
           img="thumb"
