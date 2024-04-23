@@ -33,6 +33,11 @@ const Navbar = () => {
   const [isFixed, setIsFixed] = useState(false);
   const location = useLocation();
 
+    // Function to scroll the page to the top
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0 });
+    };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight * 0.1) {
@@ -74,7 +79,7 @@ const Navbar = () => {
             Stay informed about{" "}
             <span className="text-gradient font-extrabold">$LAIKA</span>
           </h2>
-          <Link to="/waitlist" className="bg-transparent py-1 px-8 mt-3 md:mt-0 md:ml-4 text-white border border-white rounded-[5px] text-sm">
+          <Link to="/waitlist" className="bg-transparent py-1 px-8 mt-3 md:mt-0 md:ml-4 text-white border border-white rounded-[5px] text-sm" onClick={scrollToTop}>
             Join Waitlist
           </Link>
         </nav>

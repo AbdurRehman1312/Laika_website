@@ -132,7 +132,7 @@ const Token = () => {
                   type="text"
                   placeholder="jonh@doge.wtf..."
                 />
-                <Link to="/waitlist" className="absolute right-[5px] top-[11.7%]">
+                <Link to="" className="absolute right-[5px] top-[11.7%]">
                   <img src={images.inputsend} alt="" className="w-7 h-7" />
                 </Link>
               </form>
