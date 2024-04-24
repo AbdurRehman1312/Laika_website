@@ -185,7 +185,7 @@ const Token = () => {
               </h2>
               <p className="text-dimGrey">Spread some what?</p>
               <a
-                href="https://twitter.com/intent/post?text=I%20just%20discovered%20%40Laika_Layer2%2C%20a%20tier%202%20solution%20built%20on%20the%20Dogecoin%20blockchain.%0A%0ALet%27s%20join%20the%20Sputnik%201%20Program%2C%20allowing%20us%20to%20get%20early%20and%20accumulate%20%24LAIKA%20points.%20%20%0A%0A%24DOGE%20is%20the%20leading%20Memechain%2C%20La%C3%AFka%20will%20skyrocket%20its%20potential.%0A%F0%9F%A6%B4%F0%9F%A6%B4%F0%9F%A6%B4%0A%0Ahttps%3A%2F%2Flaikachain.dog%2F%20"
+                href="https://twitter.com/intent/post?text=I%20just%20discovered%20%40Laika_Layer2%2C%20a%20Layer%202%20solution%20built%20on%20the%20Dogecoin%20blockchain.%0A%0ALet%27s%20join%20the%20Sputnik%201%20Program%2C%20allowing%20us%20to%20get%20early%20and%20accumulate%20%24LAIKA%20points.%20%20%0A%0A%24DOGE%20is%20the%20leading%20Memechain%2C%20La%C3%AFka%20will%20skyrocket%20its%20potential.%0A%F0%9F%A6%B4%F0%9F%A6%B4%F0%9F%A6%B4%0A%0Ahttps%3A%2F%2Flaikachain.dog%2F%20"
                 target="_blank"
                 className="bg-dark-gradient py-3 px-4 rounded-[10px] sm:w-[70%] xl:w-[50%] md:w-[80%] w-full text-center text-lg"
               >
