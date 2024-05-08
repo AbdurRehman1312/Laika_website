@@ -20,6 +20,12 @@ const styles = {
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
   },
+  bridgebox: {
+    paddingX: "sm:px-0 px-0", // No padding for hero component
+    paddingY: "sm:py-0 py-0", // No padding for hero component
+    marginX: "sm:mx-16 mx-6",
+    marginY: "sm:my-16 my-6",
+  },
 };
 
 export default styles;

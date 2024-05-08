@@ -33,3 +33,8 @@ export { default as Zealy } from "./Zealy.png";
 export { default as digoicon } from "./digoicon.png";
 export { default as x } from "./x.png";
 export { default as sendarrow } from "./sendarrow.png";
+export { default as faucetdrop } from "./faucetdrop.png";
+export { default as historytab } from "./historytab.png";
+export { default as tabbridge } from "./tabbridge.png";
+export { default as shiftvector } from "./shiftvector.png";
+export { default as dogecoin } from "./dogecoin.png";

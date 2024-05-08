@@ -148,3 +148,9 @@ body{
 .popup-open {
   overflow: hidden;
 }
+.bridge_box{
+  box-shadow: 0 0px 10px 6px rgba(0, 111, 243, 0.5);
+}
+.shadow_coin{
+  box-shadow: 0 0px 20px 6px rgba(0, 111, 243, 0.5);
+}

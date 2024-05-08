@@ -18,8 +18,9 @@ const Footer = () => {
       comingSoon: true, // Add a flag to indicate "coming soon"
     },
     {
+      id: "/bridge",
       title: "Bridge",
-      comingSoon: true, // Add a flag to indicate "coming soon"
+      comingSoon: false, // Add a flag to indicate "coming soon"
     },
   ];
   

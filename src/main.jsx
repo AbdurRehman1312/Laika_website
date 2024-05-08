@@ -7,6 +7,8 @@ import Layout from '../Layout.jsx';
 import './index.css';
 import Airdrop from './components/Airdrop.jsx';
 import Waitlist from './components/Waitlist.jsx';
+import Bridge from './components/Bridge.jsx';
+import Faucets from './components/Faucets.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +16,8 @@ const router = createBrowserRouter(
         <Route path= "" element={<Home />}/>
         <Route path= "/sputnik" element={<Airdrop />}/>
         <Route path= "waitlist" element={<Waitlist />}/>
+        <Route path= "/bridge" element={<Bridge />}/>
+        <Route path= "/faucets" element={<Faucets />}/>
     </Route>
   )
 );

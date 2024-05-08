@@ -11,6 +11,7 @@ function Layout() {
 
     // Check if the current route is the home route
     const isHomeRoute = location.pathname === '/';
+    const isBridgeRoute = location.pathname === '/bridge';
 
     return (
         <>
