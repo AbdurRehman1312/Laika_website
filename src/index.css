@@ -159,3 +159,27 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+.progress-container {
+  position: relative;
+  width: 70%;
+  height: 43px; /* Increased height for a thicker bar */
+  border: 1px solid white;
+  border-radius: 36px; /* Rounded corners */
+  overflow: hidden; /* Ensures the bar does not spill over */
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00EDDF 0%,  #0A3EF4 100%); /* Gradient color */
+  transition: width 0.4s ease;
+  border-radius: 30px
+}
+
+.marker-text {
+  transform: translateX(-50%);
+}
+.mark{
+  border-right-width: 2px;
+}

@@ -40,3 +40,8 @@ export { default as shiftvector } from "./shiftvector.png";
 export { default as dogecoin } from "./dogecoin.png";
 export { default as swap } from "./swap.png";
 export { default as walletbtn } from "./walletbtn.png";
+export { default as dog4 } from "./dog4.png";
+export { default as dog5 } from "./dog5.png";
+export { default as bone } from "./bone.png";
+export { default as bone1 } from "./bone1.png";
+export { default as chain } from "./chain.png";
