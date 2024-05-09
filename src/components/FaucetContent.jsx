@@ -8,7 +8,7 @@ const FaucetContent = () => {
   };
   return (
     <div
-      className={`h-[600px] bg-[#091017] lg:rounded-t-[100px] rounded-t-[40px] bridge_box flex justify-center items-center mb-10`}
+      className={`py-20 bg-[#091017] lg:rounded-t-[100px] rounded-t-[40px] bridge_box flex justify-center items-center mb-10`}
     >
       <div className="w-full md:w-[70%] lg:w-[60%] xl:w-[55%] mt-9">
         <div className="bg-[#22282e] w-[90%] lg:w-[60%] xl:w-[60%] mx-auto rounded-[20px] my-14 p-8 border border-white border-opacity-30 flex flex-col justify-between gap-3">

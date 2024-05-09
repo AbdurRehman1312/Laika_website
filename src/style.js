@@ -21,10 +21,10 @@ const styles = {
     marginY: "sm:my-16 my-6",
   },
   bridgebox: {
-    paddingX: "sm:px-0 px-0", // No padding for hero component
-    paddingY: "sm:py-0 py-0", // No padding for hero component
-    marginX: "sm:mx-16 mx-6",
-    marginY: "sm:my-16 my-6",
+    paddingX: "px-0", // Zero padding on X-axis
+    paddingY: "py-0", // Zero padding on Y-axis
+    marginX: "mx-0", // Zero margin on X-axis
+    marginY: "my-0", // Zero margin on Y-axis
   },
 };
 

@@ -3,7 +3,7 @@ import BridgeHero from "./BridgeHero";
 import BridgeContent from "./BridgeContent";
 const Bridge = () => {
   return (
-    <section className="w-full overflow-hidden">
+    <section className="w-full">
       <BridgeHero />
       <BridgeContent />
     </section>

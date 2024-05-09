@@ -1,4 +1,3 @@
-// Layout.js
 import React from 'react';
 import styles from './src/style';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -12,6 +11,10 @@ function Layout() {
     // Check if the current route is the home route
     const isHomeRoute = location.pathname === '/';
     const isBridgeRoute = location.pathname === '/bridge';
+    const isFaucetRoute = location.pathname === '/faucets';
+    
+    // Combine bridge and faucet route checks
+    const isSpecialRoute = isBridgeRoute || isFaucetRoute;
 
     return (
         <>
@@ -22,14 +25,15 @@ function Layout() {
                         <Navbar />
                     </div>
                 </div>
-                <div className={`${styles.paddingX} ${styles.flexStart}`}>
-                    <div className={`${styles.boxWidth}`}>
+                {/* Apply conditional styling based on the route */}
+                <div className={`${isSpecialRoute ? 'px-0' : styles.paddingX} ${isSpecialRoute ? 'justify-start' : styles.flexStart}`}>
+                    <div className={`${styles.bridgebox}`}>
                         {/* Hero component without padding */}
                         {isHomeRoute && <Hero styles={styles.hero} />}
 
-                        {/* Outlet */}
+                        {/* Outlet - where Bridge and Faucet components will be rendered */}
                         <Outlet />
-                        
+
                         {/* Footer */}
                         <Footer />
                     </div>
