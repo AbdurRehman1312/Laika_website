@@ -22,7 +22,7 @@ const BridgeHero = () => {
           <ButtonImage
             name="Go to Faucets"
             img="faucetdrop"
-            style="py-3 lg:px-8 px-28"
+            style="py-3 lg:px-8 px-20"
             imgStyle="w-5 h-5"
           />
         </Link>
