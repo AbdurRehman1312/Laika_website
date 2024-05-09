@@ -154,3 +154,8 @@ body{
 .shadow_coin{
   box-shadow: 0 0px 20px 6px rgba(0, 111, 243, 0.5);
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

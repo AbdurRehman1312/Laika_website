@@ -38,3 +38,4 @@ export { default as historytab } from "./historytab.png";
 export { default as tabbridge } from "./tabbridge.png";
 export { default as shiftvector } from "./shiftvector.png";
 export { default as dogecoin } from "./dogecoin.png";
+export { default as swap } from "./swap.png";
