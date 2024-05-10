@@ -5,32 +5,6 @@ import * as images from "../assets";
 const Waitlist = () => {
   const [showPopup, setShowPopup] = useState(false);
 
-  // function Submit(e) {
-  //   e.preventDefault();
-  //   const formEle = document.querySelector("form");
-  //   const formDatab = new FormData(formEle);
-  //   fetch(
-  //     "https://script.google.com/macros/s/AKfycbzB4zFTjX3W0R5Xnd4mD00IbHp5_Gw3zlPSxNQNDFwGQS9sRSPs_ytFms4Fl69e7InHvw/exec",
-  //     {
-  //       method: "POST",
-  //       body: formDatab,
-  //     }
-  //   )
-  //     .then((res) => {
-  //       console.log("Response received", res);
-  //       return res.text();
-  //     })
-  //     .then((data) => {
-  //       console.log("Data received", data);
-  //       setShowPopup(true);
-  //       // Add class to body to prevent scrolling
-  //       document.body.classList.add("popup-open");
-  //     })
-  //     .catch((error) => {
-  //       console.log("Error occurred", error);
-  //     });
-  // }
-
   function Submit(e) {
     e.preventDefault();
     const formEle = document.querySelector("form");
@@ -40,27 +14,28 @@ const Waitlist = () => {
       {
         method: "POST",
         body: formDatab,
-        mode:"no-cors"
       }
     )
-    .then((res) => {
-      console.log('Response received', res);
-      return res.text();
-    })
-    .then((data) => {
-      console.log('Data received', data);
-      setShowPopup(true);
-    })
-    .catch((error) => {
-      console.log('Error occurred', error);
-    });
+      .then((res) => {
+        console.log("Response received", res);
+        return res.text();
+      })
+      .then((data) => {
+        console.log("Data received", data);
+        setShowPopup(true);
+        // Add class to body to prevent scrolling
+        document.body.classList.add("popup-open");
+      })
+      .catch((error) => {
+        console.log("Error occurred", error);
+      });
   }
 
-  // // Function to close the popup and remove class from body to enable scrolling
-  // function closePopup() {
-  //   setShowPopup(false);
-  //   document.body.classList.remove("popup-open");
-  // }
+  // Function to close the popup and remove class from body to enable scrolling
+  function closePopup() {
+    setShowPopup(false);
+    document.body.classList.remove("popup-open");
+  }
 
   return (
     <section className="my-10">
@@ -124,7 +99,7 @@ const Waitlist = () => {
         <div className="fixed inset-0 flex items-center justify-center z-[100]">
           <div className="bg-[#191919] py-6 px-7 z-[300] rounded-[20px] w-[85%] md:w-[80%] lg:w-[75%] xl:w-[55%]">
             <div className="flex justify-end">
-              <button onClick={() => setShowPopup(false)}>
+              <button onClick={closePopup}>
                 <img src={images.close2} alt="" width={20} />
               </button>
             </div>
@@ -132,7 +107,7 @@ const Waitlist = () => {
               <div className="fixed inset-0 flex items-center justify-center">
                 <div className="bg-[#191919] py-6 px-7  rounded-[20px] w-[85%] md:w-[80%] lg:w-[75%] xl:w-[55%]">
                   <div className="flex justify-end">
-                    <button onClick={() => setShowPopup(false)}>
+                    <button onClick={closePopup}>
                       <img src={images.close2} alt="" width={20} />
                     </button>
                   </div>
