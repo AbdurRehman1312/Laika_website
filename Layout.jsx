@@ -12,7 +12,7 @@ function Layout() {
     const isHomeRoute = location.pathname === '/';
     const isBridgeRoute = location.pathname === '/bridge';
     const isFaucetRoute = location.pathname === '/faucets';
-    
+
     // Combine bridge and faucet route checks
     const isSpecialRoute = isBridgeRoute || isFaucetRoute;
 
@@ -33,8 +33,11 @@ function Layout() {
 
                         {/* Outlet - where Bridge and Faucet components will be rendered */}
                         <Outlet />
-
-                        {/* Footer */}
+                    </div>
+                </div>
+                {/* Applying styles.boxWidth to the Footer */}
+                <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+                    <div className={`${styles.boxWidth}`}>
                         <Footer />
                     </div>
                 </div>
