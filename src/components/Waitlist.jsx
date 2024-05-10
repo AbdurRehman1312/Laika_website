@@ -40,7 +40,7 @@ const Waitlist = () => {
   return (
     <section className="my-10">
       <div className="mt-12">
-        <Link className="text-primary hover:opacity-65">
+        <Link className="text-[#006FF3] hover:opacity-65">
           {">"} Laika Waitlist
         </Link>
       </div>

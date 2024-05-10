@@ -2,7 +2,11 @@ import React, { useRef, useEffect } from "react";
 import Button from "./Button";
 import gsap from "gsap";
 import { useIntersection } from "react-use";
+import { Link } from "react-router-dom";
 const Memechain = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0 });
+  };
   const sectionRef = useRef(null);
   const intersection = useIntersection(sectionRef, {
     root: null,
@@ -64,8 +68,9 @@ const Memechain = () => {
           <span className="text-gradient font-extrabold m-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center">
             MEMECHAIN
           </span>
-
-          <Button name="Bridge to Laïka now" style="px-6" desc="coming soon" />
+          <Link to={"/bridge"} onClick={scrollToTop}>
+          <Button name="Bridge to Laïka now" style="px-6"/>
+          </Link>
         </div>
       </section>
     </>

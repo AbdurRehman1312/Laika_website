@@ -3,6 +3,9 @@ import ButtonImage from "./ButtonImage";
 import { Link } from "react-router-dom";
 
 const BridgeHero = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0 });
+  };
   return (
     <div className="my-24 px-4">
       <div className="flex flex-col items-center justify-center gap-6">
@@ -18,7 +21,7 @@ const BridgeHero = () => {
           Bridge offers a streamlined experience for navigating the multi-chain
           landscape.
         </p>
-        <Link to={"/faucets"} className="flex justify-center">
+        <Link to={"/faucets"} className="flex justify-center" onClick={scrollToTop}>
           <ButtonImage
             name="Go to Faucets"
             img="faucetdrop"
