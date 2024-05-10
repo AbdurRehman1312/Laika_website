@@ -8,7 +8,7 @@ const Sputnik = () => {
     <>
       <section className="">
         <div className="flex justify-start mt-20 ml-2">
-          <Link className="text-primary hover:opacity-65">
+          <Link className="text-[#006FF3] hover:opacity-65">
             {">"} Sputnik 1 Program
           </Link>
         </div>
@@ -44,45 +44,45 @@ const Sputnik = () => {
                     Earn 2 LAIKA points for each DOGE worth swapped.
                   </h2>
                 </div>
-              <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
-                <div className="flex items-center justify-evenly gap-5 px-5 w-full">
-                  <div className="bg-dark-gradient flex justify-center py-2 px-[2.2rem] md:w-[20%] rounded-[5px]">
-                    <p className="text-white font-semibold text-xs text-center">
-                      Providing <br /> liquidity
-                    </p>
-                  </div>
-                  <h2 className="text-white font-semibold text-sm flex-1">
-                    Earn 3 LAIKA points for each DOGE worth provided every 6
-                    hours.
-                  </h2>
-                </div>
-                <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
+                <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
                   <div className="flex items-center justify-evenly gap-5 px-5 w-full">
                     <div className="bg-dark-gradient flex justify-center py-2 px-[2.2rem] md:w-[20%] rounded-[5px]">
                       <p className="text-white font-semibold text-xs text-center">
-                        Staking
+                        Providing <br /> liquidity
                       </p>
                     </div>
                     <h2 className="text-white font-semibold text-sm flex-1">
-                      Earn 1 LAIKA point for each DOGE worth staked every 6
+                      Earn 3 LAIKA points for each DOGE worth provided every 6
                       hours.
                     </h2>
                   </div>
-                  <div className="bg-[#060910] py-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
+                  <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
                     <div className="flex items-center justify-evenly gap-5 px-5 w-full">
                       <div className="bg-dark-gradient flex justify-center py-2 px-[2.2rem] md:w-[20%] rounded-[5px]">
                         <p className="text-white font-semibold text-xs text-center">
-                          Referring
+                          Staking
                         </p>
                       </div>
                       <h2 className="text-white font-semibold text-sm flex-1">
-                        Earn 10% of your referral's points + an additional 5%
-                        from their referrals.
+                        Earn 1 LAIKA point for each DOGE worth staked every 6
+                        hours.
                       </h2>
+                    </div>
+                    <div className="bg-[#060910] py-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
+                      <div className="flex items-center justify-evenly gap-5 px-5 w-full">
+                        <div className="bg-dark-gradient flex justify-center py-2 px-[2.2rem] md:w-[20%] rounded-[5px]">
+                          <p className="text-white font-semibold text-xs text-center">
+                            Referring
+                          </p>
+                        </div>
+                        <h2 className="text-white font-semibold text-sm flex-1">
+                          Earn 10% of your referral's points + an additional 5%
+                          from their referrals.
+                        </h2>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
