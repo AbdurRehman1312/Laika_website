@@ -35,6 +35,7 @@ const Navbar = () => {
   // Function to scroll the page to the top
   const scrollToTop = () => {
     window.scrollTo({ top: 0 });
+    setToggle(false);
   };
 
   useEffect(() => {
@@ -164,6 +165,7 @@ const Navbar = () => {
                             ? "disabled-link font-medium tracking-wide"
                             : ""
                         }
+                        onClick={scrollToTop}
                       >
                         {nav.title}
                       </NavLink>
