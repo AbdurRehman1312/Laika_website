@@ -39,7 +39,7 @@ const FaucetContent = () => {
               disabled={isClaimed || !inputValue.trim()}
               onClick={handleClaim}
             >
-              {isClaimed ? "!Claimed" : <img src={images.faucetdrop} alt="" className="w-5 h-5" />}
+              {isClaimed ? "Claimed!" : <img src={images.faucetdrop} alt="" className="w-5 h-5" />}
               {!isClaimed && "Claim Faucet"}
             </button>
           </form>
