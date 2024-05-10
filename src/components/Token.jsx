@@ -118,7 +118,7 @@ const Token = () => {
               <h2 className="text-white text-lg md:text-xl font-semibold w-72">
                 Engage with Laïka to earn Laïka points
               </h2>
-              <p className="text-dimGrey w-80 text-base">
+              <p className="text-dimGrey md:w-[80%] w-full text-base">
                 Earn points by actively engaging with Laïka, transforming your
                 contributions into valuable rewards within the Dogecoin
                 ecosystem.
