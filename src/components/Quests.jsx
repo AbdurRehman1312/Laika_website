@@ -4,7 +4,7 @@ import * as images from "../assets";
 import ProgressBar from "./ProgressBar";
 
 const Quests = () => {
-  const [activeTab, setActiveTab] = useState("tweetToEarn");
+  const [activeTab, setActiveTab] = useState("mainQuest");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -274,65 +274,10 @@ const Quests = () => {
             </div>
           </div>
         );
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <>
-      <section className="my-8 md:my-32">
-        <div className="w-full rounded-[20px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-3 lg:gap-0 xl:gap-0 bg-dark-gradient2 py-10 md:py-5 lg:py-0 h-[40vh] xl:h-[60px] lg:h-[70px] md:h-[90px] text-center items-center rounded-t-[20px]">
-            <button
-              className={`text-white  ${activeTab === "tweetToEarn"
-                ? "opacity-100 font-semibold"
-                : "opacity-25 font-extralight "
-                }`}
-              onClick={() => handleTabClick("tweetToEarn")}
-            >
-              Tweet-to-Earn
-            </button>
-            <button
-              className={`text-white  ${activeTab === "inviteToEarn"
-                ? "opacity-100 font-semibold"
-                : "opacity-25 font-extralight"
-                }`}
-              onClick={() => handleTabClick("inviteToEarn")}
-            >
-              Invite-to-Earn
-            </button>
-            <button
-              className={`text-white  ${activeTab === "dailyTasks"
-                ? "opacity-100 font-semibold"
-                : "opacity-25 font-extralight"
-                }`}
-              onClick={() => handleTabClick("dailyTasks")}
-            >
-              Daily Tasks
-            </button>
-            <button
-              className={`text-white  ${activeTab === "🦴🦴🦴"
-                ? "opacity-100 font-semibold"
-                : "opacity-25 font-extralight"
-                }`}
-              onClick={() => handleTabClick("🦴🦴🦴")}
-            >
-              🦴🦴🦴
-            </button>
-            <button
-              className={`text-white   ${activeTab === "supportLaika"
-                ? "opacity-100 font-semibold"
-                : "opacity-25 font-extralight"
-                }`}
-              onClick={() => handleTabClick("supportLaika")}
-            >
-              Support Laïka Ecosystem
-            </button>
-          </div>
-          <div className="bg-dark-gradient py-12 rounded-b-[20px]">
-            {renderContent()}
-            {/* <>
+      case "mainQuest":
+        return(
+          <>
+           {/* <>
             <div className="flex flex-col items-center gap-4 py-8">
               <div className="flex items-center gap-1">
                 <img src={images.lock} alt="" width={20} />
@@ -440,6 +385,133 @@ const Quests = () => {
               </div>
             </div>
           </> */}
+
+          <div className="flex flex-col items-center gap-4 py-8">
+            <div className="flex items-center gap-1">
+              <img src={images.lock} alt="" width={20} />
+              <h1 className="text-white text-center">Main quests locked</h1>
+            </div>
+
+            <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
+            To unlock all Laika quests and collect Meme Points, you must first complete these three steps
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
+            <div className="flex flex-col items-center gap-5">
+              <h1 className="text-white text-center">
+                Follow Laïka on Twitter
+              </h1>
+              <div className="flex gap-4 items-center justify-center">
+                <a
+                  href="https://twitter.com/Laika_Layer2/"
+                  target="_blank"
+                  className="border rounded py-2 px-7 text-white"
+                >
+                  Follow
+                </a>
+                <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
+                  <Button name="Check" style="px-7 " />
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-5">
+              <h1 className="text-white text-center">
+              Join the Laïka Telegram Group
+              </h1>
+              <div className="flex gap-4 items-center justify-center">
+                <a
+                  href="https://discord.com/invite/YTHa4fda5r"
+                  target="_blank"
+                  className="border rounded py-2 px-7 text-white"
+                >
+                  Join
+                </a>
+                <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
+                  <Button name="Check" style="px-7 " />
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-5">
+              <h1 className="text-white text-center">
+                RT & Like the Campaign Tweet
+              </h1>
+              <div className="flex gap-4 items-center justify-center">
+              <a
+                  href="https://twitter.com/Laika_Layer2/status/1768690859673874692"
+                  target="_blank"
+                  className="border rounded py-2 px-7 text-white"
+                >
+                  See Tweet
+                </a>
+                <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
+                  <Button name="Check" style="px-7 " />
+                </a>
+              </div>
+            </div>
+          </div>
+        </>
+          
+
+         
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <>
+      <section className="my-8 md:my-32">
+        <div className="w-full rounded-[20px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-3 lg:gap-0 xl:gap-0 bg-dark-gradient2 py-10 md:py-5 lg:py-0 h-[40vh] xl:h-[60px] lg:h-[70px] md:h-[90px] text-center items-center rounded-t-[20px]">
+            <button
+              className={`text-white  ${activeTab === "tweetToEarn"
+                ? "opacity-100 font-semibold"
+                : "opacity-25 font-extralight "
+                }`}
+              onClick={() => handleTabClick("tweetToEarn")}
+            >
+              Tweet-to-Earn
+            </button>
+            <button
+              className={`text-white  ${activeTab === "inviteToEarn"
+                ? "opacity-100 font-semibold"
+                : "opacity-25 font-extralight"
+                }`}
+              onClick={() => handleTabClick("inviteToEarn")}
+            >
+              Invite-to-Earn
+            </button>
+            <button
+              className={`text-white  ${activeTab === "dailyTasks"
+                ? "opacity-100 font-semibold"
+                : "opacity-25 font-extralight"
+                }`}
+              onClick={() => handleTabClick("dailyTasks")}
+            >
+              Daily Tasks
+            </button>
+            <button
+              className={`text-white  ${activeTab === "🦴🦴🦴"
+                ? "opacity-100 font-semibold"
+                : "opacity-25 font-extralight"
+                }`}
+              onClick={() => handleTabClick("🦴🦴🦴")}
+            >
+              🦴🦴🦴
+            </button>
+            <button
+              className={`text-white   ${activeTab === "supportLaika"
+                ? "opacity-100 font-semibold"
+                : "opacity-25 font-extralight"
+                }`}
+              onClick={() => handleTabClick("supportLaika")}
+            >
+              Support Laïka Ecosystem
+            </button>
+          </div>
+          <div className="bg-dark-gradient py-12 rounded-b-[20px]">
+            {renderContent()}
           </div>
         </div>
       </section>
