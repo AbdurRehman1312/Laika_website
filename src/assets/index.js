@@ -45,3 +45,6 @@ export { default as dog5 } from "./dog5.png";
 export { default as bone } from "./bone.png";
 export { default as bone1 } from "./bone1.png";
 export { default as chain } from "./chain.png";
+export { default as pepe } from "./pepe.png";
+export { default as eth } from "./eth.png";
+export { default as sol } from "./sol.png";
