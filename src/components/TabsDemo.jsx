@@ -50,13 +50,14 @@ export function TabsDemo() {
     <>
       <div className="flex justify-center items-center md:w-[80%] w-[95%]">
         <Tabs defaultValue="bridge" className="w-full" onValueChange={(value) => setActiveTab(value)}>
-          <TabsList className="flex items-center gap-3 lg:w-[25%] w-[80%] mx-auto py-3 bg-[#0c151f] rounded-2xl">
+          <TabsList className="flex items-center gap-3 lg:w-[19%] md:w-[35%] w-[70%] mx-auto py-7 bg-[#0c151f] rounded-full">
             <TabsTrigger
               value="bridge"
               isActive={activeTab === 'bridge'}
               className="rounded-full flex items-center gap-3"
             >
               <img src={images.tabbridge} alt="" className="w-4 h-4" />
+             
               <span>Bridge</span>
             </TabsTrigger>
             <TabsTrigger
@@ -72,22 +73,17 @@ export function TabsDemo() {
             <Card className="lg:w-[45%] w-[100%] mx-auto">
               <CardHeader>
                 <CardTitle className="my-10">Bridge</CardTitle>
-                <div className="flex justify-evenly items-center w-full gap-4">
+                <div className="flex justify-center items-center w-full gap-8">
                   <div className="md:h-[100px] md:w-[100px] h-[70px] w-[70px] p-5 bg-[#060b10] rounded-2xl flex justify-center items-center shadow_coin">
                     <img src={coin1Details.image} alt={coin1Details.name} />
                   </div>
                   <img src={images.shiftvector} alt="" className="lg:w-[30%] w-[20%]" />
-
-
-
                   <div className="md:h-[100px] md:w-[100px] h-[70px] w-[70px] p-5 bg-[#060b10] rounded-2xl flex justify-center items-center shadow_coin">
                     <img src={coin2Details.image} alt={coin2Details.name} />
                   </div>
                 </div>
-
-
               </CardHeader>
-              <CardContent className="space-y-2 my-14">
+              <CardContent className="space-y-2 my-4">
                 <div className="flex justify-between w-full my-10">
 
                   <Select value={selectedOption1} onValueChange={(value) => setSelectedOption1(value)}>
@@ -174,10 +170,6 @@ export function TabsDemo() {
                       </SelectGroup>
                     </SelectContent>
                   </Select>
-
-
-
-
                 </div>
                 <div className="flex justify-between my-20">
                   <Label className="text-dimGrey">You Send</Label>

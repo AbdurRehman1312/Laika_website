@@ -21,7 +21,7 @@ const TabsTrigger = React.forwardRef(({ isActive, className, ...props }, ref) =>
     <TabsPrimitive.Trigger
       ref={ref}
       className={cn(
-        "inline-flex items-center justify-center py-1 px-4",
+        "inline-flex items-center justify-center py-2 px-4",
         {
           'bg-[#060b10] text-gray-400': isActive,
           'bg-background text-foreground': !isActive
