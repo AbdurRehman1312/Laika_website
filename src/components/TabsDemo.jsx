@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -34,8 +34,20 @@ export function TabsDemo() {
   const [activeTab, setActiveTab] = useState('bridge');
   const [selectedOption1, setSelectedOption1] = useState(coins[0].id);
   const [selectedOption2, setSelectedOption2] = useState(coins[1].id);
+  const [secondSelectOptions, setSecondSelectOptions] = useState(coins);
 
   const getCoinDetails = (id) => coins.find(coin => coin.id === id);
+
+  useEffect(() => {
+    // Check if the selected option in the first select is not 'laika'
+    if (selectedOption1 !== 'laika') {
+      // Set the second select to only show 'Laïka'
+      setSecondSelectOptions(coins.filter(coin => coin.id === 'laika'));
+    } else {
+      // Otherwise, show all options
+      setSecondSelectOptions(coins.filter(coin => coin.id !== 'laika'));
+    }
+  }, [selectedOption1, coins]);
 
   const swapCoins = () => {
     let temp = selectedOption1;
@@ -56,7 +68,7 @@ export function TabsDemo() {
               isActive={activeTab === 'bridge'}
               className="rounded-full flex items-center gap-3"
             >
-              <img src={images.tabbridge} alt="" className="w-4 h-4" />
+              <img src={images.tabbridge} alt="" className={`w-4 h-4 ${activeTab === 'bridge'? `opacity-100`:`opacity-[40%]`} `} />
              
               <span>Bridge</span>
             </TabsTrigger>
@@ -65,7 +77,7 @@ export function TabsDemo() {
               isActive={activeTab === 'history'}
               className="rounded-full flex items-center gap-3"
             >
-              <img src={images.historytab} alt="" className="w-4 h-4" />
+              <img src={images.historytab} alt="" className={`w-4 h-4 ${activeTab === 'history'? `opacity-100`:`opacity-[40%]`} `} />
               <span>History</span>
             </TabsTrigger>
           </TabsList>
@@ -91,38 +103,16 @@ export function TabsDemo() {
                       <SelectValue  />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectGroup>
-                        <SelectItem value="doge">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[0].image} alt={coins[0].name} className="w-4 h-4" />
-                            <span>{coins[0].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="laika">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[1].image} alt={coins[1].name} className="w-4 h-4" />
-                            <span>{coins[1].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="eth">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[2].image} alt={coins[2].name} className="w-4 h-4" />
-                            <span>{coins[2].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="pepe">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[3].image} alt={coins[3].name} className="w-4 h-4" />
-                            <span>{coins[3].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="sol">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[4].image} alt={coins[4].name} className="w-4 h-4" />
-                            <span>{coins[4].name}</span>
-                          </div>
-                        </SelectItem>
-                      </SelectGroup>
+                    <SelectGroup>
+                    {coins.map((coin) => (
+                      <SelectItem key={coin.id} value={coin.id}>
+                        <div className="flex items-center gap-2">
+                          <img src={coin.image} alt={coin.name} className="w-4 h-4" />
+                          <span>{coin.name}</span>
+                        </div>
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
                     </SelectContent>
                   </Select>
 
@@ -136,38 +126,16 @@ export function TabsDemo() {
                       <SelectValue  />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectGroup>
-                        <SelectItem value="doge" >
-                          <div className="flex items-center gap-2">
-                            <img src={coins[0].image} alt={coins[0].name} className="w-4 h-4" />
-                            <span>{coins[0].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="laika" >
-                          <div className="flex items-center gap-2">
-                            <img src={coins[1].image} alt={coins[1].name} className="w-4 h-4" />
-                            <span>{coins[1].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="eth">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[2].image} alt={coins[2].name} className="w-4 h-4" />
-                            <span>{coins[2].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="pepe">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[3].image} alt={coins[3].name} className="w-4 h-4" />
-                            <span>{coins[3].name}</span>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="sol">
-                          <div className="flex items-center gap-2">
-                            <img src={coins[4].image} alt={coins[4].name} className="w-4 h-4" />
-                            <span>{coins[4].name}</span>
-                          </div>
-                        </SelectItem>
-                      </SelectGroup>
+                    <SelectGroup>
+                    {secondSelectOptions.map((coin) => (
+                      <SelectItem key={coin.id} value={coin.id}>
+                        <div className="flex items-center gap-2">
+                          <img src={coin.image} alt={coin.name} className="w-4 h-4" />
+                          <span>{coin.name}</span>
+                        </div>
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
                     </SelectContent>
                   </Select>
                 </div>
