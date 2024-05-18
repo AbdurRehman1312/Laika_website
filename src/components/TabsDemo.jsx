@@ -22,6 +22,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import * as images from "../assets";
 import { TableDemo } from "./TableDemo";
+import Button from "./Button";
 export function TabsDemo() {
   const [coins, setCoins] = useState([
     { id: 'doge', name: 'Doge', image: images.dogecoin },
@@ -29,12 +30,13 @@ export function TabsDemo() {
     { id: 'eth', name: 'Ethereum', image: images.eth },
     { id: 'pepe', name: 'Pepe', image: images.pepe },
     { id: 'sol', name: 'Solana', image: images.sol },
-    
+
   ]);
   const [activeTab, setActiveTab] = useState('bridge');
   const [selectedOption1, setSelectedOption1] = useState(coins[0].id);
   const [selectedOption2, setSelectedOption2] = useState(coins[1].id);
   const [secondSelectOptions, setSecondSelectOptions] = useState(coins);
+  const [showPopup, setShowPopup] = useState(false);
 
   const getCoinDetails = (id) => coins.find(coin => coin.id === id);
 
@@ -55,8 +57,17 @@ export function TabsDemo() {
     setSelectedOption2(temp);
   };
 
+  const renderPopup = () => {
+    setShowPopup(true)
+  }
+
   const coin1Details = getCoinDetails(selectedOption1);
   const coin2Details = getCoinDetails(selectedOption2);
+
+  function closePopup() {
+    setShowPopup(false);
+    document.body.classList.remove("popup-open");
+  }
 
   return (
     <>
@@ -68,8 +79,8 @@ export function TabsDemo() {
               isActive={activeTab === 'bridge'}
               className="rounded-full flex items-center gap-3"
             >
-              <img src={images.tabbridge} alt="" className={`w-4 h-4 ${activeTab === 'bridge'? `opacity-100`:`opacity-[40%]`} `} />
-             
+              <img src={images.tabbridge} alt="" className={`w-4 h-4 ${activeTab === 'bridge' ? `opacity-100` : `opacity-[40%]`} `} />
+
               <span>Bridge</span>
             </TabsTrigger>
             <TabsTrigger
@@ -77,7 +88,7 @@ export function TabsDemo() {
               isActive={activeTab === 'history'}
               className="rounded-full flex items-center gap-3"
             >
-              <img src={images.historytab} alt="" className={`w-4 h-4 ${activeTab === 'history'? `opacity-100`:`opacity-[40%]`} `} />
+              <img src={images.historytab} alt="" className={`w-4 h-4 ${activeTab === 'history' ? `opacity-100` : `opacity-[40%]`} `} />
               <span>History</span>
             </TabsTrigger>
           </TabsList>
@@ -100,19 +111,19 @@ export function TabsDemo() {
 
                   <Select value={selectedOption1} onValueChange={(value) => setSelectedOption1(value)}>
                     <SelectTrigger>
-                      <SelectValue  />
+                      <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                    <SelectGroup>
-                    {coins.map((coin) => (
-                      <SelectItem key={coin.id} value={coin.id}>
-                        <div className="flex items-center gap-2">
-                          <img src={coin.image} alt={coin.name} className="w-4 h-4" />
-                          <span>{coin.name}</span>
-                        </div>
-                      </SelectItem>
-                    ))}
-                  </SelectGroup>
+                      <SelectGroup>
+                        {coins.map((coin) => (
+                          <SelectItem key={coin.id} value={coin.id}>
+                            <div className="flex items-center gap-2">
+                              <img src={coin.image} alt={coin.name} className="w-4 h-4" />
+                              <span>{coin.name}</span>
+                            </div>
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
                     </SelectContent>
                   </Select>
 
@@ -123,19 +134,19 @@ export function TabsDemo() {
                   <Select value={selectedOption2} onValueChange={(value) => setSelectedOption2(value)}
                   >
                     <SelectTrigger >
-                      <SelectValue  />
+                      <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                    <SelectGroup>
-                    {secondSelectOptions.map((coin) => (
-                      <SelectItem key={coin.id} value={coin.id}>
-                        <div className="flex items-center gap-2">
-                          <img src={coin.image} alt={coin.name} className="w-4 h-4" />
-                          <span>{coin.name}</span>
-                        </div>
-                      </SelectItem>
-                    ))}
-                  </SelectGroup>
+                      <SelectGroup>
+                        {secondSelectOptions.map((coin) => (
+                          <SelectItem key={coin.id} value={coin.id}>
+                            <div className="flex items-center gap-2">
+                              <img src={coin.image} alt={coin.name} className="w-4 h-4" />
+                              <span>{coin.name}</span>
+                            </div>
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
                     </SelectContent>
                   </Select>
                 </div>
@@ -170,7 +181,7 @@ export function TabsDemo() {
                 </div>
               </CardContent>
               <CardFooter>
-                <button className="w-full relative bg-[#0064e2] py-3 px-3 text-center rounded-[5px] text-sm">
+                <button className="w-full relative bg-[#0064e2] py-3 px-3 text-center rounded-[5px] text-sm" onClick={renderPopup}>
                   Connect Your Wallet
                   <img src={images.walletbtn} className="w-12 h-8 absolute bottom-10 right-2" alt="" />
                 </button>
@@ -185,6 +196,35 @@ export function TabsDemo() {
           </TabsContent>
         </Tabs>
       </div>
+
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center z-[100]">
+          <div className="bg-[#191919] py-6 px-7 z-[300] rounded-[20px]">
+            <div className="flex flex-col items-center gap-5">
+
+            <h2 className="text-white font-bold text-xl">Wallet Not Found</h2>
+            <p className="text-dimGrey text-lg text-center">
+            Please install the latest version of WIWW by <a href="" className="text-[#0064e2]">clicking here</a> !
+            </p>
+
+
+              <div role="status">
+                <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
+                  <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill" />
+                </svg>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <button
+                className="rounded-[30px] bg-white text-black font-extrabold py-2 px-6" onClick={closePopup}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
