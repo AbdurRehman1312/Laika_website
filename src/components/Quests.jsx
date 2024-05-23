@@ -276,17 +276,14 @@ const Quests = () => {
         );
       case "mainQuest":
         return(
-          <>
-           {/* <>
-            <div className="flex flex-col items-center gap-4 py-8">
+
+           <>
+            <div className="flex justify-center gap-3  pb-8">
               <div className="flex items-center gap-1">
                 <img src={images.lock} alt="" width={20} />
                 <h1 className="text-white text-center">Tesnet quests locked</h1>
               </div>
 
-              <p className="text-white font-extralight text-center w-full max-w-xs md:max-w-md lg:max-w-lg">
-                Tesnet interaction quests coming soon.
-              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
               <div className="flex flex-col items-center gap-5">
@@ -384,9 +381,9 @@ const Quests = () => {
                 </div>
               </div>
             </div>
-          </> */}
+      
 
-          <div className="flex flex-col items-center gap-4 py-8">
+          {/* <div className="flex flex-col items-center gap-4 py-8">
             <div className="flex items-center gap-1">
               <img src={images.lock} alt="" width={20} />
               <h1 className="text-white text-center">Main quests locked</h1>
@@ -448,8 +445,8 @@ const Quests = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </>
+          </div> */}
+    </>
           
 
          
