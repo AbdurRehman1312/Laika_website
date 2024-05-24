@@ -55,8 +55,8 @@ export function TabsDemo() {
   const [selectedOption1, setSelectedOption1] = useState(coins[0].id);
   const [selectedOption2, setSelectedOption2] = useState(coins[1].id);
   const [tokenSelectOptions, setTokenSelectOptions] = useState([
-    { id: 'wen', name: 'WEN', image: images.wen },
     { id: 'doge', name: 'Doge', image: images.dogecoin },
+    { id: 'wen', name: 'WEN', image: images.wen },
     { id: 'fiwb', name: 'FIWB', image: images.fiwb },
     { id: 'dbit', name: 'DBIT', image: images.dbit },
     { id: 'dnld', name: 'DNLD', image: images.dnld },
@@ -75,7 +75,7 @@ export function TabsDemo() {
     { id: 'toshi', name: 'Toshi', image: images.toshi },
     { id: 'brett', name: 'Brett', image: images.brett },
     { id: 'degen', name: 'Degen', image: images.degen },]);
-  const [selectedOption3, setSelectedOption3] = useState(tokenSelectOptions[1].id);
+  const [selectedOption3, setSelectedOption3] = useState(tokenSelectOptions[0].id);
   const [secondSelectOptions, setSecondSelectOptions] = useState(coins);
   const [secondFirstOptions, setFirstSelectOptions] = useState(coins);
 
