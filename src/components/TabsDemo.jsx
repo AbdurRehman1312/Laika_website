@@ -56,6 +56,7 @@ export function TabsDemo() {
   const [selectedOption2, setSelectedOption2] = useState(coins[1].id);
   const [tokenSelectOptions, setTokenSelectOptions] = useState([
     { id: 'wen', name: 'WEN', image: images.wen },
+    { id: 'doge', name: 'Doge', image: images.dogecoin },
     { id: 'fiwb', name: 'FIWB', image: images.fiwb },
     { id: 'dbit', name: 'DBIT', image: images.dbit },
     { id: 'dnld', name: 'DNLD', image: images.dnld },
@@ -74,7 +75,7 @@ export function TabsDemo() {
     { id: 'toshi', name: 'Toshi', image: images.toshi },
     { id: 'brett', name: 'Brett', image: images.brett },
     { id: 'degen', name: 'Degen', image: images.degen },]);
-  const [selectedOption3, setSelectedOption3] = useState(tokenSelectOptions[0].id);
+  const [selectedOption3, setSelectedOption3] = useState(tokenSelectOptions[1].id);
   const [secondSelectOptions, setSecondSelectOptions] = useState(coins);
   const [secondFirstOptions, setFirstSelectOptions] = useState(coins);
 
@@ -102,7 +103,7 @@ export function TabsDemo() {
     if (selectedOption1 == 'doge' || selectedOption2 == 'doge') {
       setTokenSelectOptions(coins.filter(coin => (coin.id !== 'laika' & coin.id !== 'eth' & coin.id !== 'sol' & coin.id !== 'dogechain'
         & coin.id !== 'base' & coin.id !== 'Shibarium' & coin.id !== 'bonk' & coin.id !== 'slerf'
-        & coin.id !== 'wif' & coin.id !== 'usdt' & coin.id !== 'usdc' & coin.id !== 'doge'
+        & coin.id !== 'wif' & coin.id !== 'usdt' & coin.id !== 'usdc'
         & coin.id !== 'pepe' & coin.id !== 'shib' & coin.id !== 'bonetoken' & coin.id !== 'toshi' & coin.id !== 'brett' & coin.id !== 'degen')));
     }
 
@@ -260,7 +261,7 @@ export function TabsDemo() {
 
                 </div>
                 <div className="flex flex-col gap-4 ">
-                  <Label className="text-dimGrey">Chose your Token</Label>
+                  <Label className="text-dimGrey">Choose your Token</Label>
                   <Select value={selectedOption3} onValueChange={(value) => setSelectedOption3(value)}
                   >
                     <SelectTrigger >
@@ -311,10 +312,13 @@ export function TabsDemo() {
                 </div> */}
               </CardContent>
               <CardFooter>
-                <button className="w-full relative bg-[#0064e2] py-3 px-3 mt-3 text-center rounded-[5px] text-sm" onClick={renderPopup}>
+                <div className="flex flex-col w-full">
+                <p className={`text-gradient text-center text-[100%]`}>coming soon</p>
+                <button className="w-full relative bg-[#0064e2] py-3 px-3 mt-3 text-center rounded-[5px] text-sm opacity-50" onClick={renderPopup} disabled >
                   Connect Your Wallet
                   <img src={images.walletbtn} className="w-12 h-8 absolute bottom-10 right-2" alt="" />
                 </button>
+                </div>
               </CardFooter>
             </Card>
           </TabsContent>

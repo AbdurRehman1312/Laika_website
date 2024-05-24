@@ -16,13 +16,13 @@ const Quests = () => {
       case "tweetToEarn":
         return (
           <>
-            <div className="flex justify-center gap-3  pb-8">
+            {/* <div className="flex justify-center gap-3  pb-8">
               <div className="flex items-center gap-1">
                 <img src={images.lock} alt="" width={20} />
                 <h1 className="text-white text-center">Tesnet quests locked</h1>
               </div>
 
-            </div>
+            </div> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
@@ -190,13 +190,6 @@ const Quests = () => {
       case "inviteToEarn":
         return (
           <>
-            <div className="flex justify-center gap-3  pb-8">
-              <div className="flex items-center gap-1">
-                <img src={images.lock} alt="" width={20} />
-                <h1 className="text-white text-center">Tesnet quests locked</h1>
-              </div>
-
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
@@ -316,13 +309,6 @@ const Quests = () => {
       case "dailyTasks":
         return (
           <>
-            <div className="flex justify-center gap-3  pb-8">
-              <div className="flex items-center gap-1">
-                <img src={images.lock} alt="" width={20} />
-                <h1 className="text-white text-center">Tesnet quests locked</h1>
-              </div>
-
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
@@ -463,13 +449,6 @@ const Quests = () => {
         return (
 
           <>
-            <div className="flex justify-center gap-3  pb-8">
-              <div className="flex items-center gap-1">
-                <img src={images.lock} alt="" width={20} />
-                <h1 className="text-white text-center">Tesnet quests locked</h1>
-              </div>
-
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
@@ -615,13 +594,6 @@ const Quests = () => {
       case "supportLaika":
         return (
           <>
-            <div className="flex justify-center gap-3  pb-8">
-              <div className="flex items-center gap-1">
-                <img src={images.lock} alt="" width={20} />
-                <h1 className="text-white text-center">Tesnet quests locked</h1>
-              </div>
-
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">
@@ -802,13 +774,6 @@ const Quests = () => {
         return (
 
           <>
-            <div className="flex justify-center gap-3  pb-8">
-              <div className="flex items-center gap-1">
-                <img src={images.lock} alt="" width={20} />
-                <h1 className="text-white text-center">Tesnet quests locked</h1>
-              </div>
-
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 md:mt-0 gap-8 md:gap-6  mx-7 pb-12">
               <div className="flex flex-col items-center gap-5">
                 <h1 className="text-white text-center">

@@ -73,9 +73,8 @@ const Navbar = () => {
     <>
       {!isAirdropRoute && !isWaitListRoute && !isBridgeRoute && !isFaucetRoute && (
         <nav
-          className={`hidden lg:flex bg-black w-full  justify-center items-center trans py-3 ${
-            isFixed ? "fixed top-0 w-full z-[40] left-0" : ""
-          }`}
+          className={`hidden lg:flex bg-black w-full  justify-center items-center trans py-3 ${isFixed ? "fixed top-0 w-full z-[40] left-0" : ""
+            }`}
         >
           <h2 className="text-white text-center md:text-left">
             Stay informed about{" "}
@@ -104,9 +103,8 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-normal cursor-pointer text-[16px] text-white navlink ${
-                  nav.id === "docs" ? "coming-soon" : ""
-                }`}
+                className={`font-normal cursor-pointer text-[16px] text-white navlink ${nav.id === "docs" ? "coming-soon" : ""
+                  }`}
               >
                 {(nav.id === "docs") && (
                   <p className="text-gradient text-[55%]">{nav.desc}</p>
@@ -129,12 +127,13 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Button
-          name="Whitepaper"
-          style="px-6 hidden lg:flex"
-          desc="coming soon"
-          descStyle=" hidden sm:hidden md:hidden lg:block"
-        />
+        <a href="https://app.gitbook.com/o/0BHbYU17l9lahykWXBaq/s/yYxKYh2qUIr5ra6hLaLr/" target="_blank">
+          <Button
+            name="Litepaper"
+            style="px-6 hidden lg:flex"
+            descStyle=" hidden sm:hidden md:hidden lg:block"
+          />
+        </a>
 
         {/* For mobile screen */}
         <div className="lg:hidden flex justify-end items-center">
@@ -173,11 +172,12 @@ const Navbar = () => {
                   </li>
                 ))}
                 <li>
-                  <Button
-                    name="Whitepaper"
-                    style="px-6 mt-3"
-                    desc="coming soon"
-                  />{" "}
+                  <a href="https://app.gitbook.com/o/0BHbYU17l9lahykWXBaq/s/yYxKYh2qUIr5ra6hLaLr/" target="_blank">
+                    <Button
+                      name="Litepaper"
+                      style="px-6 mt-3"
+                    />{" "}
+                  </a>
                 </li>
               </ul>
             </div>
