@@ -22,34 +22,108 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import * as images from "../assets";
 import { TableDemo } from "./TableDemo";
-import Button from "./Button";
 export function TabsDemo() {
   const [coins, setCoins] = useState([
     { id: 'doge', name: 'Doge', image: images.dogecoin },
     { id: 'laika', name: 'Laika', image: images.logo },
     { id: 'eth', name: 'Ethereum', image: images.eth },
-    { id: 'pepe', name: 'Pepe', image: images.pepe },
     { id: 'sol', name: 'Solana', image: images.sol },
-
+    { id: 'dogechain', name: 'Dogechain', image: images.dogechain },
+    { id: 'base', name: 'Base', image: images.base },
+    { id: 'shib', name: 'Shibarium', image: images.shib },
   ]);
   const [activeTab, setActiveTab] = useState('bridge');
   const [selectedOption1, setSelectedOption1] = useState(coins[0].id);
   const [selectedOption2, setSelectedOption2] = useState(coins[1].id);
+  const [token, setToken] = useState([
+    { id: 'wen', name: 'WEN', image: images.wen },
+    { id: 'fiwb', name: 'FIWB', image: images.fiwb },
+    { id: 'dbit', name: 'DBIT', image: images.dbit },
+    { id: 'dnld', name: 'DNLD', image: images.dnld },
+    { id: 'wufi', name: 'WUFI', image: images.wufi },
+    { id: 'dogi', name: 'DOGI', image: images.dogi },
+    { id: '$hub', name: '$HUB', image: images.$hub },
+    { id: 'dfat', name: 'DFAT', image: images.dfat },
+    { id: 'bonk', name: 'BONK', image: images.bonk },
+    { id: 'slerf', name: 'SLERF', image: images.slerf },
+    { id: 'wif', name: 'WIF', image: images.wif },
+    { id: 'usdt', name: 'USDT', image: images.usdt },
+    { id: 'usdc', name: 'USDC', image: images.usdc },
+    { id: 'doge', name: 'Doge', image: images.dogecoin },
+    { id: 'pepe', name: 'PEPE', image: images.pepe },
+    { id: 'shib', name: 'SHIB', image: images.shib },
+    { id: 'bonetoken', name: 'Bone', image: images.bonetoken },
+    { id: 'toshi', name: 'Toshi', image: images.toshi },
+    { id: 'brett', name: 'Brett', image: images.brett },
+    { id: 'degen', name: 'Degen', image: images.degen },
+    
+  ]);
+  const [selectedOption3, setSelectedOption3] = useState(token[1].id);
   const [secondSelectOptions, setSecondSelectOptions] = useState(coins);
+  const [secondFirstOptions, setFirstSelectOptions] = useState(coins);
+  const [tokenSelectOptions, setTokenSelectOptions] = useState(token);
   const [showPopup, setShowPopup] = useState(false);
 
   const getCoinDetails = (id) => coins.find(coin => coin.id === id);
-
+  const getTokenDetails = (id) => token.find(tokens => tokens.id === id);
   useEffect(() => {
     // Check if the selected option in the first select is not 'laika'
     if (selectedOption1 !== 'laika') {
       // Set the second select to only show 'Laïka'
       setSecondSelectOptions(coins.filter(coin => coin.id === 'laika'));
+      setFirstSelectOptions(coins.filter(coin => coin.id !== 'laika'))
     } else {
       // Otherwise, show all options
       setSecondSelectOptions(coins.filter(coin => coin.id !== 'laika'));
+      setFirstSelectOptions(coins.filter(coin => coin.id === 'laika'))
     }
   }, [selectedOption1, coins]);
+
+  useEffect(() => {
+
+    if (selectedOption1 == 'doge' || selectedOption2 == 'doge') {
+    setTokenSelectOptions(token.filter(tokens => (tokens.id !== 'bonk' & tokens.id !== 'slerf'
+       & tokens.id !== 'wif' & tokens.id !== 'usdt' & tokens.id !== 'usdc' & tokens.id !== 'doge'
+        & tokens.id !== 'pepe'& tokens.id !== 'shib' & tokens.id !== 'bonetoken' & tokens.id !== 'toshi' & tokens.id !== 'brett' & tokens.id !== 'degen') ));
+    }
+    
+    else if (selectedOption1 == 'eth'  || selectedOption2 == 'eth') {
+
+      setTokenSelectOptions(token.filter(tokens => ( tokens.id !== 'wen' & tokens.id !== 'fiwb' & tokens.id !== 'dbit'
+    & tokens.id !== 'dnld' & tokens.id !== 'wufi' & tokens.id !== 'dogi' & tokens.id !== '$hub' & tokens.id !== 'dfat'  & tokens.id !== 'bonk' & tokens.id !== 'slerf'
+       & tokens.id !== 'wif' & tokens.id !== 'doge'  & tokens.id !== 'toshi' & tokens.id !== 'brett' & tokens.id !== 'degen') ));
+    } 
+    
+    else if (selectedOption1 == 'sol' || selectedOption2 == 'sol') {
+
+      setTokenSelectOptions(token.filter(tokens => ( tokens.id !== 'wen' & tokens.id !== 'fiwb' & tokens.id !== 'dbit'
+    & tokens.id !== 'dnld' & tokens.id !== 'wufi' & tokens.id !== 'dogi' & tokens.id !== '$hub' & tokens.id !== 'dfat' & tokens.id !== 'doge'  & tokens.id !== 'toshi' & tokens.id !== 'brett' & tokens.id !== 'degen' & tokens.id !== 'pepe'& tokens.id !== 'shib' & tokens.id !== 'bonetoken') ));
+    }
+    
+    else if (selectedOption1 == 'dogechain' || selectedOption2 == 'dogechain') {
+
+      setTokenSelectOptions(token.filter(tokens => ( tokens.id !== 'bonk' & tokens.id !== 'slerf'
+      & tokens.id !== 'wif' & tokens.id !== 'usdt' & tokens.id !== 'usdc' &tokens.id !== 'wen' & tokens.id !== 'fiwb' & tokens.id !== 'dbit'
+    & tokens.id !== 'dnld' & tokens.id !== 'wufi' & tokens.id !== 'dogi' & tokens.id !== '$hub' & tokens.id !== 'dfat' & tokens.id !== 'toshi' & tokens.id !== 'brett' & tokens.id !== 'degen' & tokens.id !== 'pepe'& tokens.id !== 'shib' & tokens.id !== 'bonetoken') ));
+    }
+
+    else if (selectedOption1 == 'base' || selectedOption2 == 'base') {
+
+      setTokenSelectOptions(token.filter(tokens => ( tokens.id !== 'bonk' & tokens.id !== 'slerf'
+      & tokens.id !== 'wif' & tokens.id !== 'usdt' & tokens.id !== 'usdc' &tokens.id !== 'wen' & tokens.id !== 'fiwb' & tokens.id !== 'dbit'
+    & tokens.id !== 'dnld' & tokens.id !== 'wufi' & tokens.id !== 'dogi' & tokens.id !== '$hub' & tokens.id !== 'dfat' & tokens.id !== 'doge' & tokens.id !== 'pepe'& tokens.id !== 'shib' & tokens.id !== 'bonetoken') ));
+    }
+
+    else if (selectedOption1 == 'shib' || selectedOption2 == 'shib') {
+
+      setTokenSelectOptions(token.filter(tokens => ( tokens.id !== 'bonk' & tokens.id !== 'slerf'
+      & tokens.id !== 'wif' & tokens.id !== 'usdt' & tokens.id !== 'usdc' &tokens.id !== 'wen' & tokens.id !== 'fiwb' & tokens.id !== 'dbit'
+    & tokens.id !== 'dnld' & tokens.id !== 'wufi' & tokens.id !== 'dogi' & tokens.id !== '$hub' & tokens.id !== 'dfat' & tokens.id !== 'doge' & tokens.id !== 'toshi' & tokens.id !== 'brett' & tokens.id !== 'degen'  & tokens.id !== 'pepe'& tokens.id !== 'shib' ) ));
+    }
+    else{
+      setTokenSelectOptions(token)
+    }
+  }, [selectedOption1,selectedOption2,  selectedOption3, token]);
 
   const swapCoins = () => {
     let temp = selectedOption1;
@@ -63,6 +137,7 @@ export function TabsDemo() {
 
   const coin1Details = getCoinDetails(selectedOption1);
   const coin2Details = getCoinDetails(selectedOption2);
+  const tokenDetails = getTokenDetails(selectedOption3);
 
   function closePopup() {
     setShowPopup(false);
@@ -106,16 +181,18 @@ export function TabsDemo() {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-2 my-4">
-                <div className="flex justify-between w-full my-10">
-
-                  <Select value={selectedOption1} onValueChange={(value) => setSelectedOption1(value)}>
+              <CardContent className=" my-4">
+                <div className="flex justify-between items-end w-full my-10">
+                <div className="flex flex-col gap-4 w-[40%]">
+                <Label className="text-dimGrey">Selected Network</Label>
+                  <Select value={selectedOption1} onValueChange={(value) => setSelectedOption1(value)} >
+                    
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
-                        {coins.map((coin) => (
+                        {secondFirstOptions.map((coin) => (
                           <SelectItem key={coin.id} value={coin.id}>
                             <div className="flex items-center gap-2">
                               <img src={coin.image} alt={coin.name} className="w-4 h-4" />
@@ -126,11 +203,14 @@ export function TabsDemo() {
                       </SelectGroup>
                     </SelectContent>
                   </Select>
+                </div>
+               
 
                   <button className="bg-[#060b10] py-3 px-3 rounded-[5px]" onClick={swapCoins}>
                     <img src={images.swap} alt="" className="w-5 h-5" />
                   </button>
-
+                  <div className="flex flex-col gap-4 w-[40%]">
+                  <Label className="text-dimGrey">Bridge to</Label>
                   <Select value={selectedOption2} onValueChange={(value) => setSelectedOption2(value)}
                   >
                     <SelectTrigger >
@@ -149,39 +229,62 @@ export function TabsDemo() {
                       </SelectGroup>
                     </SelectContent>
                   </Select>
+                  </div>
+                 
                 </div>
-                <div className="flex justify-between my-20">
+                <div className="flex flex-col gap-4 ">
+                  <Label className="text-dimGrey">Chose your Token</Label>
+                  <Select value={selectedOption3} onValueChange={(value) => setSelectedOption3(value)}
+                  >
+                    <SelectTrigger >
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        {tokenSelectOptions.map((tokens) => (
+                          <SelectItem key={tokens.id} value={tokens.id}>
+                            <div className="flex items-center gap-2">
+                              <img src={tokens.image} alt={tokens.name} className="w-4 h-4" />
+                              <span>{tokens.name}</span>
+                            </div>
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                  </div>
+                <div className="flex justify-between mt-8">
                   <Label className="text-dimGrey">You Send</Label>
                   <Label className="text-dimGrey">Balance: 5,000</Label>
                 </div>
-                <div className="relative my-20">
+                <div className="relative mt-5">
                   <input type="number" className="w-full bg-[#060b10] appearance-none border-0 text-sm focus:outline-none py-3 px-3 rounded-[5px]" placeholder="0.00" />
                   <div className="absolute top-[20%] right-2 flex items-center gap-8">
                     <span className="text-gradient text-sm">MAX</span>
                     <div className="flex items-center gap-2">
-                      <img src={coin1Details.image} alt={coin1Details.name} className="w-4 h-4" />
-                      <span>{coin1Details.name}</span>
+                      <img src={tokenDetails.image} alt={tokenDetails.name} className="w-4 h-4" />
+                      <span>{tokenDetails.name}</span>
                     </div>
                   </div>
                 </div>
-                <div className="my-20">
+                <div className="mt-5">
                   <Label className="text-dimGrey">You Receive</Label>
                 </div>
-                <div className="relative">
+                <div className="relative mt-3">
                   <input type="number" disabled className="w-full appearance-none bg-[#060b10] border-0 text-sm focus:outline-none py-3 px-3 rounded-[5px]" placeholder="0.00" />
                   <div className="flex items-center gap-3 absolute top-3 right-2">
                     <img src={coin2Details.image} alt={coin2Details.name} className="w-4 h-4" />
                   </div>
                 </div>
-                <div className="pt-6">
+                {/* <div className="pt-6">
                   <div className="bg-[#0a121b] flex flex-col gap-3 text-white text-sm py-5 px-3 rounded-[5px]">
                     <p>Fees:  0.8%</p>
                     <p>Estimated Received:  15,000 Doge</p>
                   </div>
-                </div>
+                </div> */}
               </CardContent>
               <CardFooter>
-                <button className="w-full relative bg-[#0064e2] py-3 px-3 text-center rounded-[5px] text-sm" onClick={renderPopup}>
+                <button className="w-full relative bg-[#0064e2] py-3 px-3 mt-3 text-center rounded-[5px] text-sm" onClick={renderPopup}>
                   Connect Your Wallet
                   <img src={images.walletbtn} className="w-12 h-8 absolute bottom-10 right-2" alt="" />
                 </button>
