@@ -46,7 +46,7 @@ const Sputnik = () => {
                 <div className="flex items-center flex-col sm:flex-row gap-5 justify-between px-3 sm:gap-2  w-full">
 
                   <div className="flex flex-col sm:flex-row gap-5 sm:gap-0  items-center">
-                    <div className="bg-dark-gradient flex justify-center py-2 px-8 rounded-[5px]">
+                    <div className="bg-dark-gradient block w-full sm:flex sm:justify-center sm:w-auto py-2 px-8 rounded-[5px]">
                       <p className="text-white font-semibold text-xs text-center  text-nowrap">
                         Task 1
                       </p>
@@ -58,7 +58,7 @@ const Sputnik = () => {
 
                   <ButtonImage
                     name="Go to task"
-                    style="text-sm px-2 py-0 md:w-[90%] "
+                    style="text-sm px-2 py-0 w-[40%] md:w-[90%] "
                     img="dog2"
                     Link="https://wufiswap.com/launch-app.html"
                     imgStyle="w-5 h-5"
@@ -68,7 +68,7 @@ const Sputnik = () => {
                   <div className="flex items-center flex-col sm:flex-row gap-5 justify-between px-3 sm:gap-2 w-full">
 
                     <div className="flex flex-col sm:flex-row gap-5 sm:gap-0  items-center">
-                      <div className="bg-dark-gradient flex justify-center py-2  px-8 rounded-[5px]">
+                      <div className="bg-dark-gradient block w-full sm:flex sm:justify-center sm:w-auto py-2  px-8 rounded-[5px]">
                         <p className="text-white font-semibold text-xs text-center text-nowrap">
                           Task 2
                         </p>
@@ -82,7 +82,7 @@ const Sputnik = () => {
 
                     <ButtonImage
                       name="Go to task"
-                      style="text-sm px-2 py-0 w-full md:w-[90%] "
+                      style="text-sm px-2 py-0 w-[40%] md:w-[90%] "
                       img="dog2"
                       Link="https://wufiswap.com/launch-app.html"
                       imgStyle="w-5 h-5"
