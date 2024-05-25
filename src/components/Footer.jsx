@@ -80,12 +80,11 @@ const Footer = () => {
               <ul className="list-none md:text-right">
                 {testnet.map((nav) => (
                   <li
-                    key={nav.title}
+                    key={nav.href}
                     className="font-normal cursor-pointer text-[0.8rem]  mb-4 text-dimGrey text-nowrap"
                   >
-                    {/* Render link only if id is provided */}
-                    {nav.id ? (
-                      <Link to={nav.id} onClick={scrollToTop}>
+                    {nav.href ? (
+                      <Link to={nav.href} onClick={scrollToTop}>
                         {nav.title}
                       </Link>
                     ) : (
