@@ -32,7 +32,7 @@ const Quests = () => {
                       name="Go to Wufiswap"
                       img="wufi"
                       style=" px-8 bg_gradient5"
-                      imgStyle="w-full h-8"
+                      imgStyle="w-8 h-8"
                       includeHoverEffect={false}
                     />
                   </a>
@@ -46,7 +46,7 @@ const Quests = () => {
                       name="Go to Wufiswap"
                       img="wufi"
                       style=" px-8 bg_gradient5"
-                      imgStyle="w-full h-8"
+                      imgStyle="w-8 h-8"
                       includeHoverEffect={false}
                     />
                   </a>
