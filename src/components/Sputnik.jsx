@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import * as images from "../assets";
 import ButtonImage from "./ButtonImage";
 import { Link } from "react-router-dom";
@@ -6,6 +6,23 @@ import { Link } from "react-router-dom";
 const Sputnik = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0 });
+  };
+  const [time, setTime] = useState(49 * 60 * 60); // 49 hours in seconds
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(prevTime => prevTime >= 1 ? prevTime - 1 : 0);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatTime = () => {
+    const hours = Math.floor(time / 3600);
+    const minutes = Math.floor((time % 3600) / 60);
+    const seconds = time % 60;
+
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
   return (
     <>
@@ -41,81 +58,49 @@ const Sputnik = () => {
                 Link="https://wufiswap.com/launch-app.html"
               /> */}
             </div>
-            <div className="flex flex-col z-[-10]">
+            <div className="flex flex-col">
               <div className="bg-[#0f1a27] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
-                <div className="flex items-center flex-col sm:flex-row gap-5 justify-between px-3 sm:gap-2  w-full">
-
-                  <div className="flex flex-col sm:flex-row gap-5 sm:gap-0  items-center">
-                    <div className="bg-dark-gradient block w-full sm:flex sm:justify-center sm:w-auto py-2 px-8 rounded-[5px]">
-                      <p className="text-white font-semibold text-xs text-center  text-nowrap">
-                        Task 1
-                      </p>
+                <div className="flex items-center justify-between px-3 sm:gap-2  w-full">
+                  <div className="flex items-center gap-3 sm:gap-0">
+                    <div className="bg-dark-gradient  flex justify-center py-3 px-2 rounded-[5px]">
+                      <img src={images.sparrow} alt="" width={17} />
                     </div>
-                    <h2 className="text-white pl-0 sm:pl-6  font-semibold text-sm text-center sm:text-left  ">
-                      Swap DOGE to USDT on Wufiswap testnet
-                    </h2>
+                    <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left">
+                      <span className="font-bold"> Claim 5 DOGE  </span> by using {" "}<a href="http://laikachain.dog/faucets" className="underline cursor-pointer">faucet</a>
+                    </div>
                   </div>
-
-                  <ButtonImage
-                    name="Go to task"
-                    style="text-sm px-2 py-0 w-[40%] md:w-[90%] "
-                    img="dog2"
-                    Link="https://wufiswap.com/launch-app.html"
-                    imgStyle="w-5 h-5"
-                  />
                 </div>
                 <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
-                  <div className="flex items-center flex-col sm:flex-row gap-5 justify-between px-3 sm:gap-2 w-full">
-
-                    <div className="flex flex-col sm:flex-row gap-5 sm:gap-0  items-center">
-                      <div className="bg-dark-gradient block w-full sm:flex sm:justify-center sm:w-auto py-2  px-8 rounded-[5px]">
-                        <p className="text-white font-semibold text-xs text-center text-nowrap">
-                          Task 2
-                        </p>
+                  <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
+                    <div className="flex gap-3 sm:gap-0  items-center">
+                      <div className="bg-dark-gradient  flex justify-center py-2  px-2 rounded-[5px]">
+                        <img src={images.spundo} alt="" width={18} />
                       </div>
-
-                      <h2 className="text-white pl-0 sm:pl-6  font-semibold text-sm text-center sm:text-left ">
-                        Provide liquidity in the DOGE/USDT liquidity pool
-                      </h2>
+                      <div className="text-white tracking-wider pl-0 sm:pl-6 font-normal text-sm text-center sm:text-left">
+                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 0.1 DOGE to USDT</span></span>
+                      </div>
                     </div>
-
-
-                    <ButtonImage
-                      name="Go to task"
-                      style="text-sm px-2 py-0 w-[40%] md:w-[90%] "
-                      img="dog2"
-                      Link="https://wufiswap.com/launch-app.html"
-                      imgStyle="w-5 h-5"
-                    />
-
                   </div>
                   <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
-                    <div className="flex items-center justify-start gap-6 px-3  w-full">
-                      <div className="bg-dark-gradient flex justify-center py-2  px-8  rounded-[5px]">
-                        <p className="text-white font-semibold text-xs text-center  text-nowrap">
-                          Task 3
-                        </p>
-                      </div>
-                      <div className="flex  gap-2 items-center">
-                        <img src={images.lock} alt="" width={20} />
-                        <h2 className="text-white font-semibold text-sm flex-1 text-center">
-                          Tesnet quest locked
-                        </h2>
-                      </div>
+                    <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
 
+                      <div className="flex gap-3 sm:gap-0  items-center">
+                        <div className="bg-dark-gradient flex justify-center py-2  px-2 rounded-[5px]">
+                          <img src={images.swap} alt="" width={18} />
+                        </div>
+                        <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left">
+                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/USDT liquidity pool</span></span>
+                        </div>
+                      </div>
                     </div>
                     <div className="bg-[#060910] py-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
-                      <div className="flex items-center justify-start gap-6 px-3  w-full">
-                        <div className="bg-dark-gradient flex justify-center py-2  px-8 rounded-[5px]">
-                          <p className="text-white font-semibold text-xs text-center  text-nowrap">
-                            Task 4
-                          </p>
+                      <div className="flex items-center justify-between py-3 w-full">
+                        <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left">
+                          <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
                         </div>
-                        <div className="flex  gap-2 items-center">
-                          <img src={images.lock} alt="" width={20} />
-                          <h2 className="text-white font-semibold text-sm flex-1 text-center">
-                            Tesnet quest locked
-                          </h2>
+                        <div className="flex flex-col items-center text-white lg:pr-4">
+                          <p className="timer text-base lg:text-lg">{formatTime()}</p>
+                          <p className="font-thin text-center text-xs lg:text-lg">Before end</p>
                         </div>
                       </div>
                     </div>

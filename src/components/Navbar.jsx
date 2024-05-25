@@ -127,7 +127,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <a href="https://app.gitbook.com/o/0BHbYU17l9lahykWXBaq/s/yYxKYh2qUIr5ra6hLaLr/" target="_blank">
+        <a href="https://litepaper.laikachain.dog/" target="_blank">
           <Button
             name="Litepaper"
             style="px-6 hidden lg:flex"
@@ -172,7 +172,7 @@ const Navbar = () => {
                   </li>
                 ))}
                 <li>
-                  <a href="https://app.gitbook.com/o/0BHbYU17l9lahykWXBaq/s/yYxKYh2qUIr5ra6hLaLr/" target="_blank">
+                  <a href="https://litepaper.laikachain.dog/" target="_blank">
                     <Button
                       name="Litepaper"
                       style="px-6 mt-3"

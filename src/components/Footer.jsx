@@ -14,8 +14,9 @@ const Footer = () => {
     },
     // Disabled Docs and Bridge links
     {
-      title: "Docs",
-      comingSoon: true, // Add a flag to indicate "coming soon"
+      id: "https://litepaper.laikachain.dog/",
+      title: "Litepaper",
+      comingSoon: false, // Add a flag to indicate "coming soon"
     },
     {
       id: "/bridge",
@@ -23,7 +24,7 @@ const Footer = () => {
       comingSoon: false, // Add a flag to indicate "coming soon"
     },
   ];
-  
+
   const community = [
     {
       href: "http://twitter.com/Laika_Layer2/",
@@ -36,6 +37,20 @@ const Footer = () => {
     {
       href: "https://medium.com/@laika-layer2",
       title: "Medium",
+    },
+  ];
+  const testnet = [
+    {
+      href: "http://laikachain.dog/faucets",
+      title: "Faucet",
+    },
+    {
+      href: "https://testnet.laikachain.dog/",
+      title: "Explorer",
+    },
+    {
+      href: "",
+      title: "Add Network",
     },
   ];
 
@@ -56,7 +71,36 @@ const Footer = () => {
             height.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-20 xl:gap-12">
+        <div className="grid grid-cols-3 gap-20 xl:gap-12">
+          <div className="flex flex-col md:items-end">
+            <h1 className="text-[1rem] text-white font-medium text-nowrap">
+              Testnet
+            </h1>
+            <div className="mt-4 md:mt-9">
+              <ul className="list-none md:text-right">
+                {testnet.map((nav) => (
+                  <li
+                    key={nav.title}
+                    className="font-normal cursor-pointer text-[0.8rem]  mb-4 text-dimGrey text-nowrap"
+                  >
+                    {/* Render link only if id is provided */}
+                    {nav.id ? (
+                      <Link to={nav.id} onClick={scrollToTop}>
+                        {nav.title}
+                      </Link>
+                    ) : (
+                      <span>
+                        {nav.comingSoon && (
+                          <p className="text-gradient text-[100%]">Coming soon</p>
+                        )}
+                        {nav.title}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
           <div className="flex flex-col md:items-end">
             <h1 className="text-[1rem] text-white font-medium text-nowrap">
               Quick Links

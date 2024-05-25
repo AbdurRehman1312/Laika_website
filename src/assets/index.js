@@ -68,3 +68,5 @@ export { default as usdt } from "./usdt.png";
 export { default as wen } from "./wen.png";
 export { default as wif } from "./wif.png";
 export { default as wufi } from "./wufi.png";
+export { default as sparrow } from "./sparrow1.png";
+export { default as spundo } from "./spundo.png";
