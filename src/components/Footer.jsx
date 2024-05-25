@@ -71,7 +71,7 @@ const Footer = () => {
             height.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-20 xl:gap-12">
+        <div className="grid grid-cols-3 gap-10 lg:gap-20 xl:gap-12">
           <div className="flex flex-col md:items-end">
             <h1 className="text-[1rem] text-white font-medium text-nowrap">
               Testnet
