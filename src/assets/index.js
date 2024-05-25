@@ -72,3 +72,5 @@ export { default as sparrow } from "./sparrow1.png";
 export { default as spundo } from "./spundo.png";
 export { default as refresh } from "./refresh.png";
 export { default as laikaDiscord } from "./Laika-Discord.png";
+export { default as logolaika } from "./logolaika.png";
+export { default as logozealy } from "./logozealy.png";
