@@ -21,7 +21,7 @@ const Quests = () => {
         return (
           <>
             <div className="lg:w-[60%] mx-auto lg:py-14">
-              <h2 className="text-white text-center lg:w-[80%] mx-auto">Participate in the Laika ecosystem by <span className="font-bold">interacting on the Testnet </span>to earn <span className="font-bold">LAIKA Points.</span>Quests are available for 48 hours, so stay tuned! </h2>
+              <h2 className="text-white text-center lg:w-[80%] mx-auto px-2">Participate in the Laika ecosystem by <span className="font-bold">interacting on the Testnet </span>to earn <span className="font-bold">LAIKA Points.</span>Quests are available for 48 hours, so stay tuned! </h2>
               <div className="flex md:flex-row flex-col justify-around mt-20 gap-10">
                 <div className="flex flex-col justify-center items-center gap-8">
                   <h2 className="text-white font-bold text-center">
