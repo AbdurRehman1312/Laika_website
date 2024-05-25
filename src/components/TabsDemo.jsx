@@ -54,6 +54,8 @@ export function TabsDemo() {
   const [activeTab, setActiveTab] = useState("bridge");
   const [selectedOption1, setSelectedOption1] = useState(coins[0].id);
   const [selectedOption2, setSelectedOption2] = useState(coins[1].id);
+  const [selectedOption3, setSelectedOption3] = useState(coins[0].id);
+  const [selectedOption4, setSelectedOption4] = useState(coins[1].id);
   const [tokenSelectOptions, setTokenSelectOptions] = useState([
     { id: "doge", name: "Doge", image: images.dogecoin },
     { id: "wen", name: "WEN", image: images.wen },
@@ -76,7 +78,6 @@ export function TabsDemo() {
     { id: "brett", name: "Brett", image: images.brett },
     { id: "degen", name: "Degen", image: images.degen },
   ]);
-  const [selectedOption3, setSelectedOption3] = useState(tokenSelectOptions[0].id);
   const [secondSelectOptions, setSecondSelectOptions] = useState(coins);
   const [secondFirstOptions, setFirstSelectOptions] = useState(coins);
 
@@ -305,19 +306,17 @@ export function TabsDemo() {
     setTokenSelectOptions(filteredTokens);
 
     if (filteredTokens.length > 0) {
-      setSelectedOption3(filteredTokens[0].id);
+      const tempToken = filteredTokens.filter((token) => token.id === selectedOption3)
+      if (tempToken.length === 0){
+        setSelectedOption3(filteredTokens[0].id);
+      }
     }
   }, [selectedOption1, selectedOption2, coins]);
 
-  const [selectedOption4, setSelectedOption4] = useState(
-    coins.find((coin) => coin.id === "laika").id
-  );
 
   const swapCoins = () => {
     setSelectedOption1(selectedOption2);
     setSelectedOption2(selectedOption1);
-    setSelectedOption3(selectedOption4);
-    setSelectedOption4(selectedOption3);
   };
 
   const renderPopup = () => {
@@ -326,8 +325,11 @@ export function TabsDemo() {
 
   const coin1Details = getCoinDetails(selectedOption1);
   const coin2Details = getCoinDetails(selectedOption2);
-  const coin3Details = getCoinDetails(selectedOption4);
   const tokenDetails = getCoinDetails(selectedOption3);
+  
+
+  const sendDetails = coin1Details.id === "laika" ? coin1Details : tokenDetails;
+  const reciveDetails = coin2Details.id === "laika" ? coin2Details : tokenDetails;
 
   function closePopup() {
     setShowPopup(false);
@@ -494,11 +496,11 @@ export function TabsDemo() {
                     <span className="text-gradient text-sm">MAX</span>
                     <div className="flex items-center gap-2">
                       <img
-                        src={tokenDetails.image}
-                        alt={tokenDetails.name}
+                        src={sendDetails.image}
+                        alt={sendDetails.name}
                         className="w-4 h-4"
                       />
-                      <span>{tokenDetails.name}</span>
+                      <span>{sendDetails.name}</span>
                     </div>
                   </div>
                 </div>
@@ -514,8 +516,8 @@ export function TabsDemo() {
                   />
                   <div className="flex items-center gap-3 absolute top-3 right-2">
                     <img
-                      src={coin3Details.image}
-                      alt={coin3Details.name}
+                      src={reciveDetails.image}
+                      alt={reciveDetails.name}
                       className="w-4 h-4"
                     />
                   </div>
