@@ -4,14 +4,33 @@ import ButtonImage from "./ButtonImage";
 import { Link } from "react-router-dom";
 
 const Sputnik = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0 });
+  const scrollToTop = () => window.scrollTo({ top: 0 });
+
+  // Store the initial countdown duration (49 hours in seconds)
+  const countdownDuration = 49 * 60 * 60;
+
+  // Helper function to get the remaining time from now to the end time
+  const getRemainingTime = endTime => {
+    const now = Date.now();
+    const remainingTime = Math.floor((endTime - now) / 1000);
+    return remainingTime > 0 ? remainingTime : 0;
   };
-  const [time, setTime] = useState(49 * 60 * 60); // 49 hours in seconds
+
+  const [time, setTime] = useState(() => {
+    const endTime = localStorage.getItem('endTime');
+    return endTime ? getRemainingTime(endTime) : countdownDuration;
+  });
 
   useEffect(() => {
+    const existingEndTime = localStorage.getItem('endTime');
+    const endTime = existingEndTime || Date.now() + countdownDuration * 1000;
+
+    if (!existingEndTime) {
+      localStorage.setItem('endTime', endTime);
+    }
+
     const interval = setInterval(() => {
-      setTime(prevTime => prevTime >= 1 ? prevTime - 1 : 0);
+      setTime(getRemainingTime(endTime));
     }, 1000);
 
     return () => clearInterval(interval);
