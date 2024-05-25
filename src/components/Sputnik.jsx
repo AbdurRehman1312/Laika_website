@@ -37,7 +37,7 @@ const Sputnik = () => {
   }, []);
 
   const formatTime = () => {
-    const hours = Math.floor(time / 3600);
+    const hours = Math.floor(time / 1008000);
     const minutes = Math.floor((time % 3600) / 60);
     const seconds = time % 60;
 
@@ -77,7 +77,7 @@ const Sputnik = () => {
               <div className="bg-[#0f1a27] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
                 <div className="flex items-center justify-between px-3 sm:gap-2  w-full">
                   <div className="flex items-center gap-8 sm:gap-0">
-                    <div className="bg-dark-gradient  flex justify-center py-3 px-2 rounded-[5px]">
+                    <div className="bg_gradient5  flex justify-center py-3 px-2 rounded-[5px]">
                       <img src={images.sparrow} alt="" className="w-4 sm:w-5" />
                     </div>
                     <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-right lg:text-center sm:text-base">
@@ -88,7 +88,7 @@ const Sputnik = () => {
                 <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
                   <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
                     <div className="flex gap-7 sm:gap-0  items-center">
-                      <div className="bg-dark-gradient  flex justify-center py-1  px-2 rounded-[5px]">
+                      <div className="bg_gradient5  flex justify-center py-1  px-2 rounded-[5px]">
                         <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
                       </div>
                       <div className="text-white tracking-wider pl-0 sm:pl-6 font-normal text-sm text-right lg:text-center sm:text-base">
@@ -100,7 +100,7 @@ const Sputnik = () => {
                     <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
 
                       <div className="flex items-center">
-                        <div className="bg-dark-gradient flex justify-center py-2  px-2 rounded-[5px]">
+                        <div className="bg_gradient5 flex justify-center py-2  px-2 rounded-[5px]">
                           <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
                         </div>
                         <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-right lg:text-center sm:text-base">
@@ -108,7 +108,7 @@ const Sputnik = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-[#060910] py-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
+                    <div className="bg-[#060910] py-2 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
                       <div className="flex items-center justify-between py-3 w-full">
                         <div className="text-white tracking-wider pl-4 sm:pl-5 font-thin text-sm  w-[70%] sm:w-full text-left sm:text-base">
                           <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
