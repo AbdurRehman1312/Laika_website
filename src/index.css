@@ -213,6 +213,6 @@ input::-webkit-inner-spin-button {
   border-right-width: 2px;
 }
 .bg_gradient5 {
-  background: rgb(1,19,56);
-  background: linear-gradient(90deg, rgba(1,19,56,1) 0%, rgba(1,43,55,1) 48%);
+  background: rgb(1,19,56) !important;
+  background: linear-gradient(90deg, rgba(1,19,56,1) 0%, rgba(1,43,55,1) 48%) !important;
 }

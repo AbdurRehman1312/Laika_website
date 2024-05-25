@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import * as images from "../assets";
 import ButtonImage from "./ButtonImage";
 import { Link } from "react-router-dom";
@@ -53,16 +53,18 @@ const Sputnik = () => {
         </div>
         <div className="my-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-28">
-            <div className="flex flex-col justify-evenly gap-7 mx-3">
-              <h1 className="text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold lg:leading-[50px] xl:leading-[70px] ">
-                Unlock Rewards with{" "}
+            <div className="flex flex-col justify-evenly gap-10 mx-3">
+              <h1 className="text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold lg:leading-[50px] xl:leading-[50px] ">
+                Explore Laïka through
+                <br />
                 <span className="text-gradient font-extrabold">Sputnik I</span>{" "}
-                on testnet
+                Incentive <br />
+                Campaign
               </h1>
               <p className="text-dimGrey text-base md:text-base xl:text-lg">
-                Join the Sputnik I campaign by completing testnet tasks to become an early adopter of the Laïka network. Engage in various activities such as swapping, providing liquidity, minting NFTs, voting, etc. Tasks will be released gradually; visit this page regularly to ensure you don't miss out.
+                Join the Sputnik I Campaign by completing Testnet and Social Tasks to become an early adopter of the Laïka Network. Engage in various activities such as swapping, providing liqui dity, minting NFTs, voting and much more. Tasks will be released gradually; visit this page regularly to ensure you don't miss out LAIKA Points.
               </p>
-              <Link to={"/faucets"} className="flex justify-center lg:w-[80%]" onClick={scrollToTop}>
+              <Link to={"/faucets"} className="flex lg:w-[80%]" onClick={scrollToTop}>
                 <ButtonImage
                   name="Go to Faucets"
                   img="faucetdrop"
@@ -70,21 +72,15 @@ const Sputnik = () => {
                   imgStyle="w-5 h-5"
                 />
               </Link>
-              {/* <ButtonImage
-                name="Go to Wufiswap"
-                style="w-[71%] md:w-[30%] lg:w-[53%] xl:w-[39%] gap-1"
-                img="dog2"
-                Link="https://wufiswap.com/launch-app.html"
-              /> */}
             </div>
             <div className="flex flex-col">
               <div className="bg-[#0f1a27] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
                 <div className="flex items-center justify-between px-3 sm:gap-2  w-full">
                   <div className="flex items-center gap-8 sm:gap-0">
                     <div className="bg-dark-gradient  flex justify-center py-3 px-2 rounded-[5px]">
-                      <img src={images.sparrow} alt=""  className="w-4 sm:w-5" />
+                      <img src={images.sparrow} alt="" className="w-4 sm:w-5" />
                     </div>
-                    <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left sm:text-base">
+                    <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-right lg:text-center sm:text-base">
                       <span className="font-bold"> Claim 5 DOGE  </span> by using {" "}<a href="http://laikachain.dog/faucets" className="underline cursor-pointer">faucet</a>
                     </div>
                   </div>
@@ -95,7 +91,7 @@ const Sputnik = () => {
                       <div className="bg-dark-gradient  flex justify-center py-1  px-2 rounded-[5px]">
                         <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
                       </div>
-                      <div className="text-white tracking-wider pl-0 sm:pl-6 font-normal text-sm text-center sm:text-left sm:text-base">
+                      <div className="text-white tracking-wider pl-0 sm:pl-6 font-normal text-sm text-right lg:text-center sm:text-base">
                         <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 0.1 DOGE to USDT</span></span>
                       </div>
                     </div>
@@ -105,9 +101,9 @@ const Sputnik = () => {
 
                       <div className="flex items-center">
                         <div className="bg-dark-gradient flex justify-center py-2  px-2 rounded-[5px]">
-                          <img src={images.swap} alt="" width={21} className="w-5 sm:w-5"/>
+                          <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
                         </div>
-                        <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left sm:text-base">
+                        <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-right lg:text-center sm:text-base">
                           <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/USDT liquidity pool</span></span>
                         </div>
                       </div>
