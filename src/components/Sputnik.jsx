@@ -61,22 +61,22 @@ const Sputnik = () => {
             <div className="flex flex-col">
               <div className="bg-[#0f1a27] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
                 <div className="flex items-center justify-between px-3 sm:gap-2  w-full">
-                  <div className="flex items-center gap-3 sm:gap-0">
+                  <div className="flex items-center gap-8 sm:gap-0">
                     <div className="bg-dark-gradient  flex justify-center py-3 px-2 rounded-[5px]">
-                      <img src={images.sparrow} alt="" width={17} />
+                      <img src={images.sparrow} alt=""  className="w-4 sm:w-5" />
                     </div>
-                    <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left">
+                    <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left sm:text-base">
                       <span className="font-bold"> Claim 5 DOGE  </span> by using {" "}<a href="http://laikachain.dog/faucets" className="underline cursor-pointer">faucet</a>
                     </div>
                   </div>
                 </div>
                 <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
                   <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
-                    <div className="flex gap-3 sm:gap-0  items-center">
-                      <div className="bg-dark-gradient  flex justify-center py-2  px-2 rounded-[5px]">
-                        <img src={images.spundo} alt="" width={18} />
+                    <div className="flex gap-7 sm:gap-0  items-center">
+                      <div className="bg-dark-gradient  flex justify-center py-1  px-2 rounded-[5px]">
+                        <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
                       </div>
-                      <div className="text-white tracking-wider pl-0 sm:pl-6 font-normal text-sm text-center sm:text-left">
+                      <div className="text-white tracking-wider pl-0 sm:pl-6 font-normal text-sm text-center sm:text-left sm:text-base">
                         <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 0.1 DOGE to USDT</span></span>
                       </div>
                     </div>
@@ -84,23 +84,23 @@ const Sputnik = () => {
                   <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
                     <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
 
-                      <div className="flex gap-3 sm:gap-0  items-center">
+                      <div className="flex items-center">
                         <div className="bg-dark-gradient flex justify-center py-2  px-2 rounded-[5px]">
-                          <img src={images.swap} alt="" width={18} />
+                          <img src={images.swap} alt="" width={21} className="w-5 sm:w-5"/>
                         </div>
-                        <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left">
+                        <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left sm:text-base">
                           <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/USDT liquidity pool</span></span>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[#060910] py-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
                       <div className="flex items-center justify-between py-3 w-full">
-                        <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-center sm:text-left">
+                        <div className="text-white tracking-wider pl-4 sm:pl-5 font-thin text-sm  w-[70%] sm:w-full text-left sm:text-base">
                           <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
                         </div>
-                        <div className="flex flex-col items-center text-white lg:pr-4">
+                        <div className="flex flex-col items-center text-white pr-5 md:pr-7">
                           <p className="timer text-base lg:text-lg">{formatTime()}</p>
-                          <p className="font-thin text-center text-xs lg:text-lg">Before end</p>
+                          <p className="font-thin text-center text-xs md:text-lg text-nowrap">Before end</p>
                         </div>
                       </div>
                     </div>
