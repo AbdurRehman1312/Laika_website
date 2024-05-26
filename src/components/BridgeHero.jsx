@@ -15,11 +15,7 @@ const BridgeHero = () => {
         </h1>
         <p className="text-dimGrey text-lg md:text-base text-center lg:text-lg xl:text-base lg:w-[60%] md:w-[90%]">
           {" "}
-          Seamlessly move your assets between Dogecoin and other supported
-          blockchains with confidence and security. Whether you're swapping
-          tokens, providing liquidity, or exploring new opportunities, Laika's
-          Bridge offers a streamlined experience for navigating the multi-chain
-          landscape.
+          Transfer your assets between Dogecoin and supported blockchains with ease and security. Laika’s Bridge simplifies the process of swapping tokens across different chains, providing a straightforward and reliable solution for managing your memecoins.
         </p>
         <Link to={"/faucets"} className="flex justify-center" onClick={scrollToTop}>
           <ButtonImage

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Sputnik = () => {
   const scrollToTop = () => window.scrollTo({ top: 0 });
   // Helper to get current UTC time in milliseconds
+  // Helper to get current UTC time in milliseconds
   const getUTCTime = () => new Date().getTime();
 
   // Retrieve or set the end time in localStorage
@@ -16,7 +17,8 @@ const Sputnik = () => {
     if (savedEndTime && parseInt(savedEndTime, 10) > currentTime) {
       return parseInt(savedEndTime, 10);
     } else {
-      const endTime = currentTime + 48 * 60 * 60 * 1000; // Adds exactly 48 hours to the current time
+      // Manually set a fixed endTime for demonstration; ideally, this would come from your server/config
+      const endTime = new Date('YYYY-MM-DDTHH:mm:ssZ').getTime(); // Set this to a fixed UTC time
       localStorage.setItem('endTime', endTime.toString());
       return endTime;
     }

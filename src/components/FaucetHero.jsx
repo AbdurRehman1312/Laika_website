@@ -11,7 +11,7 @@ const FaucetHero = () => {
         </h1>
         <p className="text-dimGrey text-lg md:text-base text-center lg:text-lg xl:text-base lg:w-[70%] md:w-[90%]">
           {" "}
-          Get started on your journey in the Laïka ecosystem by claiming free DOGE tokens. Simply visit our Faucet page, complete your wallet address, and receive DOGE rewards directly to your wallet. It's the perfect way to get acquainted with Laika and start exploring the possibilities of the Dogecoin Layer 2 solution.
+          Get started on your journey in the Laïka ecosystem by claiming free DOGE tokens. Simply visit our Faucet page, complete your wallet address, and receive DOGE rewards directly to your wallet.
         </p>
       </div>
     </div>
