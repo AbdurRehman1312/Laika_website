@@ -170,6 +170,7 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
+  
 }
 .popup-open {
   overflow: hidden;
@@ -216,3 +217,4 @@ input::-webkit-inner-spin-button {
   background: rgb(1,19,56) !important;
   background: linear-gradient(90deg, rgba(1,19,56,1) 0%, rgba(1,43,55,1) 48%) !important;
 }
+

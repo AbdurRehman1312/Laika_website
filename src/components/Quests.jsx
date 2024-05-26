@@ -58,8 +58,8 @@ const Quests = () => {
       case "supportLaika":
         return (
           <>
-            <div className="py-10">
-              <div className="flex flex-col md:flex-row gap-10 lg:gap-0 justify-between mx-auto w-[80%]">
+            <div className="py-0 sm:py-10">
+              <div className="flex flex-col md:flex-row gap-10 lg:gap-0 justify-between mx-auto w-[90%] sm:w-[80%]">
                 <div className="lg:w-[50%] md:w-[100%] w-full">
                   <div className="flex flex-col gap-6">
                     <h2 className="text-white text-xl font-semibold">
@@ -68,7 +68,7 @@ const Quests = () => {
                     <p className="text-white">
                       The Laïka Discord server serves as the central hub for community engagement and interaction. You can join discussions, participate in events, and collaborate with fellow community members. By actively engaging on Discord and completing specific tasks, you'll be able to earn XP and level up their roles, unlocking access to exclusive channels and perks.
                     </p>
-                    <div className="lg:w-[35%] md:w-[65%] w-full">
+                    <div className="xl:w-[35%] lg:w-[55%] md:w-[77%] w-[60%]">
                       <ButtonImage
                         name="Join Laïka Discord"
                         img="discord"
@@ -79,19 +79,19 @@ const Quests = () => {
                     </div>
                   </div>
                 </div>
-                <div className="lg:w-[40%] md:w-[100%] w-full mt-16 lg:mt-0">
-                  <div className="bg-[#0e131c] p-6 rounded-[20px]">
+                <div className="lg:w-[40%] md:w-[100%] w-full mt-5 lg:mt-0 ">
+                  <div className="bg-[#0e131c] p-6 rounded-[20px] ">
                     <div>
                       <img src={images.laikaDiscord} alt="" className="w-full" />
                     </div>
                     <div className="flex flex-col lg:flex-row gap-2 lg:gap-0 bg-[#161616] items-center text-white font-semibold justify-between p-3 rounded-b-[20px]">
                       <h1>Laïka Discord Community</h1>
-                      <a href="" className="py-2 px-9 rounded-[5px] text-white bg-[#2544a7]" target="_blank">Join</a>
+                      <a href="" className="py-2 px-9 rounded-[5px] text-white bg-[#2544a7] hidden sm:block" target="_blank">Join</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between gap-10 lg:gap-0 items-center flex-col md:flex-row mx-auto lg:w-[80%] w-full mt-20 px-4">
+              <div className="flex justify-between gap-6 lg:gap-0 items-center flex-col-reverse md:flex-row mx-auto lg:w-[80%] w-full mt-7 sm:mt-20 px-4">
                 <div className="lg:w-[40%] md:w-[60%] w-full">
                   <div className="bg-[#0e131c] p-6 py-10 rounded-[20px]">
                     <div className="flex flex-col gap-3 justify-center items-center">
@@ -113,7 +113,7 @@ const Quests = () => {
                     <p className="text-white">
                       Discord Sputnik 1 Zealy Quests, a series of challenges designed to encourage community participation and engagement. Quests range from inviting friends to join the Laïka community to completing daily tasks on X.
                     </p>
-                    <div className="lg:w-[50%] md:w-[70%] w-full">
+                    <div className="lg:w-[50%] md:w-[70%] w-[80%]">
                       <Button
                         name="Go to Zealy "
                         style="w-[50%] bg_gradient5 cursor-pointer"
@@ -134,7 +134,7 @@ const Quests = () => {
     <>
       <section className="my-8 md:my-32">
         <div className="w-full rounded-[20px]">
-          <div className="flex justify-around  gap-3 md:gap-3 lg:gap-0 xl:gap-0 py-10 md:py-5 lg:py-0 h-[10vh] xl:h-[60px] lg:h-[70px] md:h-[90px] text-center items-center rounded-t-[20px]">
+          <div className="flex justify-around gap-0 py-0 h-[7vh] xl:h-[60px] md:h-[70px] text-center items-center rounded-t-[20px]">
             <button
               className={`text-white w-[50%] bg_gradient5 h-[100%]  rounded-tl-[20px]  ${activeTab === "tweetToEarn"
                 ? "opacity-100 font-semibold "
@@ -145,7 +145,7 @@ const Quests = () => {
               Testnet Quests
             </button>
             <button
-              className={`text-white w-[50%] bg_gradient5 h-[100%]  rounded-tr-[20px]   ${activeTab === "supportLaika"
+              className={`text-white w-[50%] bg_gradient5 h-[100%]   rounded-tr-[20px]   ${activeTab === "supportLaika"
                 ? "opacity-100 font-semibold"
                 : "opacity-25 font-extralight"
                 }`}
