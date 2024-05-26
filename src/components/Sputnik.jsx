@@ -6,50 +6,50 @@ import { Link } from "react-router-dom";
 const Sputnik = () => {
   const scrollToTop = () => window.scrollTo({ top: 0 });
   // Helper to get current UTC time in milliseconds
-  const getUTCTime = () => new Date().getTime();
+  // const getUTCTime = () => new Date().getTime();
 
-  // Retrieve or set the end time in localStorage
-  const getEndTime = () => {
-    const savedEndTime = localStorage.getItem('endTime');
-    const currentTime = getUTCTime();
+  // // Retrieve or set the end time in localStorage
+  // const getEndTime = () => {
+  //   const savedEndTime = localStorage.getItem('endTime');
+  //   const currentTime = getUTCTime();
 
-    if (savedEndTime && parseInt(savedEndTime, 10) > currentTime) {
-      return parseInt(savedEndTime, 10);
-    } else {
-      const endTime = currentTime + 48 * 60 * 60 * 1000; // Adds exactly 48 hours to the current time
-      localStorage.setItem('endTime', endTime.toString());
-      return endTime;
-    }
-  };
+  //   if (savedEndTime && parseInt(savedEndTime, 10) > currentTime) {
+  //     return parseInt(savedEndTime, 10);
+  //   } else {
+  //     const endTime = currentTime + 48 * 60 * 60 * 1000; // Adds exactly 48 hours to the current time
+  //     localStorage.setItem('endTime', endTime.toString());
+  //     return endTime;
+  //   }
+  // };
 
-  const [endTime, setEndTime] = useState(getEndTime());
+  // const [endTime, setEndTime] = useState(getEndTime());
 
-  // Calculate the time left in seconds
-  const calculateTimeLeft = () => {
-    const currentTime = getUTCTime();
-    const difference = endTime - currentTime;
-    return Math.floor(difference / 1000);
-  };
+  // // Calculate the time left in seconds
+  // const calculateTimeLeft = () => {
+  //   const currentTime = getUTCTime();
+  //   const difference = endTime - currentTime;
+  //   return Math.floor(difference / 1000);
+  // };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  // const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-  useEffect(() => {
-    // Set up an interval to decrement the time left every second
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+  // useEffect(() => {
+  //   // Set up an interval to decrement the time left every second
+  //   const timer = setInterval(() => {
+  //     setTimeLeft(calculateTimeLeft());
+  //   }, 1000);
 
-    // Clear the interval on component unmount
-    return () => clearInterval(timer);
-  }, [endTime]);
+  //   // Clear the interval on component unmount
+  //   return () => clearInterval(timer);
+  // }, [endTime]);
 
-  // Function to format time in HH:MM:SS
-  const formatTime = (time) => {
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time % 3600) / 60);
-    const seconds = time % 60;
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-  };
+  // // Function to format time in HH:MM:SS
+  // const formatTime = (time) => {
+  //   const hours = Math.floor(time / 3600);
+  //   const minutes = Math.floor((time % 3600) / 60);
+  //   const seconds = time % 60;
+  //   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  // };
 
   return (
     <>
@@ -122,8 +122,8 @@ const Sputnik = () => {
                           <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
                         </div>
                         <div className="flex flex-col items-center text-white pr-5 md:pr-7">
-                          <p className="timer text-base lg:text-lg">{formatTime(timeLeft)}</p>
-                          <p className="font-thin text-center text-xs md:text-lg text-nowrap">Before end</p>
+                          <p className="font-thin text-center text-xs md:text-lg text-nowrap">Ends On</p>
+                          <p className="timer text-base text-nowrap">28 May, 4:pm UTC</p>
                         </div>
                       </div>
                     </div>
