@@ -5,27 +5,28 @@ import { Link } from "react-router-dom";
 
 const Sputnik = () => {
   const scrollToTop = () => window.scrollTo({ top: 0 });
-  // Retrieve the end time from localStorage or set it if not present
+  // Helper to get current UTC time in milliseconds
+  const getUTCTime = () => new Date().getTime();
+
+  // Retrieve or set the end time in localStorage
   const getEndTime = () => {
     const savedEndTime = localStorage.getItem('endTime');
-    const currentTime = new Date().getTime();
+    const currentTime = getUTCTime();
 
-    // If there's a saved end time and it's in the future, use it
     if (savedEndTime && parseInt(savedEndTime, 10) > currentTime) {
-        return parseInt(savedEndTime, 10);
+      return parseInt(savedEndTime, 10);
     } else {
-        // Otherwise, set a new end time 48 hours from now
-        const endTime = currentTime + 48 * 60 * 60 * 1000;
-        localStorage.setItem('endTime', endTime.toString());
-        return endTime;
+      const endTime = currentTime + 48 * 60 * 60 * 1000; // Adds exactly 48 hours to the current time
+      localStorage.setItem('endTime', endTime.toString());
+      return endTime;
     }
-};
+  };
 
   const [endTime, setEndTime] = useState(getEndTime());
 
-  // Calculate time left in seconds
+  // Calculate the time left in seconds
   const calculateTimeLeft = () => {
-    const currentTime = new Date().getTime();
+    const currentTime = getUTCTime();
     const difference = endTime - currentTime;
     return Math.floor(difference / 1000);
   };
@@ -33,12 +34,12 @@ const Sputnik = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    // Set up the interval to decrement the time left every second
+    // Set up an interval to decrement the time left every second
     const timer = setInterval(() => {
-        setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // Clear interval on component unmount
+    // Clear the interval on component unmount
     return () => clearInterval(timer);
   }, [endTime]);
 
@@ -49,7 +50,6 @@ const Sputnik = () => {
     const seconds = time % 60;
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
-
 
   return (
     <>
