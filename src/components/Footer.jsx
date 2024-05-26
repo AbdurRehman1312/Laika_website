@@ -59,6 +59,49 @@ const Footer = () => {
     window.scrollTo({ top: 0 });
   };
 
+  const addmeta = async () => {
+    console.log('addmeta');
+    // Check if MetaMask is installed
+    if (typeof window.ethereum !== 'undefined') {
+      const ethereum = window.ethereum;
+
+      // Request permission to connect MetaMask
+      ethereum.request({ method: 'eth_requestAccounts' })
+        .then(() => {
+          // Add your custom network details
+          const customNetwork = {
+            chainId: '0x10ad', // Chain ID of your custom network
+            chainName: 'Laika Testnet', // Name of your custom network
+            nativeCurrency: {
+              name: 'Doge',
+              symbol: 'DOGE',
+              decimals: 18,
+            },
+            rpcUrls: ['https://testnetrpc1.laikachain.dog'], // RPC endpoint of your custom network
+            blockExplorerUrls: ['https://testnet.laikachain.dog'], // Block explorer URL of your custom network
+          };
+
+          // Add the custom network to MetaMask
+          ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [customNetwork],
+          })
+            .then(() => {
+              console.log('Custom network added to MetaMask');
+            })
+            .catch((error) => {
+              console.error('Error adding custom network to MetaMask:', error);
+            });
+        })
+        .catch((error) => {
+          console.error('Error requesting MetaMask access:', error);
+        });
+    } else {
+      console.error('MetaMask is not installed');
+    }
+
+  }
+
   return (
     <footer className="my-10">
       <div className="flex flex-col gap-10 md:gap-0 md:flex-row ">
@@ -70,8 +113,9 @@ const Footer = () => {
             Pioneering the Infrastructure that elevates memecoins to new
             height.
           </p>
+          <button onClick={addmeta} className="font-normal cursor-pointer text-[0.8rem] text-dimGrey " type="button">Add to metamask</button>
         </div>
-        <div className="grid grid-cols-3 gap-10 lg:gap-20 xl:gap-12">
+        <div className="grid grid-cols-3 gap-20 xl:gap-12">
           <div className="flex flex-col md:items-end">
             <h1 className="text-[1rem] text-white font-medium text-nowrap">
               Testnet
@@ -146,6 +190,8 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+
+
         </div>
       </div>
     </footer>
