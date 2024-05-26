@@ -5,44 +5,52 @@ import { Link } from "react-router-dom";
 
 const Sputnik = () => {
   const scrollToTop = () => window.scrollTo({ top: 0 });
+  // Retrieve the end time from localStorage or set it if not present
+  const getEndTime = () => {
+    const savedEndTime = localStorage.getItem('endTime');
+    const currentTime = new Date().getTime();
 
-  // Store the initial countdown duration (49 hours in seconds)
-  const countdownDuration = 49 * 60 * 60;
+    // If there's a saved end time and it's in the future, use it
+    if (savedEndTime && parseInt(savedEndTime, 10) > currentTime) {
+        return parseInt(savedEndTime, 10);
+    } else {
+        // Otherwise, set a new end time 48 hours from now
+        const endTime = currentTime + 48 * 60 * 60 * 1000;
+        localStorage.setItem('endTime', endTime.toString());
+        return endTime;
+    }
+};
 
-  // Helper function to get the remaining time from now to the end time
-  const getRemainingTime = endTime => {
-    const now = Date.now();
-    const remainingTime = Math.floor((endTime - now) / 1000);
-    return remainingTime > 0 ? remainingTime : 0;
+  const [endTime, setEndTime] = useState(getEndTime());
+
+  // Calculate time left in seconds
+  const calculateTimeLeft = () => {
+    const currentTime = new Date().getTime();
+    const difference = endTime - currentTime;
+    return Math.floor(difference / 1000);
   };
 
-  const [time, setTime] = useState(() => {
-    const endTime = localStorage.getItem('endTime');
-    return endTime ? getRemainingTime(endTime) : countdownDuration;
-  });
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const existingEndTime = localStorage.getItem('endTime');
-    const endTime = existingEndTime || Date.now() + countdownDuration * 1000;
-
-    if (!existingEndTime) {
-      localStorage.setItem('endTime', endTime);
-    }
-
-    const interval = setInterval(() => {
-      setTime(getRemainingTime(endTime));
+    // Set up the interval to decrement the time left every second
+    const timer = setInterval(() => {
+        setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+    // Clear interval on component unmount
+    return () => clearInterval(timer);
+  }, [endTime]);
 
-  const formatTime = () => {
-    const hours = Math.floor(time / 1008000);
+  // Function to format time in HH:MM:SS
+  const formatTime = (time) => {
+    const hours = Math.floor(time / 3600);
     const minutes = Math.floor((time % 3600) / 60);
     const seconds = time % 60;
-
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
+
+
   return (
     <>
       <section className="">
@@ -114,7 +122,7 @@ const Sputnik = () => {
                           <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
                         </div>
                         <div className="flex flex-col items-center text-white pr-5 md:pr-7">
-                          <p className="timer text-base lg:text-lg">{formatTime()}</p>
+                          <p className="timer text-base lg:text-lg">{formatTime(timeLeft)}</p>
                           <p className="font-thin text-center text-xs md:text-lg text-nowrap">Before end</p>
                         </div>
                       </div>

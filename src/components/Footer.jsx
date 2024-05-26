@@ -110,12 +110,12 @@ const Footer = () => {
             height.
           </p>
         </div>
-        <div className="lg:mx-10">
+        <div className="lg:mx-20">
           <button onClick={addmeta} className="font-normal flex justify-center gap-2 items-center cursor-pointer border-2 border-blue-500 rounded-[5px] px-7 py-1 text-[0.8rem] text-white text-nowrap " type="button">
             <img src={images.metamask} alt="" className="w-6" />
             Add to Metamask</button>
         </div>
-        <div className="grid grid-cols-3 gap-18 xl:gap-12">
+        <div className="grid grid-cols-3 gap-18 lg:gap-20 xl:gap-20">
           <div className="flex flex-col md:items-end">
             <h1 className="text-[1rem] text-white font-medium text-nowrap">
               Testnet
