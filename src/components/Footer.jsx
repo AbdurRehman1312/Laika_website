@@ -48,10 +48,6 @@ const Footer = () => {
       href: "https://testnet.laikachain.dog/",
       title: "Explorer",
     },
-    {
-      href: "",
-      title: "Add Network",
-    },
   ];
 
   // Function to scroll the page to the top
@@ -113,9 +109,13 @@ const Footer = () => {
             Pioneering the Infrastructure that elevates memecoins to new
             height.
           </p>
-          <button onClick={addmeta} className="font-normal cursor-pointer text-[0.8rem] text-dimGrey " type="button">Add to metamask</button>
         </div>
-        <div className="grid grid-cols-3 gap-20 xl:gap-12">
+        <div className="lg:mx-10">
+          <button onClick={addmeta} className="font-normal flex justify-center gap-2 items-center cursor-pointer border-2 border-blue-500 rounded-[5px] px-7 py-1 text-[0.8rem] text-white text-nowrap " type="button">
+            <img src={images.metamask} alt="" className="w-6" />
+            Add to Metamask</button>
+        </div>
+        <div className="grid grid-cols-3 gap-18 xl:gap-12">
           <div className="flex flex-col md:items-end">
             <h1 className="text-[1rem] text-white font-medium text-nowrap">
               Testnet

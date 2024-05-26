@@ -62,7 +62,7 @@ export function TabsDemo() {
     { id: "fiwb", name: "FIWB", image: images.fiwb },
     { id: "dbit", name: "DBIT", image: images.dbit },
     { id: "dnld", name: "DNLD", image: images.dnld },
-    { id: "wufi", name: "WUFI", image: images.wufi },
+    { id: "wufi", name: "WUFI", image: images.wufi2 },
     { id: "dogi", name: "DOGI", image: images.dogi },
     { id: "$hub", name: "$HUB", image: images.$hub },
     { id: "dfat", name: "DFAT", image: images.dfat },
@@ -472,7 +472,7 @@ export function TabsDemo() {
                               <img
                                 src={tokens.image}
                                 alt={tokens.name}
-                                className="w-4 h-4"
+                                className="w-4"
                               />
                               <span>{tokens.name}</span>
                             </div>
@@ -498,7 +498,7 @@ export function TabsDemo() {
                       <img
                         src={sendDetails.image}
                         alt={sendDetails.name}
-                        className="w-4 h-4"
+                        className="w-4"
                       />
                       <span>{sendDetails.name}</span>
                     </div>

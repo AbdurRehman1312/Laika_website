@@ -74,3 +74,5 @@ export { default as refresh } from "./refresh.png";
 export { default as laikaDiscord } from "./Laika-Discord.png";
 export { default as logolaika } from "./logolaika.png";
 export { default as logozealy } from "./logozealy.png";
+export { default as metamask } from "./metamask.png";
+export { default as wufi2 } from "./wufi2.png";
