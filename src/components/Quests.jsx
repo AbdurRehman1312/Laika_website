@@ -69,13 +69,15 @@ const Quests = () => {
                       The Laïka Discord server serves as the central hub for community engagement and interaction. You can join discussions, participate in events, and collaborate with fellow community members. By actively engaging on Discord and completing specific tasks, you'll be able to earn XP and level up their roles, unlocking access to exclusive channels and perks.
                     </p>
                     <div className="xl:w-[35%] lg:w-[55%] md:w-[77%] w-[60%]">
-                      <ButtonImage
-                        name="Join Laïka Discord"
-                        img="discord"
-                        style="bg_gradient5 cursor-pointer"
-                        imgStyle="w-7"
-                        includeHoverEffect={false}
-                      />
+                      <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                        <ButtonImage
+                          name="Join Laïka Discord"
+                          img="discord"
+                          style="bg_gradient5 cursor-pointer"
+                          imgStyle="w-7"
+                          includeHoverEffect={false}
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -86,7 +88,7 @@ const Quests = () => {
                     </div>
                     <div className="flex flex-col lg:flex-row gap-2 lg:gap-0 bg-[#161616] items-center text-white font-semibold justify-between p-3 rounded-b-[20px]">
                       <h1>Laïka Discord Community</h1>
-                      <a href="" className="py-2 px-9 rounded-[5px] text-white bg-[#2544a7] hidden sm:block" target="_blank">Join</a>
+                      <a href="https://discord.com/invite/YTHa4fda5r" className="py-2 px-9 rounded-[5px] text-white bg-[#2544a7] hidden sm:block" target="_blank">Join</a>
                     </div>
                   </div>
                 </div>
@@ -114,12 +116,14 @@ const Quests = () => {
                       Discord Sputnik 1 Zealy Quests, a series of challenges designed to encourage community participation and engagement. Quests range from inviting friends to join the Laïka community to completing daily tasks on X.
                     </p>
                     <div className="lg:w-[50%] md:w-[70%] w-[80%]">
+                      <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                       <Button
                         name="Go to Zealy "
                         style="w-[50%] bg_gradient5 cursor-pointer"
                         imgStyle=" h-8"
                         includeHoverEffect={false}
                       />
+                      </a>
                     </div>
                   </div>
                 </div>
