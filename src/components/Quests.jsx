@@ -65,7 +65,7 @@ const Quests = () => {
                     <h2 className="text-white text-xl font-semibold">
                       Join the Laïka Discord and climb Roles
                     </h2>
-                    <p className="text-white">
+                    <p className="text-dimGrey">
                       The Laïka Discord server serves as the central hub for community engagement and interaction. You can join discussions, participate in events, and collaborate with fellow community members. By actively engaging on Discord and completing specific tasks, you'll be able to earn XP and level up their roles, unlocking access to exclusive channels and perks.
                     </p>
                     <div className="xl:w-[35%] lg:w-[55%] md:w-[77%] w-[60%]">
@@ -105,12 +105,12 @@ const Quests = () => {
                     </div>
                   </div>
                 </div>
-                <div className="lg:w-[40%] md:w-[60%] w-full my-10 lg:my-0 ">
+                <div className="lg:w-[40%] md:w-[60%] w-full my-7 lg:my-0 ">
                   <div className="flex flex-col gap-6">
                     <h2 className="text-white text-xl font-semibold">
                       Explore our Zealy Quests
                     </h2>
-                    <p className="text-white">
+                    <p className="text-dimGrey ">
                       Discord Sputnik 1 Zealy Quests, a series of challenges designed to encourage community participation and engagement. Quests range from inviting friends to join the Laïka community to completing daily tasks on X.
                     </p>
                     <div className="lg:w-[50%] md:w-[70%] w-[80%]">
