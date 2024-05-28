@@ -176,11 +176,11 @@ export function TabsDemo() {
           coin.id !== "base" &&
           coin.id !== "Shibarium" &&
           coin.id !== "wen" &&
-          coin.id !== "usdt" &&
           coin.id !== "fiwb" &&
           coin.id !== "dbit" &&
           coin.id !== "dnld" &&
           coin.id !== "wufi" &&
+          coin.id !== "dogi" &&
           coin.id !== "$hub" &&
           coin.id !== "dfat" &&
           coin.id !== "bonk" &&
@@ -201,11 +201,11 @@ export function TabsDemo() {
           coin.id !== "base" &&
           coin.id !== "Shibarium" &&
           coin.id !== "wen" &&
-          coin.id !== "usdt" &&
           coin.id !== "fiwb" &&
           coin.id !== "dbit" &&
           coin.id !== "dnld" &&
           coin.id !== "wufi" &&
+          coin.id !== "dogi" &&
           coin.id !== "$hub" &&
           coin.id !== "dfat" &&
           coin.id !== "doge" &&
