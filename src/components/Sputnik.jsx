@@ -99,8 +99,8 @@ const Sputnik = () => {
                       <div className="bg_gradient5  flex justify-center py-1  px-2 rounded-[5px]">
                         <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
                       </div>
-                      <div className="text-white tracking-wider pl-0 sm:pl-6 font-normal text-sm text-right lg:text-center sm:text-base">
-                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 0.1 DOGE to DOGI</span></span>
+                      <div className="text-white flex flex-col gap-1 pl-0 sm:pl-6 font-normal text-sm text-right lg:text-center sm:text-base">
+                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to wPEPE, then swap wPEPE to wWIF</span></span>
                       </div>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ const Sputnik = () => {
                           <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
                         </div>
                         <div className="text-white tracking-wider pl-0 sm:pl-6 font-thin text-sm text-right lg:text-center sm:text-base">
-                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/DOGI liquidity pool</span></span>
+                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/wWIF liquidity pool</span></span>
                         </div>
                       </div>
                     </div>
@@ -123,7 +123,7 @@ const Sputnik = () => {
                         </div>
                         <div className="flex flex-col items-center text-white pr-5 md:pr-7">
                           <p className="font-thin text-center text-xs md:text-lg text-nowrap">Ends On</p>
-                          <p className="timer text-base text-nowrap">30th May, 4pm UTC</p>
+                          <p className="timer text-base text-nowrap">1 <sup>st</sup> April, 4pm UTC</p>
                         </div>
                       </div>
                     </div>
