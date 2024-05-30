@@ -95,7 +95,7 @@ const Sputnik = () => {
                 </div>
                 <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
                   <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
-                    <div className="flex gap-7 sm:gap-0  items-center">
+                    <div className="flex gap-8 sm:gap-0 items-center">
                       <div className="bg_gradient5  flex justify-center py-1  px-2 rounded-[5px]">
                         <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
                       </div>
@@ -107,7 +107,7 @@ const Sputnik = () => {
                   <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
                     <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
 
-                      <div className="flex items-center">
+                      <div className="flex gap-8 sm:gap-0 items-center">
                         <div className="bg_gradient5 flex justify-center py-2  px-2 rounded-[5px]">
                           <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
                         </div>
