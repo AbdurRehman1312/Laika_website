@@ -89,7 +89,7 @@ const Sputnik = () => {
                       <img src={images.sparrow} alt="" className="w-4 sm:w-5" />
                     </div>
                     <div className="text-white tracking-wider font-thin text-sm">
-                      <span className="font-bold"> Follow  </span> <a href="https://x.com/mutt_laika" className="underline cursor-pointer">@mutt_laika</a>
+                      <span className="font-bold"> Follow  </span> <a href="https://x.com/mutt_laika" target="_blank" className="underline cursor-pointer">@mutt_laika</a>
                     </div>
                   </div>
                 </div>
