@@ -133,7 +133,7 @@ const Sputnik = () => {
                           </div>
                           <div className="flex flex-col items-center text-white pr-5 md:pr-7">
                             <p className="font-thin text-center text-xs md:text-lg text-nowrap">Ends On</p>
-                            <p className="timer text-base text-nowrap">3 <sup>rd</sup> June, 4pm UTC</p>
+                            <p className="timer text-base text-nowrap">5 <sup>th</sup> June, 4pm UTC</p>
                           </div>
                         </div>
                       </div>
