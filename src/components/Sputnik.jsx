@@ -82,47 +82,59 @@ const Sputnik = () => {
               </Link>
             </div>
             <div className="flex flex-col">
-              <div className="bg-[#0f1a27] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
+              <div className="bg-[#142232] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
                 <div className="flex items-center justify-between px-3 sm:gap-2  w-full">
                   <div className="flex items-center gap-5">
                     <div className="bg_gradient5  flex justify-center py-3 px-2 rounded-[5px]">
                       <img src={images.sparrow} alt="" className="w-4 sm:w-5" />
                     </div>
                     <div className="text-white tracking-wider font-thin text-sm">
-                      <span className="font-bold"> Claim 5 DOGE  </span> by using {" "}<a href="http://laikachain.dog/faucets" className="underline cursor-pointer">faucet</a>
+                      <span className="font-bold"> Follow  </span> <a href="https://x.com/mutt_laika" className="underline cursor-pointer">@mutt_laika</a>
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
-                  <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
+                <div className="bg-[#0f1a27] w-full pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
+                  <div className="flex items-center justify-between px-3 sm:gap-2  w-full">
                     <div className="flex items-center gap-5">
-                      <div className="bg_gradient5  flex justify-center py-1  px-2 rounded-[5px]">
-                        <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
+                      <div className="bg_gradient5  flex justify-center py-3 px-2 rounded-[5px]">
+                        <img src={images.sparrow} alt="" className="w-4 sm:w-5" />
                       </div>
-                      <div className="text-white flex flex-col gap-1 font-normal text-sm">
-                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to wWIF</span></span>
+                      <div className="text-white tracking-wider font-thin text-sm">
+                        <span className="font-bold"> Claim 5 DOGE  </span> by using {" "}<a href="http://laikachain.dog/faucets" className="underline cursor-pointer">faucet</a>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
+                  <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
                     <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
                       <div className="flex items-center gap-5">
-                        <div className="bg_gradient5 flex justify-center py-2  px-2 rounded-[5px]">
-                          <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
+                        <div className="bg_gradient5  flex justify-center py-1  px-2 rounded-[5px]">
+                          <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
                         </div>
-                        <div className="text-white tracking-wider font-thin text-sm">
-                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/wWIF liquidity pool</span></span>
+                        <div className="text-white flex flex-col gap-1 font-normal text-sm">
+                          <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to MUTT</span></span>
                         </div>
                       </div>
                     </div>
-                    <div className="bg-[#060910] py-2 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
-                      <div className="flex items-center justify-between py-3 w-full">
-                        <div className="text-white tracking-wider pl-4 sm:pl-5 font-thin text-sm  w-[70%] sm:w-full text-left sm:text-base">
-                          <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
+                    <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
+                      <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
+                        <div className="flex items-center gap-5">
+                          <div className="bg_gradient5 flex justify-center py-2  px-2 rounded-[5px]">
+                            <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
+                          </div>
+                          <div className="text-white tracking-wider font-thin text-sm">
+                            <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/MUTT liquidity pool</span></span>
+                          </div>
                         </div>
-                        <div className="flex flex-col items-center text-white pr-5 md:pr-7">
-                          <p className="font-thin text-center text-xs md:text-lg text-nowrap">Ends On</p>
-                          <p className="timer text-base text-nowrap">3 <sup>rd</sup> June, 4pm UTC</p>
+                      </div>
+                      <div className="bg-[#060910] py-2 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
+                        <div className="flex items-center justify-between py-3 w-full">
+                          <div className="text-white tracking-wider pl-4 sm:pl-5 font-thin text-sm  w-[70%] sm:w-full text-left sm:text-base">
+                            <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
+                          </div>
+                          <div className="flex flex-col items-center text-white pr-5 md:pr-7">
+                            <p className="font-thin text-center text-xs md:text-lg text-nowrap">Ends On</p>
+                            <p className="timer text-base text-nowrap">3 <sup>rd</sup> June, 4pm UTC</p>
+                          </div>
                         </div>
                       </div>
                     </div>
