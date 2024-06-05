@@ -111,7 +111,7 @@ const Sputnik = () => {
                           <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
                         </div>
                         <div className="text-white tracking-wider font-thin text-sm">
-                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/HUB, WEN, DNLD, DFAT, DBIT liquidity pool</span></span>
+                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/ [Selected token] liquidity pool</span></span>
                         </div>
                       </div>
                     </div>

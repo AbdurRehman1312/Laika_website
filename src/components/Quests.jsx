@@ -39,7 +39,7 @@ const Quests = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-8">
                   <h2 className="text-white font-bold text-center">
-                    Provide liquidity in the DOGE/ <br />HUB, WEN, DNLD, DFAT, DBIT  liquidity pool
+                    Provide liquidity in the DOGE/ <br />[Selected token] liquidity pool
                   </h2>
                   <a href="http://testnet.wufiswap.com/" target="_blank" className="flex justify-center lg:w-[80%]" onClick={scrollToTop}>
                     <ButtonImage
