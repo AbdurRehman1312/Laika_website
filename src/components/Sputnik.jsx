@@ -97,7 +97,7 @@ const Sputnik = () => {
                   <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
                     <div className="flex items-center gap-5">
                       <div className="bg_gradient5  flex justify-center py-1  px-2 rounded-[5px]">
-                        <img src={images.refresh} alt="" width={21} className="w-6 sm:w-5" />
+                        <img src={images.refresh} alt="" width={21} className="w-12 lg:w-6" />
                       </div>
                       <div className="text-white flex flex-col gap-1 font-normal text-sm">
                         <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to your favorite DRC20 token from this list: HUB, WEN, DNLD, DFAT, DBIT</span></span>
@@ -108,7 +108,7 @@ const Sputnik = () => {
                     <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
                       <div className="flex items-center gap-5">
                         <div className="bg_gradient5 flex justify-center py-2  px-2 rounded-[5px]">
-                          <img src={images.swap} alt="" width={21} className="w-5 sm:w-5" />
+                          <img src={images.swap} alt="" width={21} className="w-7 lg:w-5" />
                         </div>
                         <div className="text-white tracking-wider font-thin text-sm">
                           <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/ [Selected token] liquidity pool</span></span>
