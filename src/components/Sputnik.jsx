@@ -85,8 +85,8 @@ const Sputnik = () => {
               <div className="bg-[#0f1a27] w-full pt-5 rounded-t-[10px] flex flex-col gap-6 items-center">
                 <div className="flex items-center justify-between px-3 sm:gap-2  w-full">
                   <div className="flex items-center gap-5">
-                    <div className="bg_gradient5  flex justify-center py-3 px-2 rounded-[5px]">
-                      <img src={images.sparrow} alt="" className="w-4 sm:w-5" />
+                    <div className="bg_gradient5  flex justify-center items-center md:w-[36px] md:h-[30px] w-[30px] p-2 flex-shrink-0 h-[30px] md:p-3 rounded-[5px]">
+                      <img src={images.arrow2} alt="" className="w-full object-contain" />
                     </div>
                     <div className="text-white tracking-wider font-thin text-sm">
                       <span className="font-bold"> Claim 5 DOGE  </span> by using {" "}<a href="http://laikachain.dog/faucets" className="underline cursor-pointer">faucet</a>
@@ -96,8 +96,8 @@ const Sputnik = () => {
                 <div className="bg-[#0c121f] pt-5 w-full rounded-t-[10px] flex flex-col gap-6 items-center">
                   <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
                     <div className="flex items-center gap-5">
-                      <div className="bg_gradient5  flex justify-center py-1  px-2 rounded-[5px]">
-                        <img src={images.refresh} alt="" width={21} className="w-12 lg:w-6" />
+                      <div className="bg_gradient5  flex justify-center items-center md:w-[36px] md:h-[30px] w-[30px] p-1 flex-shrink-0 h-[30px] md:p-1 rounded-[5px]">
+                        <img src={images.undoredo} alt="" className="h-[100%] w-full object-contain" />
                       </div>
                       <div className="text-white flex flex-col gap-1 font-normal text-sm">
                         <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to your favorite DRC20 token from this list: HUB, WEN, DNLD, DFAT, DBIT</span></span>
@@ -107,8 +107,8 @@ const Sputnik = () => {
                   <div className="bg-[#090d17] pt-5 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
                     <div className="flex items-center justify-between px-3 sm:gap-2 w-full">
                       <div className="flex items-center gap-5">
-                        <div className="bg_gradient5 flex justify-center py-2  px-2 rounded-[5px]">
-                          <img src={images.swap} alt="" width={21} className="w-7 lg:w-5" />
+                        <div className="bg_gradient5 flex justify-center items-center md:w-[36px] md:h-[30px] w-[30px] p-2 flex-shrink-0 h-[30px] md:p-3 rounded-[5px]">
+                          <img src={images.swapVertical} alt="" className="w-full object-contain" />
                         </div>
                         <div className="text-white tracking-wider font-thin text-sm">
                           <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/ [Selected token] liquidity pool</span></span>

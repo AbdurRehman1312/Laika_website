@@ -25,14 +25,14 @@ const Quests = () => {
               <div className="flex md:flex-row flex-col justify-around mt-20 gap-10">
                 <div className="flex flex-col justify-center items-center gap-8 px-2">
                   <h2 className="text-white font-bold text-center">
-                    Swap DOGE to HUB, WEN, DNLD, DFAT, DBIT on <br /> Wufiswap testnet
+                    Swap DOGE to HUB, WEN, DNLD, DFAT, DBIT on <br /> Wufiswap testnet 
                   </h2>
-                  <a href="http://testnet.wufiswap.com/" target="_blank" className="flex justify-center lg:w-[80%]" onClick={scrollToTop}>
+                  <a href="http://testnet.wufiswap.com/" target="_blank" className="flex justify-center" onClick={scrollToTop}>
                     <ButtonImage
                       name="Go to Wufiswap"
                       img="wufi"
-                      style=" px-8 bg_gradient5"
-                      imgStyle="w-8 h-8"
+                      style=" px-8 bg_gradient5 flex justify-center items-center"
+                      imgStyle="w-8"
                       includeHoverEffect={false}
                     />
                   </a>
@@ -41,12 +41,12 @@ const Quests = () => {
                   <h2 className="text-white font-bold text-center">
                     Provide liquidity in the DOGE/ <br />[Selected token] liquidity pool
                   </h2>
-                  <a href="http://testnet.wufiswap.com/" target="_blank" className="flex justify-center lg:w-[80%]" onClick={scrollToTop}>
+                  <a href="http://testnet.wufiswap.com/" target="_blank" className="flex justify-center" onClick={scrollToTop}>
                     <ButtonImage
                       name="Go to Wufiswap"
                       img="wufi"
-                      style=" px-8 bg_gradient5"
-                      imgStyle="w-8 h-8"
+                      style=" px-8 bg_gradient5 flex justify-center items-center"
+                      imgStyle="w-8"
                       includeHoverEffect={false}
                     />
                   </a>
@@ -68,12 +68,12 @@ const Quests = () => {
                     <p className="text-dimGrey">
                       The Laïka Discord server serves as the central hub for community engagement and interaction. You can join discussions, participate in events, and collaborate with fellow community members. By actively engaging on Discord and completing specific tasks, you'll be able to earn XP and level up their roles, unlocking access to exclusive channels and perks.
                     </p>
-                    <div className="xl:w-[35%] lg:w-[55%] md:w-[77%] w-[60%]">
+                    <div className="xl:w-[35%] lg:w-[55%] md:w-[77%] w-[70%]">
                       <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
                         <ButtonImage
                           name="Join Laïka Discord"
                           img="discord"
-                          style="bg_gradient5 cursor-pointer"
+                          style="bg_gradient5 cursor-pointer px-6"
                           imgStyle="w-7"
                           includeHoverEffect={false}
                         />
@@ -115,11 +115,11 @@ const Quests = () => {
                     <p className="text-dimGrey ">
                       Discord Sputnik 1 Zealy Quests, a series of challenges designed to encourage community participation and engagement. Quests range from inviting friends to join the Laïka community to completing daily tasks on X.
                     </p>
-                    <div className="lg:w-[50%] md:w-[70%] w-[80%]">
+                    <div className="lg:w-[35%] md:w-[70%] w-[60%]">
                       <a href="https://zealy.io/cw/laikalayer2/questboard" target="_blank">
                       <Button
                         name="Go to Zealy "
-                        style="w-[50%] bg_gradient5 cursor-pointer"
+                        style="bg_gradient5 cursor-pointer px-6 flex justify-center items-center"
                         imgStyle=" h-8"
                         includeHoverEffect={false}
                       />

@@ -76,3 +76,6 @@ export { default as logolaika } from "./logolaika.png";
 export { default as logozealy } from "./logozealy.png";
 export { default as metamask } from "./metamask.png";
 export { default as wufi2 } from "./wufi2.png";
+export { default as swapVertical } from "./swapVertical.png";
+export { default as arrow2 } from "./arrow2.png";
+export { default as undoredo } from "./undoredo.png";
