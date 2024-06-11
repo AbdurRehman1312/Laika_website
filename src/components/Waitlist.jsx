@@ -68,7 +68,7 @@ const Waitlist = () => {
             <a href="https://twitter.com/Laika_Layer2/" target="_blank">
               <img src={images.x} alt="" className="w-[20px] h-[20px]" />
             </a>
-            <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+            <a href="https://discord.gg/laika-layer2" target="_blank">
               <img src={images.discord} alt="" className="w-[20px] h-[20px]" />
             </a>
             <a href="https://medium.com/@laika-layer2" target="_blank">

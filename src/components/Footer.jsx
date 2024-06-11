@@ -31,7 +31,7 @@ const Footer = () => {
       title: "Twitter",
     },
     {
-      href: "https://discord.com/invite/YTHa4fda5r",
+      href: "https://discord.gg/laika-layer2",
       title: "Discord",
     },
     {

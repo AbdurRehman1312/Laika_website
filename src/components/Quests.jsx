@@ -69,7 +69,7 @@ const Quests = () => {
                       The Laïka Discord server serves as the central hub for community engagement and interaction. You can join discussions, participate in events, and collaborate with fellow community members. By actively engaging on Discord and completing specific tasks, you'll be able to earn XP and level up their roles, unlocking access to exclusive channels and perks.
                     </p>
                     <div className="xl:w-[35%] lg:w-[55%] md:w-[77%] w-[70%]">
-                      <a href="https://discord.com/invite/YTHa4fda5r" target="_blank">
+                      <a href="https://discord.gg/laika-layer2" target="_blank">
                         <ButtonImage
                           name="Join Laïka Discord"
                           img="discord"
@@ -88,7 +88,7 @@ const Quests = () => {
                     </div>
                     <div className="flex flex-col lg:flex-row gap-2 lg:gap-0 bg-[#161616] items-center text-white font-semibold justify-between p-3 rounded-b-[20px]">
                       <h1>Laïka Discord Community</h1>
-                      <a href="https://discord.com/invite/YTHa4fda5r" className="py-2 px-9 rounded-[5px] text-white bg-[#2544a7] hidden sm:block" target="_blank">Join</a>
+                      <a href="https://discord.gg/laika-layer2" className="py-2 px-9 rounded-[5px] text-white bg-[#2544a7] hidden sm:block" target="_blank">Join</a>
                     </div>
                   </div>
                 </div>
