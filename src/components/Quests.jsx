@@ -25,7 +25,7 @@ const Quests = () => {
               <div className="flex md:flex-row flex-col justify-around mt-20 gap-10">
                 <div className="flex flex-col justify-center items-center gap-8 px-2">
                   <h2 className="text-white font-bold text-center">
-                    Swap DOGE to SLERF <br /> Wufiswap testnet 
+                    Swap DOGE to BONK <br /> Wufiswap testnet 
                   </h2>
                   <a href="http://testnet.wufiswap.com/" target="_blank" className="flex justify-center" onClick={scrollToTop}>
                     <ButtonImage
@@ -39,7 +39,7 @@ const Quests = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-8">
                   <h2 className="text-white font-bold text-center">
-                    Provide liquidity in the DOGE/ <br />SLERF liquidity pool
+                    Provide liquidity in the DOGE/ <br />BONK liquidity pool
                   </h2>
                   <a href="http://testnet.wufiswap.com/" target="_blank" className="flex justify-center" onClick={scrollToTop}>
                     <ButtonImage
