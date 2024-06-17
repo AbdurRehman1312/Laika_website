@@ -100,7 +100,7 @@ const Sputnik = () => {
                         <img src={images.undoredo} alt="" className="h-[100%] w-full object-contain" />
                       </div>
                       <div className="text-white flex flex-col gap-1 font-normal text-sm">
-                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to BONK</span></span>
+                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to DEGEN</span></span>
                       </div>
                     </div>
                   </div>
@@ -111,7 +111,7 @@ const Sputnik = () => {
                           <img src={images.swapVertical} alt="" className="w-full object-contain" />
                         </div>
                         <div className="text-white tracking-wider font-thin text-sm">
-                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/ BONK liquidity pool</span></span>
+                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/ DEGEN liquidity pool</span></span>
                         </div>
                       </div>
                     </div>
