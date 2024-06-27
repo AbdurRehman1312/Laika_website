@@ -100,7 +100,7 @@ const Sputnik = () => {
                         <img src={images.undoredo} alt="" className="h-[100%] w-full object-contain" />
                       </div>
                       <div className="text-white flex flex-col gap-1 font-normal text-sm">
-                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to POPCAT </span></span>
+                        <span className="font-thin"> Wow! Now, go to <a href="http://testnet.wufiswap.com/" className="underline cursor-pointer">Wufiswap</a> and <span className="font-bold">swap 1 DOGE to MOG </span></span>
                       </div>
                     </div>
                   </div>
@@ -111,7 +111,7 @@ const Sputnik = () => {
                           <img src={images.swapVertical} alt="" className="w-full object-contain" />
                         </div>
                         <div className="text-white tracking-wider font-thin text-sm">
-                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/ POPCAT liquidity pool</span></span>
+                          <span className="font-bold"> Provide liquidity <span className="font-thin">in the DOGE/ MOG liquidity pool</span></span>
                         </div>
                       </div>
                     </div>
@@ -122,7 +122,7 @@ const Sputnik = () => {
                         </div>
                         <div className="flex flex-col items-center text-white pr-5 md:pr-7">
                           <p className="font-thin text-center text-xs md:text-lg text-nowrap">Ends On</p>
-                          <p className="timer text-base text-nowrap">27 <sup>th</sup> June, 4pm UTC</p>
+                          <p className="timer text-base text-nowrap">29 <sup>th</sup> June, 4pm UTC</p>
                         </div>
                       </div>
                     </div>
