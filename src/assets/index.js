@@ -79,3 +79,5 @@ export { default as wufi2 } from "./wufi2.png";
 export { default as swapVertical } from "./swapVertical.png";
 export { default as arrow2 } from "./arrow2.png";
 export { default as undoredo } from "./undoredo.png";
+export { default as pin } from "./pin.png";
+export { default as pinb } from "./pinb.png";

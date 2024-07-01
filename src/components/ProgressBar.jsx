@@ -1,29 +1,33 @@
-
 import React from 'react';
+
 const ProgressBar = ({ progress }) => {
-    const markers = [0, 5, 10, 25, 50, 100, "+ 500"];
-    const maxValue = 700;
+    const markers = ["+10%", "+10%", "+10%", "+10%", "+10%", "+10%", "+10%", "+10%"];
+    const bottomMarkers = ["$5,000", "$15,000", "$30,000", "$50,000", "$75,000", "$100,000", "$150,000", "$200,000"];
+    const bottomMarkersMobile = ["$5k", "$15k", "$30k", "$50k", "$75k", "$100k", "$150k", "$200k"];
 
     return (
         <>
-        <div className='flex flex-col w-full items-center'>
-        <div className="flex justify-between w-[61%] md:w-[64%] lg:w-[68%]  mb-2">
-                {markers.map((marker, index) => (
-                    <div key={index} className="relative" >
-                        <span className="marker-text text-dimGrey text-base text-center ">{marker}</span>
-                        <div className='p-3  mark border-r absolute top-[32px] md:top-[32px] lg:top-[33px] xl:top-[32px] right-[7px] z-[100]'></div>
-                    </div>
-                ))}
+            <div className='flex flex-col w-full items-center '>
+                <div className="flex justify-between w-[90%] mb-2">
+                    {markers.map((marker, index) => (
+                        <div key={index} className="relative">
+                            <span className="marker-text text-white text-base text-center font-bold">{marker}</span>
+                            <div className='p-3 mark border-r absolute top-[27px] md:top-[27px] lg:top-[27px] xl:top-[27px] md:right-[10px] z-[100]'></div>
+                        </div>
+                    ))}
+                </div>
+                <div className="progress-container bg-dark-gradient3 w-[90%] rounded-full overflow-hidden">
+                    <div className="progress-bar bg-gradient-to-r from-teal-400 to-blue-500 h-4" style={{ width: `${progress}%` }} />
+                </div>
+                <div className="flex justify-between w-[90%] mt-2">
+                    {bottomMarkersMobile.map((marker, index) => (
+                        <div key={index} className="relative">
+                            <span className="marker-text text-gray-400 text-base text-center">{marker}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
-         <div className="progress-container">
-           
-            <div className="progress-bar " style={{ width: `${progress }%` }} />
-            
-        </div>
-        </div>
-        
         </>
-       
     );
 };
 

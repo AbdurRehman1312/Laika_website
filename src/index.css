@@ -189,7 +189,7 @@ input::-webkit-inner-spin-button {
 
 .progress-container {
   position: relative;
-  width: 70%;
+  width: 100%;
   height: 43px; /* Increased height for a thicker bar */
   border: 1px solid white;
   border-radius: 36px; /* Rounded corners */
@@ -218,3 +218,13 @@ input::-webkit-inner-spin-button {
   background: linear-gradient(90deg, rgba(1,19,56,1) 0%, rgba(1,43,55,1) 48%) !important;
 }
 
+@media screen and (max-width: 600px){
+  .progress-container {
+    position: relative;
+    width: 100%;
+    height: 43px; /* Increased height for a thicker bar */
+    border: 1px solid white;
+    border-radius: 36px; /* Rounded corners */
+    overflow: hidden; /* Ensures the bar does not spill over */
+  }
+}
