@@ -170,7 +170,6 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
-  
 }
 .popup-open {
   overflow: hidden;
@@ -214,11 +213,20 @@ input::-webkit-inner-spin-button {
   border-right-width: 2px;
 }
 .bg_gradient5 {
-  background: rgb(1,19,56) !important;
-  background: linear-gradient(90deg, rgba(1,19,56,1) 0%, rgba(1,43,55,1) 48%) !important;
+  background: rgb(1, 19, 56) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 19, 56, 1) 0%,
+    rgba(1, 43, 55, 1) 48%
+  ) !important;
 }
-
-@media screen and (max-width: 600px){
+.custom_text {
+  max-width: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 600px) {
   .progress-container {
     position: relative;
     width: 100%;

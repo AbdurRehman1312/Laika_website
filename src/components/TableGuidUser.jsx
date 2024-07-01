@@ -34,7 +34,7 @@ const TableGuidUser = () => {
             <TableBody>
                 {history.map((item) => (
                     <TableRow key={item.date} className="">
-                        <TableCell className="rounded-l-[5px] text-left">{item.from}</TableCell>
+                        <TableCell className="rounded-l-[5px] text-left custom_text">{item.from}</TableCell>
                         <TableCell className="font-medium text-right rounded-r-[5px]">{item.totalAmount}</TableCell>
                     </TableRow>
                 ))}
