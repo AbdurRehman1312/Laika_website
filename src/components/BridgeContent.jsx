@@ -35,7 +35,7 @@ const BridgeContent = () => {
         {!showGuild && (
           <div className="bridge_history">
             <div className="flex md:flex-row flex-col items-center justify-between gap-10 md:px-20 px-4">
-              <div className=" md:w-[40%] lg:w-[40%] w-full flex flex-col gap-4">
+              <div className=" md:w-[40%] lg:w-[60%] xl:w-[40%] w-full flex flex-col gap-4">
                 <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold lg:leading-[50px] lg:w-[55%] md:w-[80%]">
                   Bridge to earn <br />
                   <span className="text-gradient font-extrabold">LAIKA Points</span>
@@ -79,7 +79,7 @@ const BridgeContent = () => {
             </div>
             <div className="pb-20 border-b border-dashed border-gray-600 w-[90%] mx-auto" />
             <div className="lg:w-[70%] mx-auto w-full flex justify-between items-center md:flex-row flex-col gap-y-16 mt-10 px-3">
-              <div className="md:w-[35%] w-full">
+              <div className="md:w-[55%] w-full">
                 <div className="flex items-center gap-4 text-white">
                   <h1 className="text-xl  font-bold">Your referral link</h1>
                   <div className="py-1 px-2 rounded-[8px] bg-[#0064e2] font-medium">
@@ -104,11 +104,11 @@ const BridgeContent = () => {
             </div>
             <div className=" mt-20 border-b border-dashed border-gray-800 w-[60%] mx-auto" />
             <div className="lg:w-[70%] mx-auto w-full flex justify-between items-center md:flex-row flex-col gap-y-16 mt-10 px-3">
-              <div className="md:w-[35%] w-full">
+              <div className="md:w-[55%] w-full">
                 <div className="text-white">
                   <h1 className="text-xl  font-bold">Guild Booster</h1>
                 </div>
-                <div className="flex items-center gap-1 text-dimGrey w-[50%] mt-5">
+                <div className="flex items-center gap-1 text-dimGrey w-[100%] mt-5">
                   <p className="">Your Guild: </p>
                   <p className="text-white font-bold">Solana Lover</p>
                 </div>

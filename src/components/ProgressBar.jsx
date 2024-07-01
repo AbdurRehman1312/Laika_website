@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProgressBar = ({ progress }) => {
     const markers = ["+10%", "+10%", "+10%", "+10%", "+10%", "+10%", "+10%", "+10%"];
-    const bottomMarkers = ["$5,000", "$15,000", "$30,000", "$50,000", "$75,000", "$100,000", "$150,000", "$200,000"];
+    // const bottomMarkers = ["$5,000", "$15,000", "$30,000", "$50,000", "$75,000", "$100,000", "$150,000", "$200,000"];
     const bottomMarkersMobile = ["$5k", "$15k", "$30k", "$50k", "$75k", "$100k", "$150k", "$200k"];
 
     return (
@@ -11,8 +11,8 @@ const ProgressBar = ({ progress }) => {
                 <div className="flex justify-between w-[90%] mb-2">
                     {markers.map((marker, index) => (
                         <div key={index} className="relative">
-                            <span className="marker-text text-white text-base text-center font-bold">{marker}</span>
-                            <div className='p-3 mark border-r absolute top-[27px] md:top-[27px] lg:top-[27px] xl:top-[27px] md:right-[10px] z-[100]'></div>
+                            <span className="marker-text text-white md:text-base text-xs text-center font-bold">{marker}</span>
+                            <div className='p-3 mark border-r absolute top-[27px] md:top-[27px] lg:top-[27px] xl:top-[27px] md:right-[18px] z-[100]'></div>
                         </div>
                     ))}
                 </div>
@@ -22,7 +22,7 @@ const ProgressBar = ({ progress }) => {
                 <div className="flex justify-between w-[90%] mt-2">
                     {bottomMarkersMobile.map((marker, index) => (
                         <div key={index} className="relative">
-                            <span className="marker-text text-gray-400 text-base text-center">{marker}</span>
+                            <span className="marker-text text-gray-400 md:text-base text-xs">{marker}</span>
                         </div>
                     ))}
                 </div>
