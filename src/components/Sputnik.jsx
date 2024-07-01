@@ -116,15 +116,15 @@ const Sputnik = () => {
                       </div>
                     </div>
                     <div className="bg-[#060910] py-2 rounded-t-[10px] flex flex-col gap-6 items-center w-full">
-                      <div className="flex items-center justify-between py-3 w-full">
+                      <d                                          iv className="flex items-center justify-between py-3 w-full">
                         <div className="text-white tracking-wider pl-4 sm:pl-5 font-thin text-sm  w-[70%] sm:w-full text-left sm:text-base">
                           <span className="font-bold"> Earn <span className="text-gradient font-extrabold">Laika points</span> with new quests every 48 hours</span>
                         </div>
                         <div className="flex flex-col items-center text-white pr-5 md:pr-7">
-                          <p className="font-thin text-center text-xs md:text-lg text-nowrap">Ends On</p>
-                          <p className="timer text-base text-nowrap">1 <sup>st</sup> July, 4pm UTC</p>
+                          <p className="font-thin text-center text-xs md:text-base text-wrap">Quest ended</p>
+                          <p className="timer text-sm md:text-base text-center text-wrap">Keep connected for next quest</p>
                         </div>
-                      </div>
+                      </d>
                     </div>
                   </div>
                 </div>
